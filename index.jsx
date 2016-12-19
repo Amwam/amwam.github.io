@@ -35,7 +35,6 @@ const routes = (
   </Route>
 );
 
-console.log(routes)
 render(
   <Router
     history={browserHistory}
