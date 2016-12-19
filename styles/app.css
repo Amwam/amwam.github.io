@@ -157,16 +157,10 @@ code {
 }
 
 .social .sub-text-social {
-    color: white;
-    text-align: center;
-
-}
-
-.social:hover .sub-text-social {
-    text-align: center;
     color: #808080;
-}
+    text-align: center;
 
+}
 
 pre {
     overflow: auto;
