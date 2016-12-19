@@ -10,7 +10,9 @@ import ExampleComponent from './components/ExampleComponent';
 import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
 import Contact from './components/Contact';
 import About from './components/About';
-
+import Blog from './components/Blog';
+import BlogPost from './components/BlogPost';
+import {posts} from './blog_posts';
 
 const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>
@@ -21,11 +23,19 @@ const routes = (
     </Route>
     <Route path="contact" mapMenuTitle="Contact" component={Contact} />
     <Route path="about" mapMenuTitle="About" component={About} />
+      <Route key="blog" path="blog" mapMenuTitle="Blog" component={Blog} >
+      {posts.map(post => (
+          <Route key={post.slug} path={`${post.slug}`} mapMenuTitle={post.title} component={BlogPost} />
+      ))}
+      </Route>
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
+
+
+
   </Route>
 );
 
-
+console.log(routes)
 render(
   <Router
     history={browserHistory}
