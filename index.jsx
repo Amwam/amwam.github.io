@@ -8,6 +8,8 @@ import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
 import ExampleComponent from './components/ExampleComponent';
 import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
+import Contact from './components/Contact';
+import About from './components/About';
 
 
 const routes = (
@@ -17,7 +19,8 @@ const routes = (
     <Route path="example" mapMenuTitle="Example" component={ExampleComponent}>
       <Route path="two-deep" mapMenuTitle="Two Deep" component={ExampleTwoDeepComponent} />
     </Route>
-
+    <Route path="contact" mapMenuTitle="Contact" component={Contact} />
+    <Route path="about" mapMenuTitle="About" component={About} />
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
   </Route>
 );

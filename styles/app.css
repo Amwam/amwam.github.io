@@ -12,7 +12,7 @@ html, body, div, span, a, p, ul, li, h1, code, nav {
 }
 
 html {
-  background-color: rgb(0, 120, 0);
+  /*background-color: rgb(0, 120, 0);*/
 }
 
 body {
@@ -35,7 +35,7 @@ body {
 /*root div in index.html*/
 #root {
   min-height: 100vh;
-  background-color: #F0F0F0;
+  /*background-color: #F0F0F0;*/
 }
 
 /*reactroot div*/
@@ -66,22 +66,13 @@ space for vertical scroll bar without creating horizontal scroll bar
 
 /*links*/
 a {
-  border-bottom: 1px dotted rgb(0, 168, 0);
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-}
-
-a:hover, a:active {
-  border-bottom: 1px solid rgb(0, 168, 0);
+  color: #d9230f;
 }
 
 .current-input-touch a:hover {
-  border-bottom: 1px dotted rgb(0, 168, 0);
   color: inherit;
-}
-
-.current-input-touch a:active {
-  border-bottom: 1px dashed rgb(0, 168, 0);
 }
 
 /*extended link*/
@@ -160,4 +151,18 @@ code {
 
 #root > div > div > div > div {
   margin: 3vh 0;
+}
+.social-contact {
+    width: 100%;
+}
+
+.social .sub-text-social {
+    color: white;
+    text-align: center;
+
+}
+
+.social:hover .sub-text-social {
+    text-align: center;
+    color: #808080;
 }
