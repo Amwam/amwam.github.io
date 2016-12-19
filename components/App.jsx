@@ -33,7 +33,7 @@ function App({ children, routes }) {
   return (
     <div>
       <h1>AMWAM</h1>
-      <h2>Agile Software Developer, based in London.</h2>
+      <h4>Agile Software Developer, based in London.</h4>
       <nav>
         {generateMapMenu()}
       </nav>
