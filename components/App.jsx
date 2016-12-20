@@ -34,7 +34,7 @@ function App({ children, routes }) {
         <div style={{display: 'flex', flexDirection:'row', paddingTop: 50}}>
             <div style={{paddingRight: 25, borderRight: 'lightgrey solid 1px'}}><Navigation /></div>
             <div style={{flex:1, paddingLeft: 25}}>
-                <h1>AMWAM</h1>
+                <h1>AMWAM - Amit Shah</h1>
                 <h4>Agile Software Developer, based in London.</h4>
                 <div>
                     {children}

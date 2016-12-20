@@ -6,8 +6,6 @@ import 'current-input';
 import App from './components/App';
 import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
-import ExampleComponent from './components/ExampleComponent';
-import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
 import Contact from './components/Contact';
 import About from './components/About';
 import Blog from './components/Blog';
@@ -18,9 +16,6 @@ const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>
     <IndexRoute component={Home} />
 
-    <Route path="example" mapMenuTitle="Example" component={ExampleComponent}>
-      <Route path="two-deep" mapMenuTitle="Two Deep" component={ExampleTwoDeepComponent} />
-    </Route>
     <Route path="contact" mapMenuTitle="Contact" component={Contact} />
     <Route path="about" mapMenuTitle="About" component={About} />
       <Route key="blog" path="blog" mapMenuTitle="Blog" component={Blog} >
@@ -29,8 +24,6 @@ const routes = (
       ))}
       </Route>
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
-
-
 
   </Route>
 );

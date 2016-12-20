@@ -71,40 +71,6 @@ a {
   color: #d9230f;
 }
 
-.current-input-touch a:hover {
-  color: inherit;
-}
-
-/*extended link*/
-.extended-link {
-  border: none;
-}
-
-.extended-link:hover, .extended-link:active,
-.current-input-touch .extended-link:active, .current-input-touch .extended-link:hover {
-  border: none;
-  color: inherit;
-}
-
-.extended-link > span {
-  border-bottom: 1px dotted rgb(0, 168, 0);
-}
-
-a:hover > span, a:active > span {
-  border-bottom: 1px solid rgb(0, 168, 0);
-  color: black;
-}
-
-.current-input-touch .extended-link:hover > span {
-  border-bottom: 1px dotted rgb(0, 168, 0);
-  color: inherit;
-}
-
-.current-input-touch .extended-link:active > span {
-  border-bottom: 1px dashed rgb(0, 168, 0);
-  color: black;
-}
-
 /*custom bullets*/
 li {
   list-style: none;
@@ -120,7 +86,7 @@ li:before {
 
 /*title*/
 h1 {
-  font-size: 20px;
+  font-size: 1.7em;
   margin-bottom: 0.5vh;
 }
 
