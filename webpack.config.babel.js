@@ -38,4 +38,5 @@ export default {
         }
         return [];
     })(),
+    devtool: (process.argv.indexOf('-p') === -1)? 'eval-source-map' : 'none',
 };
