@@ -41,7 +41,7 @@ body {
 /*reactroot div*/
 #root > div {
   min-width: 34vw;
-  max-width: 500px;
+  max-width: 1200px;
   padding: 3vh 0 12vh 0;
 
   /*center based on vw to prevent content jump when vertical scroll bar show/hide
@@ -90,7 +90,7 @@ a {
   border-bottom: 1px dotted rgb(0, 168, 0);
 }
 
-.extended-link:hover > span, .extended-link:active > span {
+a:hover > span, a:active > span {
   border-bottom: 1px solid rgb(0, 168, 0);
   color: black;
 }
