@@ -6,33 +6,25 @@ import 'whatwg-fetch';
 export default class BlogPost extends Component {
     constructor(props) {
         super(props);
-       const post = posts.reduce((x, p) => {
+        const post = posts.reduce((x, p) => {
             if (p.slug === this.props.route.path) {
                 return p;
             }
             return x;
         });
-       this.state = { input: null, post };
+        this.state = { input: null, post };
         fetch(`/posts/${post.post_number}.md`)
             .then(response => response.text())
-            .then(input => this.setState({input }));
+            .then(input => this.setState({ input }));
     }
 
     render() {
-        if (this.state.input) {
-            return (
-                <div>
-                    <h2>{this.state.post.title}</h2>
-                    <ReactMarkdown source={this.state.input} />,
-                </div>
-            )
-        }
-
         return (
             <div>
                 <h2>{this.state.post.title}</h2>
-                Loading...
+                <h4>{this.state.post.date}</h4>
+                {this.state.input ? <ReactMarkdown source={this.state.input} /> : 'Loading...'}
             </div>
-        )
+        );
     }
 }
