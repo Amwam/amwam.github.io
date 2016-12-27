@@ -9,6 +9,7 @@ import PageNotFound from './components/PageNotFound';
 import Contact from './components/Contact';
 import About from './components/About';
 import Blog from './components/Blog';
+import Status from './components/Status';
 import BlogPost from './components/BlogPost';
 import {posts} from './blog_posts';
 
@@ -18,6 +19,7 @@ const routes = (
 
     <Route path="contact" mapMenuTitle="Contact" component={Contact} />
     <Route path="about" mapMenuTitle="About" component={About} />
+    <Route path="status" mapMenuTitle="Status" component={Status} />
       <Route key="blog" path="blog" mapMenuTitle="Blog" component={Blog} >
       {posts.map(post => (
           <Route key={post.slug} path={`${post.slug}`} mapMenuTitle={post.title} component={BlogPost} />
