@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link as RouterLink } from 'react-router';
-import BurgerMenu from 'react-burger-menu';
 import Radium from 'radium';
+import Sidebar from 'react-sidebar';
 
 let Link = Radium(RouterLink);
 
@@ -20,47 +20,17 @@ const linkStyle = {
     marginLef: 'auto',
     marginRight: 'auto',
     textAlign: 'center',
+    marginBottom: 20,
 };
 
-const bmStyles = {
-    bmBurgerButton: {
-        position: 'fixed',
-        width: '36px',
-        height: '30px',
-        left: '36px',
-        top: '36px'
-    },
-    bmBurgerBars: {
-        background: '#000000'
-    },
-    bmCrossButton: {
-        height: '24px',
-        width: '24px'
-    },
-    bmCross: {
-        background: '#ffffff'
-    },
-    bmMenu: {
-        background: '#ffffff',
-        padding: '2.5em 1.5em 0',
-        fontSize: '1.15em',
-        width: 150,
-    },
-    bmMorphShape: {
-        fill: '#ffffff'
-    },
-    bmItemList: {
-        color: '#b8b7ad',
-        padding: '0.8em'
-    },
-    bmOverlay: {
-        background: 'rgba(0, 0, 0, 0.3)'
-    },
-    bmMenuWrap: {
-        position: 'float',
-        float:'left',
-    },
+const contentHeaderMenuLink = {
+    textDecoration: 'none',
+    color: 'black',
+    padding: 10,
+    fontSize: 40,
 };
+
+const sidebarStyles = { sidebar: { width: 150 }, overlay: {width:150, backgroundColor: 'white'} }
 
 export default class Navigation extends Component {
 
@@ -68,46 +38,76 @@ export default class Navigation extends Component {
         super(props);
         this.state = {
             side: 'right',
-            showMenu: window.innerWidth > 650,
+            docked: window.innerWidth > 650,
+            sidebarOpen: false,
         };
 
         window.addEventListener('resize', (e) => {
-            this.setState({showMenu: e.currentTarget.innerWidth > 650})
+            this.setState({ docked: e.currentTarget.innerWidth > 650 })
 
-            })
+        })
 
     }
 
+    onSetSidebarOpen = (open) => {
+        this.setState({ sidebarOpen: open });
+    };
+
+    toggleOpen = () => {
+        this.setState({ sidebarOpen: !this.state.sidebarOpen });
+    };
+
+    closeSidebar= () => {
+        this.setState({sidebarOpen: false})
+    };
+
     render() {
-        const Menu = BurgerMenu['push'];
+        const contentHeader = (
+            <span>
+        {!this.state.docked &&
+        <a onClick={this.toggleOpen} href="#" style={contentHeaderMenuLink}>=</a>}
+      </span>
+        );
+
+        const sidebarContent = (<div>
+            <a onClick={this.closeSidebar} href='#' style={{float:'right', marginTop:'-20px'}}>X</a>
+            <img
+                style={selfStyle}
+                src="https://secure.gravatar.com/avatar/8fc4b5f17beaf8893a97c896f68ba084?s=200"
+                alt="Me (Amit)" />
+            <br />
+            <div style={linkStyle}>
+                <Link onClick={this.closeSidebar} to="/" className="menu-item">
+                    <strong>Home</strong>
+                </Link>
+            </div>
+            <div style={linkStyle}>
+                <Link onClick={this.closeSidebar} to="/about" className='menu-item'>
+                    <strong>About</strong>
+                </Link>
+            </div>
+            <div style={linkStyle}>
+                <Link onClick={this.closeSidebar} to="/blog" className='menu-item'>
+                    <strong>Blog</strong>
+                </Link>
+            </div>
+            <div style={linkStyle}>
+                <Link onClick={this.closeSidebar} to="/contact" className='menu-item'>
+                    <strong>Contact</strong>
+                </Link>
+            </div>
+        </div>);
 
         return (
-            <Menu
-                width={150}
-                id={'push'}
-                pageWrapId={'content'}
-                outerContainerId={'outer-container'}
-                noOverlay
-                isOpen={this.state.showMenu}
-                styles={bmStyles}>
-                    <img
-                        style={selfStyle}
-                        src="https://secure.gravatar.com/avatar/8fc4b5f17beaf8893a97c896f68ba084?s=200"
-                        alt="Me (Amit)" />
-                    <Link to="/" className="menu-item" style={linkStyle}>
-                        <strong>Home</strong>
-                    </Link>
-                    <Link to="/about" className='menu-item' style={linkStyle}>
-                        <strong>About</strong>
-                    </Link>
-                    <Link to="/blog" className='menu-item' style={linkStyle}>
-                        <strong>Blog</strong>
-                    </Link>
-                    <Link to="/contact" className='menu-item' style={linkStyle}>
-                        <strong>Contact</strong>
-                    </Link>
-
-            </Menu>
+            <Sidebar sidebar={sidebarContent}
+                     open={this.state.sidebarOpen}
+                     docked={this.state.docked}
+                     onSetOpen={this.onSetSidebarOpen}
+                     styles={sidebarStyles}
+                     shadow={false}>
+                {contentHeader}
+                {this.props.children}
+            </Sidebar>
         );
     }
 }

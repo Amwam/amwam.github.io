@@ -32,7 +32,7 @@ function App({ children, routes }) {
 
     return (
         <div id='outer-container'>
-            <Navigation />
+            <Navigation >
             <main id='content'
                   style={{ display: 'flex', flexDirection: 'row', height: '100%', padding: 10 }}>
                 <div style={{ flex: 1, height: '100%', marginTop:50, float:'left'}}>
@@ -43,6 +43,7 @@ function App({ children, routes }) {
                     </div>
                 </div>
             </main>
+            </Navigation>
         </div>
     );
 }
