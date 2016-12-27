@@ -69,8 +69,12 @@ export default class Navigation extends Component {
       </span>
         );
 
+        const closeButton = (
+            <a onClick={this.closeSidebar} href='#' style={{float:'right', marginTop:'-10px'}}>X</a>
+        );
+
         const sidebarContent = (<div>
-            <a onClick={this.closeSidebar} href='#' style={{float:'right', marginTop:'-20px'}}>X</a>
+            {!this.state.docked ? closeButton : null}
             <img
                 style={selfStyle}
                 src="https://secure.gravatar.com/avatar/8fc4b5f17beaf8893a97c896f68ba084?s=200"
