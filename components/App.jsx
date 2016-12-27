@@ -31,15 +31,18 @@ function App({ children, routes }) {
     }
 
     return (
-        <div style={{display: 'flex', flexDirection:'row', paddingTop: 50}}>
-            <div style={{paddingRight: 25, borderRight: 'lightgrey solid 1px'}}><Navigation /></div>
-            <div style={{flex:1, paddingLeft: 25}}>
-                <h1>AMWAM - Amit Shah</h1>
-                <h4>Agile Software Developer, based in London.</h4>
-                <div>
-                    {children}
+        <div id='outer-container'>
+            <Navigation />
+            <main id='content'
+                  style={{ display: 'flex', flexDirection: 'row', height: '100%', padding: 10 }}>
+                <div style={{ flex: 1, height: '100%', marginTop:50, float:'left'}}>
+                    <h1>AMWAM - Amit Shah</h1>
+                    <h4>Agile Software Developer, based in London.</h4>
+                    <div>
+                        {children}
+                    </div>
                 </div>
-            </div>
+            </main>
         </div>
     );
 }

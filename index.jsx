@@ -28,10 +28,24 @@ const routes = (
   </Route>
 );
 
-render(
-  <Router
-    history={browserHistory}
-    routes={routes}
-  />,
-  document.getElementById('root')
-);
+const root = document.getElementById('root')
+
+// if (global.__DEV__) {
+//     console.log('here')
+  const RedBox = require('redbox-react').default
+  try {
+    render(<Router history={browserHistory} routes={routes} />, root)
+  } catch (e) {
+    render(<RedBox error={e} />, root)
+  }
+// } else {
+//     console.log('not here')
+//     render(<Router history={browserHistory} routes={routes} />, root)
+// }
+// render(
+//   <Router
+//     history={browserHistory}
+//     routes={routes}
+//   />,
+//   document.getElementById('root')
+// );
