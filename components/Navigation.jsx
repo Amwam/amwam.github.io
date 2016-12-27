@@ -108,6 +108,7 @@ export default class Navigation extends Component {
                      docked={this.state.docked}
                      onSetOpen={this.onSetSidebarOpen}
                      styles={sidebarStyles}
+                     touch={false}
                      shadow={false}>
                 {contentHeader}
                 {this.props.children}
