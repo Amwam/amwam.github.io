@@ -20,6 +20,10 @@ export default {
     },
     resolve: {
         extensions: ['', '.js', '.jsx'],
+ alias: {
+            'react': 'preact-compat',
+            'react-dom': 'preact-compat'
+        },
     },
     plugins: (() => {
         if (process.argv.indexOf('-p') !== -1) {
