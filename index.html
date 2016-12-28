@@ -25,8 +25,6 @@
     <meta name="theme-color" content="#000000">
     <!-- end favicon -->
 
-    <link rel="stylesheet" href="/styles/app.css">
-
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
 
@@ -72,7 +70,23 @@
         <div>This site requires Javascript to run (sorry)</div>
     </div>
     <div id="root"></div>
+    <noscript id="deferred-styles">
+      <link rel="stylesheet" type="text/css" href="/styles/app.css"/>
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
     <!-- single page app in bundle.js -->
-    <script src="/__build__/bundle.js"></script>
+    <script async src="/__build__/bundle.js"></script>
   </body>
 </html>
