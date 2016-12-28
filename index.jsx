@@ -37,6 +37,7 @@ const root = document.getElementById('root')
   const RedBox = require('redbox-react').default
   try {
     render(<Router history={browserHistory} routes={routes} />, root)
+    document.getElementById('prerender').remove(); //remove the prerender text
   } catch (e) {
     render(<RedBox error={e} />, root)
   }
