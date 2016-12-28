@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link as RouterLink } from 'react-router';
 import Radium from 'radium';
 import Sidebar from 'react-sidebar';
+import imageData from './gravatarImage';
 
 let Link = Radium(RouterLink);
 
@@ -77,7 +78,7 @@ export default class Navigation extends Component {
             {!this.state.docked ? closeButton : null}
             <img
                 style={selfStyle}
-                src="https://secure.gravatar.com/avatar/8fc4b5f17beaf8893a97c896f68ba084?s=200"
+                src={imageData}
                 alt="Me (Amit)" />
             <br />
             <div style={linkStyle}>
