@@ -109,14 +109,15 @@ code {
 #root > div > div > div > div {
   margin: 3vh 0;
 }
+
 .social-contact {
+    max-width: 100px;
     width: 100%;
 }
 
 .social .sub-text-social {
     color: #808080;
     text-align: center;
-
 }
 
 pre {
