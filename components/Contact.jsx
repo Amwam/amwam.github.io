@@ -42,7 +42,7 @@ const contacts = [
 export default class Contact extends Component {
     render() {
         return (
-            <div style={{display: 'flex', flexWrap:'wrap'}}>
+            <div style={{display: 'flex', flexWrap:'wrap', flexDirection: 'column'}}>
                 {contacts.map(c => (<ContactIcon key={c.subtext} {...c} />))}
            </div>
         )
