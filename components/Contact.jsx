@@ -32,7 +32,7 @@ const contacts = [
     },
 
     {
-        href: "mailto:amit.amwam+website@gmail.com",
+        href: "mailto:amit+website@amwam.me",
         image: "mail.png",
         subtext: "Email",
     },
