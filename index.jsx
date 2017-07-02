@@ -14,19 +14,18 @@ import BlogPost from './components/BlogPost';
 import {posts} from './blog_posts';
 
 const routes = (
-  <Route path="/" mapMenuTitle="Home" component={App}>
-    <IndexRoute component={Home} />
+  <Route key="root" path="/" mapMenuTitle="Home" component={App}>
+    <IndexRoute key="index" component={Home} />
 
-    <Route path="contact" mapMenuTitle="Contact" component={Contact} />
-    <Route path="about" mapMenuTitle="About" component={About} />
-    <Route path="status" mapMenuTitle="Status" component={Status} />
+    <Route key="contact" path="contact" mapMenuTitle="Contact" component={Contact} />
+    <Route key="about" path="about" mapMenuTitle="About" component={About} />
+    <Route key="status" path="status" mapMenuTitle="Status" component={Status} />
       <Route key="blog" path="blog" mapMenuTitle="Blog" component={Blog} >
       {posts.map(post => (
           <Route key={post.slug} path={`${post.slug}`} mapMenuTitle={post.title} component={BlogPost} />
       ))}
       </Route>
-    <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
-
+    <Route key="404" path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
   </Route>
 );
 
