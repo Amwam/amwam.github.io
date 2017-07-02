@@ -73,7 +73,7 @@ export const posts = [
         "title": "Using React with Web Components",
         "date": "02/07/2017",
         "post_number": 10,
-        "published": false,
+        "published": true,
         "slug": "react-web-components",
         "tags": ["javascript", "react"]
     }
