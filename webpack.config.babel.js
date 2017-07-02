@@ -1,5 +1,8 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 import webpack from 'webpack';
+import UglifyEsPlugin from 'uglify-es-webpack-plugin';
+
+const isProduction  = process.env.NODE_ENV === 'production';
 
 export default {
   context: __dirname,
@@ -25,23 +28,19 @@ export default {
     extensions: ['.js', '.jsx'],
   },
   plugins: (() => {
-    if (process.argv.indexOf('-p') !== -1) {
+    if (isProduction) {
       return [
         new webpack.DefinePlugin({
           'process.env': {
             NODE_ENV: JSON.stringify('production'),
           },
         }),
-        new webpack.optimize.UglifyJsPlugin({
-          output: {
-            comments: false,
-          },
-        }),
+        new UglifyEsPlugin(),
       ];
     }
     return [];
   })(),
-  devtool: process.argv.indexOf('-p') === -1 ? 'eval-source-map' : 'none',
+  devtool: isProduction ? 'none': 'eval-source-map',
   devServer: {
     port: 3500,
     historyApiFallback: {
