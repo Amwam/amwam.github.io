@@ -12,7 +12,8 @@ const languages = [
   },
   {
     name: 'Objective-C',
-    link: 'https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html',
+    link:
+      'https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html',
   },
   {
     name: 'Swift',
@@ -59,7 +60,8 @@ const tools = [
   },
   {
     name: 'Core Data',
-    link: 'https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CoreData/cdProgrammingGuide.html',
+    link:
+      'https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CoreData/cdProgrammingGuide.html',
   },
   {
     name: 'IntelliJ IDEA/PyCharm',
@@ -112,12 +114,11 @@ export default class About extends Component {
     return (
       <div>
         <div>
-          I graduated from the University of Warwick with a 1st in
-          Computer Science (MEng) in July of 2013.
-          Since then I have worked at BSkyB as a Software Developer, and am currently
-          employed by WeGotPOP.
-          During my degree I also worked as a freelancer, specialising as
-          an iOS developer.
+          I graduated from the University of Warwick with a 1st in Computer
+          Science (MEng) in July of 2013. Since then I have worked at BSkyB as a
+          Software Developer, and am currently employed by WeGotPOP. During my
+          degree I also worked as a freelancer, specialising as an iOS
+          developer.
         </div>
         <hr />
         <div className="row">
@@ -126,10 +127,9 @@ export default class About extends Component {
           </div>
           <div className="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
             <em>
-              I regularly work with a variety of languages, and am always
-              look to learn new ones.
-              That said the following I would consider my main languages
-              in which I am proficient
+              I regularly work with a variety of languages, and am always look
+              to learn new ones. That said the following I would consider my
+              main languages in which I am proficient
             </em>
           </div>
           <ProductList products={languages} />
@@ -141,14 +141,12 @@ export default class About extends Component {
           </div>
           <div className="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
             <em>
-              Again, I regularly work with many different tools and
-              platforms, but the following is a selection of a few that
-              come to mind
+              Again, I regularly work with many different tools and platforms,
+              but the following is a selection of a few that come to mind
             </em>
           </div>
           <ProductList products={tools} />
         </div>
-
       </div>
     );
   }
