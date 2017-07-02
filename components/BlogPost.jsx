@@ -1,7 +1,23 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { posts } from '../blog_posts';
+import Prism from 'prismjs';
 import 'whatwg-fetch';
+import { posts } from '../blog_posts';
+
+function CodeBlock(props) {
+  const language = props.language || 'javascript';
+  var html = Prism.highlight(
+    props.literal,
+    Prism.languages[language.toLowerCase()]
+  );
+  var cls = 'language-' + props.language;
+
+  return (
+    <pre className={cls}>
+      <code dangerouslySetInnerHTML={{ __html: html }} className={cls} />
+    </pre>
+  );
+}
 
 export default class BlogPost extends Component {
   constructor(props) {
@@ -28,7 +44,10 @@ export default class BlogPost extends Component {
           {this.state.post.date}
         </h4>
         {this.state.input
-          ? <ReactMarkdown source={this.state.input} />
+          ? <ReactMarkdown
+              source={this.state.input}
+              renderers={{ CodeBlock }}
+            />
           : 'Loading...'}
       </div>
     );

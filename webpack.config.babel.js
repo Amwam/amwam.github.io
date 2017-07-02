@@ -5,7 +5,7 @@ export default {
   context: __dirname,
   entry: './index.jsx',
   output: {
-    path: `${__dirname}/__build__`,
+    path: `${__dirname}/`,
     filename: 'bundle.js',
   },
   module: {
@@ -14,6 +14,10 @@ export default {
       {
         test: /\.json$/,
         loader: 'json-loader',
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader',
       },
     ],
   },
@@ -38,4 +42,10 @@ export default {
     return [];
   })(),
   devtool: process.argv.indexOf('-p') === -1 ? 'eval-source-map' : 'none',
+  devServer: {
+    port: 3500,
+    historyApiFallback: {
+      index: 'index.html'
+    }
+  }
 };
