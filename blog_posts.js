@@ -68,6 +68,14 @@ export const posts = [
         "published": true,
         "slug": "js-import-sort",
         "tags": ["javascript"]
+    },
+      {
+        "title": "Using React with Web Components",
+        "date": "02/07/2017",
+        "post_number": 10,
+        "published": false,
+        "slug": "react-web-components",
+        "tags": ["javascript", "react"]
     }
 ]
 
