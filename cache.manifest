@@ -1,0 +1,9 @@
+CACHE MANIFEST
+# 2017-07-03
+
+CACHE:
+index.html
+bundle.js
+
+NETWORK:
+*
