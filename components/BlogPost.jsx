@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 import Prism from 'prismjs';
-import 'whatwg-fetch';
 import { posts } from '../blog_posts';
 
 function CodeBlock(props) {

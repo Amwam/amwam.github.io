@@ -4,7 +4,7 @@
   "description": "Single Page Apps for GitHub Pages",
   "scripts": {
     "start": "webpack-dev-server --watch --hot --progress --inline",
-    "build": "webpack -p",
+    "build": "NODE_ENV='production' ./node_modules/.bin/webpack --progress",
     "eslint": "eslint **/*.jsx",
     "prettier": "prettier --single-quote --trailing-comma es5 --semi --write \"components/**/*.{js,jsx}\""
   },
@@ -28,8 +28,7 @@
     "react-router": "^3.0.2",
     "react-sidebar": "^2.3.2",
     "uglify-es-webpack-plugin": "^0.0.2",
-    "webpack-dev-server": "^2.5.0",
-    "whatwg-fetch": "^2.0.3"
+    "webpack-dev-server": "^2.5.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

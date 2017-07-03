@@ -43,11 +43,18 @@ function App({ children, routes }) {
           }}
         >
           <div
-            style={{ flex: 1, height: '100%', marginTop: 50, marginLeft:'2%', marginRight:'2%', float: 'left' }}
+            style={{
+              flex: 1,
+              height: '100%',
+              marginTop: 50,
+              marginLeft: '2%',
+              marginRight: '2%',
+              float: 'left',
+            }}
           >
             <h1>AMWAM - Amit Shah</h1>
             <h4>Agile Software Developer, based in London.</h4>
-            <div style={{paddingBottom: '100px'}}>
+            <div style={{ paddingBottom: '100px' }}>
               {children}
             </div>
           </div>
