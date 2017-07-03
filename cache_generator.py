@@ -4,7 +4,7 @@ import os
 
 output = [
     "CACHE MANIFEST",
-    "{}:{}".format(date.today().isoformat(), uuid.uuid4()),
+    "#{}:{}".format(date.today().isoformat(), uuid.uuid4()),
 "",
     "CACHE:",
     "index.html",
