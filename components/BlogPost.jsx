@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import ReactMarkdown from 'react-markdown';
-import Prism from 'prismjs';
-import { posts } from '../blog_posts';
+import React, { Component } from "react";
+import ReactMarkdown from "react-markdown";
+import Prism from "prismjs";
+import { posts } from "../blog_posts";
 
 function CodeBlock(props) {
-  const language = props.language || 'javascript';
+  const language = props.language || "javascript";
   var html = Prism.highlight(
     props.literal,
     Prism.languages[language.toLowerCase()]
   );
-  var cls = 'language-' + props.language;
+  var cls = "language-" + props.language;
 
   return (
     <pre className={cls}>
@@ -47,7 +47,7 @@ export default class BlogPost extends Component {
               source={this.state.input}
               renderers={{ CodeBlock }}
             />
-          : 'Loading...'}
+          : "Loading..."}
       </div>
     );
   }

@@ -1,7 +1,7 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes } from "react";
 
 const propTypes = {
-  location: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired
 };
 
 function PageNotFound({ location }) {

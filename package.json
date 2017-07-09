@@ -6,7 +6,7 @@
     "start": "webpack-dev-server --watch --hot --progress --inline",
     "build": "NODE_ENV='production' ./node_modules/.bin/webpack --progress",
     "eslint": "eslint **/*.jsx",
-    "prettier": "prettier --single-quote --trailing-comma es5 --semi --write \"components/**/*.{js,jsx}\""
+    "prettier": "prettier --write \"components/**/*.{js,jsx}\""
   },
   "repository": {
     "type": "git",

@@ -1,20 +1,20 @@
-import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
-import Navigation from './Navigation';
+import React, { PropTypes } from "react";
+import { Link } from "react-router";
+import Navigation from "./Navigation";
 
 const propTypes = {
   children: PropTypes.element.isRequired,
-  routes: PropTypes.array.isRequired,
+  routes: PropTypes.array.isRequired
 };
 
 function App({ children, routes }) {
   function generateMapMenu() {
-    let path = '';
+    let path = "";
 
     function nextPath(route) {
       path +=
-        (path.slice(-1) === '/' ? '' : '/') +
-        (route.path === '/' ? '' : route.path);
+        (path.slice(-1) === "/" ? "" : "/") +
+        (route.path === "/" ? "" : route.path);
       return path;
     }
 
@@ -25,7 +25,7 @@ function App({ children, routes }) {
           <Link to={nextPath(route)}>
             {route.mapMenuTitle}
           </Link>
-          {index + 1 < array.length && ' / '}
+          {index + 1 < array.length && " / "}
         </span>
       );
   }
@@ -36,25 +36,27 @@ function App({ children, routes }) {
         <main
           id="content"
           style={{
-            display: 'flex',
-            flexDirection: 'row',
-            height: '100%',
-            padding: 10,
+            display: "flex",
+            flexDirection: "row",
+            height: "100%",
+            padding: 10
           }}
         >
           <div
             style={{
               flex: 1,
-              height: '100%',
+              height: "100%",
               marginTop: 50,
-              marginLeft: '2%',
-              marginRight: '2%',
-              float: 'left',
+              marginLeft: "2%",
+              marginRight: "2%",
+              float: "left",
+              width: "90%",
+              maxWidth: "750px"
             }}
           >
             <h1>AMWAM - Amit Shah</h1>
             <h4>Agile Software Developer, based in London.</h4>
-            <div style={{ paddingBottom: '100px' }}>
+            <div style={{ paddingBottom: "100px" }}>
               {children}
             </div>
           </div>

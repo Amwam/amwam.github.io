@@ -1,112 +1,112 @@
-import React, { Component } from 'react';
-import ProductList from './ProductList';
+import React, { Component } from "react";
+import ProductList from "./ProductList";
 
 const languages = [
   {
-    name: 'Python',
-    link: 'http://www.python.org/',
+    name: "Python",
+    link: "http://www.python.org/"
   },
   {
-    name: 'Java',
-    link: 'http://www.java.com/',
+    name: "Java",
+    link: "http://www.java.com/"
   },
   {
-    name: 'Objective-C',
+    name: "Objective-C",
     link:
-      'https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html',
+      "https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html"
   },
   {
-    name: 'Swift',
-    link: 'https://swift.org/',
+    name: "Swift",
+    link: "https://swift.org/"
   },
   {
-    name: 'Scala',
-    link: 'http://www.scala-lang.org/',
+    name: "Scala",
+    link: "http://www.scala-lang.org/"
   },
   {
-    name: 'Javascript',
-    link: 'http://jquery.com/',
+    name: "Javascript",
+    link: "http://jquery.com/"
   },
   {
-    name: 'HTML/CSS',
-    link: 'http://www.w3.org/',
+    name: "HTML/CSS",
+    link: "http://www.w3.org/"
   },
   {
-    name: 'Groovy/Grails',
-    link: 'http://www.grails.org/',
+    name: "Groovy/Grails",
+    link: "http://www.grails.org/"
   },
   {
-    name: 'C',
-    link: 'http://en.wikipedia.org/wiki/C_(programming_language)',
+    name: "C",
+    link: "http://en.wikipedia.org/wiki/C_(programming_language)"
   },
   {
-    name: 'Bash/Shell (Unix)',
-    link: 'http://en.wikipedia.org/wiki/Bash_(Unix_shell)',
-  },
+    name: "Bash/Shell (Unix)",
+    link: "http://en.wikipedia.org/wiki/Bash_(Unix_shell)"
+  }
 ];
 
 const tools = [
   {
-    name: 'Git',
-    link: 'http://git-scm.com/',
+    name: "Git",
+    link: "http://git-scm.com/"
   },
   {
-    name: 'iOS',
-    link: 'https://developer.apple.com/technologies/ios/',
+    name: "iOS",
+    link: "https://developer.apple.com/technologies/ios/"
   },
   {
-    name: 'Docker',
-    link: 'https://www.docker.com/',
+    name: "Docker",
+    link: "https://www.docker.com/"
   },
   {
-    name: 'Core Data',
+    name: "Core Data",
     link:
-      'https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CoreData/cdProgrammingGuide.html',
+      "https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CoreData/cdProgrammingGuide.html"
   },
   {
-    name: 'IntelliJ IDEA/PyCharm',
-    link: 'http://www.jetbrains.com/idea/',
+    name: "IntelliJ IDEA/PyCharm",
+    link: "http://www.jetbrains.com/idea/"
   },
   {
-    name: 'Jenkins',
-    link: 'https://jenkins-ci.org/',
+    name: "Jenkins",
+    link: "https://jenkins-ci.org/"
   },
   {
-    name: 'Amazon Web Services (AWS)',
-    link: 'http://aws.amazon.com/',
+    name: "Amazon Web Services (AWS)",
+    link: "http://aws.amazon.com/"
   },
   {
-    name: 'Node.js',
-    link: 'https://nodejs.org',
+    name: "Node.js",
+    link: "https://nodejs.org"
   },
   {
-    name: 'Xcode',
-    link: 'https://developer.apple.com/xcode/',
+    name: "Xcode",
+    link: "https://developer.apple.com/xcode/"
   },
   {
-    name: 'MongoDB',
-    link: 'https://www.mongodb.org/',
+    name: "MongoDB",
+    link: "https://www.mongodb.org/"
   },
   {
-    name: 'PostgreSQL',
-    link: 'http://www.postgresql.org/',
+    name: "PostgreSQL",
+    link: "http://www.postgresql.org/"
   },
   {
-    name: 'SQL (MySQL, SQLite)',
-    link: 'http://en.wikipedia.org/wiki/SQL',
+    name: "SQL (MySQL, SQLite)",
+    link: "http://en.wikipedia.org/wiki/SQL"
   },
   {
-    name: 'VIM',
-    link: 'http://vim.org',
+    name: "VIM",
+    link: "http://vim.org"
   },
   {
-    name: 'Unix',
-    link: 'http://www.unix.org/',
+    name: "Unix",
+    link: "http://www.unix.org/"
   },
   {
-    name: 'OS X',
-    link: 'http://www.apple.com/osx/',
-  },
+    name: "OS X",
+    link: "http://www.apple.com/osx/"
+  }
 ];
 
 export default class About extends Component {
