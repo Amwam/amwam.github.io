@@ -15,7 +15,7 @@
   "author": "Rafael Pedicini <code@rafrex.com>",
   "license": "MIT",
   "dependencies": {
-    "babel-preset-env": "^1.5.2",
+    "babel-preset-env": "^1.6.0",
     "current-input": "^1.1.0",
     "json-loader": "^0.5.4",
     "prettier": "^1.5.2",
@@ -28,7 +28,7 @@
     "react-router": "^3.0.2",
     "react-sidebar": "^2.3.2",
     "uglify-es-webpack-plugin": "^0.0.2",
-    "webpack-dev-server": "^2.5.0"
+    "webpack-dev-server": "^2.5.1"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -38,11 +38,11 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "eslint": "^3.19.0",
-    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.1.0",
     "live-server": "^1.2.0",
-    "redbox-react": "^1.4.2",
-    "webpack": "^3.0.0"
+    "redbox-react": "^1.4.3",
+    "webpack": "^3.1.0"
   }
 }
