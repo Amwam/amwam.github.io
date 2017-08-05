@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import ReactMarkdown from "react-markdown";
 import Prism from "prismjs";
+import { Link } from "react-router";
 import { posts } from "../blog_posts";
+import BlogPostTag from "./BlogPostTag.js";
 
 function CodeBlock(props) {
   const language = props.language || "javascript";
@@ -42,6 +44,12 @@ export default class BlogPost extends Component {
         <h4>
           {this.state.post.date}
         </h4>
+
+        {(this.state.post.tags || []).map(tag =>
+          <span>
+            <BlogPostTag tag={tag} />{" "}
+          </span>
+        )}
         {this.state.input
           ? <ReactMarkdown
               source={this.state.input}
