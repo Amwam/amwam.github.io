@@ -3,7 +3,7 @@ import ContactIcon from "./ContactIcon";
 
 const contacts = [
   {
-    href: "https://facebook.com",
+    href: "https://facebook.com/amwam",
     image: "facebook.png",
     subtext: "Facebook"
   },
