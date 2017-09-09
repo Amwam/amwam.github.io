@@ -20,14 +20,12 @@ function App({ children, routes }) {
 
     return routes
       .filter(route => route.mapMenuTitle)
-      .map((route, index, array) =>
+      .map((route, index, array) => (
         <span key={index}>
-          <Link to={nextPath(route)}>
-            {route.mapMenuTitle}
-          </Link>
+          <Link to={nextPath(route)}>{route.mapMenuTitle}</Link>
           {index + 1 < array.length && " / "}
         </span>
-      );
+      ));
   }
 
   return (
@@ -56,9 +54,7 @@ function App({ children, routes }) {
           >
             <h1>AMWAM - Amit Shah</h1>
             <h4>Agile Software Developer, based in London.</h4>
-            <div style={{ paddingBottom: "100px" }}>
-              {children}
-            </div>
+            <div style={{ paddingBottom: "100px" }}>{children}</div>
           </div>
         </main>
       </Navigation>

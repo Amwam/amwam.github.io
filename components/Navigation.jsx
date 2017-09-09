@@ -65,10 +65,11 @@ export default class Navigation extends Component {
   render() {
     const contentHeader = (
       <span>
-        {!this.state.docked &&
+        {!this.state.docked && (
           <a onClick={this.toggleOpen} href="#" style={contentHeaderMenuLink}>
             =
-          </a>}
+          </a>
+        )}
       </span>
     );
 

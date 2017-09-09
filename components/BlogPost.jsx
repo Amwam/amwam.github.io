@@ -38,24 +38,19 @@ export default class BlogPost extends Component {
   render() {
     return (
       <div>
-        <h2>
-          {this.state.post.title}
-        </h2>
-        <h4>
-          {this.state.post.date}
-        </h4>
+        <h2>{this.state.post.title}</h2>
+        <h4>{this.state.post.date}</h4>
 
-        {(this.state.post.tags || []).map(tag =>
+        {(this.state.post.tags || []).map(tag => (
           <span>
             <BlogPostTag tag={tag} />{" "}
           </span>
+        ))}
+        {this.state.input ? (
+          <ReactMarkdown source={this.state.input} renderers={{ CodeBlock }} />
+        ) : (
+          "Loading..."
         )}
-        {this.state.input
-          ? <ReactMarkdown
-              source={this.state.input}
-              renderers={{ CodeBlock }}
-            />
-          : "Loading..."}
       </div>
     );
   }
