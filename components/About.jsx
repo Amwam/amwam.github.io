@@ -127,7 +127,7 @@ export default class About extends Component {
           </div>
           <div className="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
             <em>
-              I regularly work with a variety of languages, and am always look
+              I regularly work with a variety of languages, and am always looking
               to learn new ones. That said the following I would consider my
               main languages in which I am proficient
             </em>
