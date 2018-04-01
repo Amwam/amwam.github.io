@@ -7,7 +7,7 @@
     "build": "NODE_ENV='production' ./node_modules/.bin/webpack --progress",
     "eslint": "eslint **/*.jsx",
     "prettier": "prettier --write \"components/**/*.{js,jsx}\"",
-    "precommit": "yarn prettier && yarn eslint && yarn build"
+    "precommit": "yarn prettier && yarn eslint && python cache_generator.py && yarn build"
   },
   "repository": {
     "type": "git",
