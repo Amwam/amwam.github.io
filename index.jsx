@@ -31,5 +31,5 @@ const routes = (
 
 const root = document.getElementById('root')
 
-render(<Router history={browserHistory} routes={routes} />, root)
+render(<React.StrictMode><Router history={browserHistory} routes={routes} /></React.StrictMode>, root)
 document.getElementById('prerender').remove(); //remove the prerender text

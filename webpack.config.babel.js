@@ -12,12 +12,8 @@ export default {
     filename: "bundle.js"
   },
   module: {
-    loaders: [
+    rules: [
       { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader" },
-      {
-        test: /\.json$/,
-        loader: "json-loader"
-      },
       {
         test: /\.css$/,
         loader: "css-loader"
@@ -35,12 +31,12 @@ export default {
             NODE_ENV: JSON.stringify("production")
           }
         }),
-        new UglifyEsPlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),
       ];
     }
     return [];
   })(),
+  mode: isProduction ? 'production': 'development',
   devtool: isProduction ? "source-map" : "eval-source-map",
   devServer: {
     port: 3500,

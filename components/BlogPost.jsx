@@ -42,7 +42,7 @@ export default class BlogPost extends Component {
         <h4>{this.state.post.date}</h4>
 
         {(this.state.post.tags || []).map(tag => (
-          <span>
+          <span key={tag}>
             <BlogPostTag tag={tag} />{" "}
           </span>
         ))}
