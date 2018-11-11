@@ -20,8 +20,8 @@ export default class Blog extends Component {
         <div style={{ flex: "1 1 50%" }}>
           {posts
             .filter(post => post.published)
-            .filter(
-              post => (tagQuery ? (post.tags || []).includes(tagQuery) : true)
+            .filter(post =>
+              tagQuery ? (post.tags || []).includes(tagQuery) : true
             )
             .sort((a, b) => {
               return b.post_number - a.post_number;

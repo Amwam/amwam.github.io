@@ -43,7 +43,9 @@ export default class Contact extends Component {
       <div
         style={{ display: "flex", flexWrap: "wrap", flexDirection: "column" }}
       >
-        {contacts.map(c => <ContactIcon key={c.subtext} {...c} />)}
+        {contacts.map(c => (
+          <ContactIcon key={c.subtext} {...c} />
+        ))}
       </div>
     );
   }

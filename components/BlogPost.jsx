@@ -30,7 +30,7 @@ export default class BlogPost extends Component {
       return x;
     });
     this.state = { input: null, post };
-    fetch(`/posts/${post.post_number}.md`)
+    fetch(`https://amwam.me/posts/${post.post_number}.md`)
       .then(response => response.text())
       .then(input => this.setState({ input }));
   }

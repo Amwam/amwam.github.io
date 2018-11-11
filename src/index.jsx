@@ -3,15 +3,15 @@ import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import 'current-input';
 
-import App from './components/App';
-import Home from './components/Home';
-import PageNotFound from './components/PageNotFound';
-import Contact from './components/Contact';
-import About from './components/About';
-import Blog from './components/Blog';
-import Status from './components/Status';
-import BlogPost from './components/BlogPost';
-import {posts} from './blog_posts';
+import App from '../components/App';
+import Home from '../components/Home';
+import PageNotFound from '../components/PageNotFound';
+import Contact from '../components/Contact';
+import About from '../components/About';
+import Blog from '../components/Blog';
+import Status from '../components/Status';
+import BlogPost from '../components/BlogPost';
+import {posts} from '../blog_posts';
 
 const routes = (
   <Route key="root" path="/" mapMenuTitle="Home" component={App}>
