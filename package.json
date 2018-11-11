@@ -6,7 +6,7 @@
     "start": "parcel src/index.html --no-cache",
     "build": "parcel build src/index.html --out-dir ./",
     "eslint": "eslint **/*.jsx",
-    "prettier": "prettier --write \"{components,src}/**/*.{ts,tsx,js,jsx}\"",
+    "prettier": "prettier --write \"{components,src}/**/*.{ts,tsx,js,jsx,css,html}\"",
     "precommit": "yarn prettier && python cleanup.py && yarn build && git add src.* index.html"
   },
   "repository": {
