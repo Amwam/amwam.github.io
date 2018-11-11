@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import * as React from "react";
 import { Link as RouterLink } from "react-router";
 import Radium from "radium";
-import Sidebar from "react-sidebar";
+import Sidebar, { SidebarStyles } from "react-sidebar";
 import imageData from "./gravatarImage";
 
 let Link = Radium(RouterLink);
 
-const selfStyle = {
+const selfStyle: React.CSSProperties = {
   width: 100,
   height: 100,
   borderRadius: "50%",
@@ -16,27 +16,30 @@ const selfStyle = {
   marginBottom: 20
 };
 
-const linkStyle = {
+const linkStyle: React.CSSProperties = {
   flex: 1,
-  marginLef: "auto",
+  marginLeft: "auto",
   marginRight: "auto",
   textAlign: "center",
   marginBottom: 20
 };
 
-const contentHeaderMenuLink = {
+const contentHeaderMenuLink: React.CSSProperties = {
   textDecoration: "none",
   color: "black",
   padding: 10,
   fontSize: 40
 };
 
-const sidebarStyles = {
-  sidebar: { width: 150 },
-  overlay: { width: 150, backgroundColor: "white" }
+const sidebarStyles: SidebarStyles = {
+  sidebar: { width: "150px" },
+  overlay: { width: "150px", backgroundColor: "white" }
 };
 
-export default class Navigation extends Component {
+export default class Navigation extends React.PureComponent<
+  { children: React.ReactNode },
+  { side: "right" | "left"; docked: boolean; sidebarOpen: boolean }
+> {
   constructor(props) {
     super(props);
     this.state = {
@@ -46,7 +49,7 @@ export default class Navigation extends Component {
     };
 
     window.addEventListener("resize", e => {
-      this.setState({ docked: e.currentTarget.innerWidth > 650 });
+      this.setState({ docked: (e.currentTarget as Window).innerWidth > 650 });
     });
   }
 

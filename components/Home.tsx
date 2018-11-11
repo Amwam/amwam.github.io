@@ -1,7 +1,7 @@
-import React from "react";
+import * as React from "react";
 
 const liStyle = { paddingBottom: 10 };
-function Home() {
+export default function Home() {
   return (
     <div>
       <div>
@@ -24,5 +24,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

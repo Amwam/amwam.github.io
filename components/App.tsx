@@ -1,14 +1,20 @@
-import React from "react";
+import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router";
 import Navigation from "./Navigation";
 
-const propTypes = {
-  children: PropTypes.element.isRequired,
-  routes: PropTypes.array.isRequired
-};
+interface IRoute {
+  mapMenuTitle: string;
+  path: string;
+}
 
-function App({ children, routes }) {
+export default function App({
+  children,
+  routes
+}: {
+  children: React.ReactChildren;
+  routes: IRoute[];
+}) {
   function generateMapMenu() {
     let path = "";
 
@@ -62,7 +68,3 @@ function App({ children, routes }) {
     </div>
   );
 }
-
-App.propTypes = propTypes;
-
-export default App;

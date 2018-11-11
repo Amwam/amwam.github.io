@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import * as React from "react";
 import ReactMarkdown from "react-markdown";
 import Prism from "prismjs";
 import { Link } from "react-router";
 import { posts } from "../blog_posts";
-import BlogPostTag from "./BlogPostTag.js";
+import BlogPostTag from "./BlogPostTag";
 
-function CodeBlock(props) {
+function CodeBlock(props: { language: string; literal: string }) {
   const language = props.language || "javascript";
   var html = Prism.highlight(
     props.literal,
@@ -20,7 +20,18 @@ function CodeBlock(props) {
   );
 }
 
-export default class BlogPost extends Component {
+interface IBlogPostProps {
+  route: { path: string };
+}
+interface IBlogPostState {
+  post: { title: string; date: string; tags?: string[] };
+  input: string | undefined;
+}
+
+export default class BlogPost extends React.Component<
+  IBlogPostProps,
+  IBlogPostState
+> {
   constructor(props) {
     super(props);
     const post = posts.reduce((x, p) => {
@@ -29,7 +40,7 @@ export default class BlogPost extends Component {
       }
       return x;
     });
-    this.state = { input: null, post };
+    this.state = { input: undefined, post };
     fetch(`https://amwam.me/posts/${post.post_number}.md`)
       .then(response => response.text())
       .then(input => this.setState({ input }));

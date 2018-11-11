@@ -1,14 +1,16 @@
-import React, { Component } from "react";
+import * as React from "react";
 import { Link } from "react-router";
 import { posts } from "../blog_posts";
 import BlogPostTag from "./BlogPostTag";
 
-let tags = new Set();
-posts.forEach(post => (post.tags || []).forEach(tag => tags.add(tag)));
+const tagsSet = new Set();
+posts.forEach(post => (post.tags || []).forEach(tag => tagsSet.add(tag)));
 
-tags = [...tags];
+const tags = Array.from(tagsSet);
 
-export default class Blog extends Component {
+export default class Blog extends React.PureComponent<{
+  location: { query: { tag: string } };
+}> {
   render() {
     if (this.props.children) {
       return this.props.children;

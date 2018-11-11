@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import ContactIcon from "./ContactIcon";
 
 const contacts = [
@@ -37,16 +37,12 @@ const contacts = [
   }
 ];
 
-export default class Contact extends Component {
-  render() {
-    return (
-      <div
-        style={{ display: "flex", flexWrap: "wrap", flexDirection: "column" }}
-      >
-        {contacts.map(c => (
-          <ContactIcon key={c.subtext} {...c} />
-        ))}
-      </div>
-    );
-  }
+export default function Contact() {
+  return (
+    <div style={{ display: "flex", flexWrap: "wrap", flexDirection: "column" }}>
+      {contacts.map(c => (
+        <ContactIcon key={c.subtext} {...c} />
+      ))}
+    </div>
+  );
 }
