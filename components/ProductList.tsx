@@ -1,4 +1,5 @@
 import * as React from "react";
+
 interface IProduct {
   name: string;
   link: string;
@@ -13,7 +14,7 @@ export default function ProductList(props: IProps) {
       {props.products.map(product => (
         <div
           key={product.name}
-          style={{ flex: 1, padding: 5, flexBasis: "25%" }}
+          className="col-md-4 col-sm-6 col-xs-12 product-item"
         >
           <strong>
             <a href={product.link}>{product.name}</a>

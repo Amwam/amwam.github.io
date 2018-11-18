@@ -6,127 +6,98 @@ import imageData from "./gravatarImage";
 
 let Link = Radium(RouterLink);
 
-const selfStyle: React.CSSProperties = {
-  width: 100,
-  height: 100,
-  borderRadius: "50%",
-  display: "block",
-  marginLeft: "auto",
-  marginRight: "auto",
-  marginBottom: 20
-};
-
-const linkStyle: React.CSSProperties = {
-  flex: 1,
-  marginLeft: "auto",
-  marginRight: "auto",
-  textAlign: "center",
-  marginBottom: 20
-};
-
-const contentHeaderMenuLink: React.CSSProperties = {
-  textDecoration: "none",
-  color: "black",
-  padding: 10,
-  fontSize: 40
-};
-
 const sidebarStyles: SidebarStyles = {
   sidebar: { width: "150px" },
   overlay: { width: "150px", backgroundColor: "white" }
 };
 
-export default class Navigation extends React.PureComponent<
-  { children: React.ReactNode },
-  { side: "right" | "left"; docked: boolean; sidebarOpen: boolean }
-> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      side: "right",
-      docked: window.innerWidth > 650,
-      sidebarOpen: false
-    };
+function CloseButton({ close }) {
+  return (
+    <a onClick={close} href="#" style={{ float: "right", marginTop: "-10px" }}>
+      X
+    </a>
+  );
+}
 
-    window.addEventListener("resize", e => {
-      this.setState({ docked: (e.currentTarget as Window).innerWidth > 650 });
-    });
+export default function Navigation(props: { children: React.ReactNode }) {
+  const [side, changeSide] = React.useState("right");
+  const docked = useDocked();
+  const [sidebarOpen, changeSidebarOpen] = React.useState(false);
+
+  function closeSidebar() {
+    changeSidebarOpen(false);
   }
 
-  onSetSidebarOpen = open => {
-    this.setState({ sidebarOpen: open });
-  };
+  function toggleOpen() {
+    changeSidebarOpen(!sidebarOpen);
+  }
 
-  toggleOpen = () => {
-    this.setState({ sidebarOpen: !this.state.sidebarOpen });
-  };
+  const sidebarContent = (
+    <div>
+      {!docked ? <CloseButton close={closeSidebar} /> : null}
+      <img id="nav-display-picture" src={imageData} alt="Me (Amit)" />
+      <br />
+      <div className="nav-link">
+        <Link onClick={closeSidebar} to="/" className="menu-item">
+          <strong>Home</strong>
+        </Link>
+      </div>
+      <div className="nav-link">
+        <Link onClick={closeSidebar} to="/about" className="menu-item">
+          <strong>About</strong>
+        </Link>
+      </div>
+      <div className="nav-link">
+        <Link onClick={closeSidebar} to="/blog" className="menu-item">
+          <strong>Blog</strong>
+        </Link>
+      </div>
+      <div className="nav-link">
+        <Link onClick={closeSidebar} to="/contact" className="menu-item">
+          <strong>Contact</strong>
+        </Link>
+      </div>
+    </div>
+  );
 
-  closeSidebar = () => {
-    this.setState({ sidebarOpen: false });
-  };
-
-  render() {
-    const contentHeader = (
+  return (
+    <Sidebar
+      sidebar={sidebarContent}
+      open={sidebarOpen}
+      docked={docked}
+      onSetOpen={changeSidebarOpen}
+      styles={sidebarStyles}
+      touch={false}
+      shadow={false}
+    >
       <span>
-        {!this.state.docked && (
-          <a onClick={this.toggleOpen} href="#" style={contentHeaderMenuLink}>
+        {!docked ? (
+          <a onClick={toggleOpen} href="#" className="content-header-menu-link">
             =
           </a>
+        ) : (
+          undefined
         )}
       </span>
-    );
+      {props.children}
+    </Sidebar>
+  );
+}
 
-    const closeButton = (
-      <a
-        onClick={this.closeSidebar}
-        href="#"
-        style={{ float: "right", marginTop: "-10px" }}
-      >
-        X
-      </a>
-    );
+function useDocked() {
+  const [docked, changeDocked] = React.useState(window.innerWidth > 650);
+  React.useEffect(
+    () => {
+      function update(e) {
+        changeDocked((e.currentTarget as Window).innerWidth > 650);
+      }
 
-    const sidebarContent = (
-      <div>
-        {!this.state.docked ? closeButton : null}
-        <img style={selfStyle} src={imageData} alt="Me (Amit)" />
-        <br />
-        <div style={linkStyle}>
-          <Link onClick={this.closeSidebar} to="/" className="menu-item">
-            <strong>Home</strong>
-          </Link>
-        </div>
-        <div style={linkStyle}>
-          <Link onClick={this.closeSidebar} to="/about" className="menu-item">
-            <strong>About</strong>
-          </Link>
-        </div>
-        <div style={linkStyle}>
-          <Link onClick={this.closeSidebar} to="/blog" className="menu-item">
-            <strong>Blog</strong>
-          </Link>
-        </div>
-        <div style={linkStyle}>
-          <Link onClick={this.closeSidebar} to="/contact" className="menu-item">
-            <strong>Contact</strong>
-          </Link>
-        </div>
-      </div>
-    );
-
-    return (
-      <Sidebar
-        sidebar={sidebarContent}
-        open={this.state.sidebarOpen}
-        docked={this.state.docked}
-        onSetOpen={this.onSetSidebarOpen}
-        styles={sidebarStyles}
-        touch={false}
-        shadow={false}
-      >
-        {contentHeader}
-        {this.props.children}
-      </Sidebar>
-    );
-  }
+      window.addEventListener("resize", update);
+      return () => {
+        window.removeEventListener("resize", update);
+      };
+    },
+    [docked]
+  );
+  return docked;
 }

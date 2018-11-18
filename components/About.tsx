@@ -7,6 +7,18 @@ const languages = [
     link: "http://www.python.org/"
   },
   {
+    name: "Typescript",
+    link: "http://www.typescriptlang.org/"
+  },
+  {
+    name: "Javascript",
+    link: "http://jquery.com/"
+  },
+  {
+    name: "Swift",
+    link: "https://swift.org/"
+  },
+  {
     name: "Java",
     link: "http://www.java.com/"
   },
@@ -16,28 +28,8 @@ const languages = [
       "https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html"
   },
   {
-    name: "Swift",
-    link: "https://swift.org/"
-  },
-  {
-    name: "Scala",
-    link: "http://www.scala-lang.org/"
-  },
-  {
-    name: "Javascript",
-    link: "http://jquery.com/"
-  },
-  {
     name: "HTML/CSS",
     link: "http://www.w3.org/"
-  },
-  {
-    name: "Groovy/Grails",
-    link: "http://www.grails.org/"
-  },
-  {
-    name: "C",
-    link: "http://en.wikipedia.org/wiki/C_(programming_language)"
   },
   {
     name: "Bash/Shell (Unix)",
@@ -59,11 +51,6 @@ const tools = [
     link: "https://www.docker.com/"
   },
   {
-    name: "Core Data",
-    link:
-      "https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CoreData/cdProgrammingGuide.html"
-  },
-  {
     name: "IntelliJ IDEA/PyCharm",
     link: "http://www.jetbrains.com/idea/"
   },
@@ -82,10 +69,6 @@ const tools = [
   {
     name: "Xcode",
     link: "https://developer.apple.com/xcode/"
-  },
-  {
-    name: "MongoDB",
-    link: "https://www.mongodb.org/"
   },
   {
     name: "PostgreSQL",
