@@ -1,4 +1,4 @@
 @import "./main.css";
 @import "./dark.css";
-@import "../components/App.css";
-@import "./flexboxgrid.min.css";
+@import "./App.css";
+@import "./flexboxgrid.css";
