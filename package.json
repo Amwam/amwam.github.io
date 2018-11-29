@@ -5,7 +5,7 @@
   "scripts": {
     "start": "parcel src/index.html --no-cache",
     "build": "parcel build src/index.html --out-dir ./",
-    "eslint": "eslint **/*.jsx",
+    "tslint": "tslint --config tslint.json 'src/**/*.ts*'",
     "prettier": "prettier --write \"{components,src}/**/*.{ts,tsx,js,jsx,css,html}\"",
     "precommit": "yarn prettier && python cleanup.py && yarn build && git add src.* index.html"
   },
@@ -38,6 +38,9 @@
     "babel-preset-react": "^6.24.1",
     "live-server": "^1.2.0",
     "redbox-react": "^1.5.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.1.6"
   }
 }

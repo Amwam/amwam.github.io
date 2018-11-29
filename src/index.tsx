@@ -1,17 +1,17 @@
+import "current-input";
 import * as React from "react";
 import { render } from "react-dom";
-import { Router, Route, IndexRoute, browserHistory } from "react-router";
-import "current-input";
+import { browserHistory, IndexRoute, Route, Router } from "react-router";
 
+import { posts } from "../blog_posts";
+import About from "../components/About";
 import App from "../components/App";
+import Blog from "../components/Blog";
+import BlogPost from "../components/BlogPost";
+import Contact from "../components/Contact";
 import Home from "../components/Home";
 import PageNotFound from "../components/PageNotFound";
-import Contact from "../components/Contact";
-import About from "../components/About";
-import Blog from "../components/Blog";
 import Status from "../components/Status";
-import BlogPost from "../components/BlogPost";
-import { posts } from "../blog_posts";
 
 const routes = (
   <Route key="root" path="/" mapMenuTitle="Home" component={App}>
@@ -57,4 +57,4 @@ render(
   </React.StrictMode>,
   root
 );
-document.getElementById("prerender").remove(); //remove the prerender text
+document.getElementById("prerender").remove(); // remove the prerender text
