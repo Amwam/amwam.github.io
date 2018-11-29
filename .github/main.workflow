@@ -2,6 +2,7 @@ workflow "New workflow" {
   on = "push"
   resolves = ["Lint"]
 }
+
 action "Build" {
   uses = "actions/npm@master"
   args = "install"
@@ -10,5 +11,5 @@ action "Build" {
 action "Lint" {
   needs = "Build"
   uses = "actions/npm@master"
-  args = "tslint"
+  args = "run tslint"
 }
