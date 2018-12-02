@@ -58,7 +58,11 @@ export default class BlogPost extends React.Component<
           </span>
         ))}
         {this.state.input ? (
-          <ReactMarkdown source={this.state.input} renderers={{ CodeBlock }} />
+          <ReactMarkdown
+            source={this.state.input}
+            renderers={{ CodeBlock }}
+            escapeHtml={false}
+          />
         ) : (
           "Loading..."
         )}
