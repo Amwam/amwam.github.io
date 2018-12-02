@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import { Link } from "react-router";
 import Navigation from "./Navigation";
 
@@ -38,27 +37,8 @@ export default function App({
   return (
     <div id="outer-container">
       <Navigation>
-        <main
-          id="content"
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            height: "100%",
-            padding: 10
-          }}
-        >
-          <div
-            style={{
-              flex: 1,
-              height: "100%",
-              marginTop: 50,
-              marginLeft: "2%",
-              marginRight: "2%",
-              float: "left",
-              width: "90%",
-              maxWidth: "750px"
-            }}
-          >
+        <main id="content">
+          <div className="title">
             <h1>AMWAM - Amit Shah</h1>
             <h4>Agile Software Developer, based in London.</h4>
             <div style={{ paddingBottom: "100px" }}>{children}</div>

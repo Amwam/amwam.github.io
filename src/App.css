@@ -26,3 +26,25 @@
   margin-right: auto;
   margin-bottom: 20px;
 }
+
+#content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding: 10px;
+}
+
+.title {
+  flex: 1;
+  height: 100%;
+  margin-top: 50;
+  margin-left: 2%;
+  margin-right: 2%;
+  float: left;
+  width: 90%;
+  max-width: 750px;
+}
+
+.title > h4 {
+  display: inline;
+}
