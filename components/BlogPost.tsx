@@ -62,6 +62,7 @@ export default class BlogPost extends React.Component<
             source={this.state.input}
             renderers={{ CodeBlock }}
             escapeHtml={false}
+            skipHtml={true}
           />
         ) : (
           "Loading..."
