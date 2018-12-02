@@ -7,7 +7,7 @@ export default function Home() {
       <div>
         <ul>
           <li style={liStyle}>
-            Software Engineer @{" "}
+            Lead Developer @{" "}
             <a href="https://www.wegotpop.com/">We Got POP Ltd</a>
           </li>
           <li style={liStyle}>
