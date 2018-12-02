@@ -1,17 +1,17 @@
+import Prism from "prismjs";
 import * as React from "react";
 import ReactMarkdown from "react-markdown";
-import Prism from "prismjs";
 import { Link } from "react-router";
 import { posts } from "../blog_posts";
 import BlogPostTag from "./BlogPostTag";
 
 function CodeBlock(props: { language: string; literal: string }) {
   const language = props.language || "javascript";
-  var html = Prism.highlight(
+  const html = Prism.highlight(
     props.literal,
     Prism.languages[language.toLowerCase()]
   );
-  var cls = "language-" + props.language;
+  const cls = `language-${props.language}`;
 
   return (
     <pre className={cls}>
@@ -46,7 +46,7 @@ export default class BlogPost extends React.Component<
       .then(input => this.setState({ input }));
   }
 
-  render() {
+  public render() {
     return (
       <div>
         <h2>{this.state.post.title}</h2>
