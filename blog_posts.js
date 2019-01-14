@@ -84,6 +84,14 @@ export const posts = [
     published: true,
     slug: "flow-to-typesript",
     tags: ["javascript", "typescript"]
+  },
+  {
+    title: "Preventing double clicks in React",
+    date: "14/01/2019",
+    post_number: 12,
+    published: true,
+    slug: "preventing-double-clicks-in-react",
+    tags: ["javascript", "react"]
   }
 ];
 
