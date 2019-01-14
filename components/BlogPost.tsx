@@ -50,7 +50,7 @@ export default class BlogPost extends React.Component<
     return (
       <div>
         <h2>{this.state.post.title}</h2>
-        <h4>{this.state.post.date}</h4>
+        <h4>{new Date(this.state.post.date).toLocaleDateString()}</h4>
 
         {(this.state.post.tags || []).map(tag => (
           <span key={tag}>
