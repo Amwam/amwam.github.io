@@ -1,17 +1,17 @@
-import "current-input";
-import * as React from "react";
-import { render } from "react-dom";
-import { browserHistory, IndexRoute, Route, Router } from "react-router";
+import 'current-input';
+import * as React from 'react';
+import { render } from 'react-dom';
+import { browserHistory, IndexRoute, Route, Router } from 'react-router';
 
-import { posts } from "../blog_posts";
-import About from "../components/About";
-import App from "../components/App";
-import Blog from "../components/Blog";
-import BlogPost from "../components/BlogPost";
-import Contact from "../components/Contact";
-import Home from "../components/Home";
-import PageNotFound from "../components/PageNotFound";
-import Status from "../components/Status";
+import { posts } from '../blog_posts';
+import About from '../components/About';
+import App from '../components/App';
+import Blog from '../components/Blog';
+import BlogPost from '../components/BlogPost';
+import Contact from '../components/Contact';
+import Home from '../components/Home';
+import PageNotFound from '../components/PageNotFound';
+import Status from '../components/Status';
 
 const routes = (
   <Route key="root" path="/" mapMenuTitle="Home" component={App}>
@@ -49,12 +49,12 @@ const routes = (
   </Route>
 );
 
-const root = document.getElementById("root");
+const root = document.getElementById('root');
 
 render(
   <React.StrictMode>
     <Router history={browserHistory} routes={routes} />
   </React.StrictMode>,
-  root
+  root,
 );
-document.getElementById("prerender").remove(); // remove the prerender text
+document.getElementById('prerender').remove(); // remove the prerender text

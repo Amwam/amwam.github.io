@@ -4,8 +4,8 @@
     color: white;
   }
 
-  code[class*="language-"],
-  pre[class*="language-"] {
+  code[class*='language-'],
+  pre[class*='language-'] {
     color: white !important;
     text-shadow: none !important;
   }

@@ -1,26 +1,26 @@
-import * as React from "react";
-import { Link as RouterLink } from "react-router";
-import Radium from "radium";
-import Sidebar, { SidebarStyles } from "react-sidebar";
-import imageData from "./gravatarImage";
+import * as React from 'react';
+import { Link as RouterLink } from 'react-router';
+import Radium from 'radium';
+import Sidebar, { SidebarStyles } from 'react-sidebar';
+import imageData from './gravatarImage';
 
 let Link = Radium(RouterLink);
 
 const sidebarStyles: SidebarStyles = {
-  sidebar: { width: "150px" },
-  overlay: { width: "150px", backgroundColor: "white" }
+  sidebar: { width: '150px' },
+  overlay: { width: '150px', backgroundColor: 'white' },
 };
 
 function CloseButton({ close }) {
   return (
-    <a onClick={close} href="#" style={{ float: "right", marginTop: "-10px" }}>
+    <a onClick={close} href="#" style={{ float: 'right', marginTop: '-10px' }}>
       X
     </a>
   );
 }
 
 export default function Navigation(props: { children: React.ReactNode }) {
-  const [side, changeSide] = React.useState("right");
+  const [side, changeSide] = React.useState('right');
   const docked = useDocked();
   const [sidebarOpen, changeSidebarOpen] = React.useState(false);
 
@@ -92,12 +92,12 @@ function useDocked() {
         changeDocked((e.currentTarget as Window).innerWidth > 650);
       }
 
-      window.addEventListener("resize", update);
+      window.addEventListener('resize', update);
       return () => {
-        window.removeEventListener("resize", update);
+        window.removeEventListener('resize', update);
       };
     },
-    [docked]
+    [docked],
   );
   return docked;
 }

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 interface IProduct {
   name: string;
@@ -10,7 +10,7 @@ interface IProps {
 }
 export default function ProductList(props: IProps) {
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
       {props.products.map(product => (
         <div
           key={product.name}

@@ -1,15 +1,15 @@
-import Prism from "prismjs";
-import * as React from "react";
-import ReactMarkdown from "react-markdown";
-import { Link } from "react-router";
-import { posts } from "../blog_posts";
-import BlogPostTag from "./BlogPostTag";
+import Prism from 'prismjs';
+import * as React from 'react';
+import ReactMarkdown from 'react-markdown';
+import { Link } from 'react-router';
+import { posts } from '../blog_posts';
+import BlogPostTag from './BlogPostTag';
 
 function CodeBlock(props: { language: string; literal: string }) {
-  const language = props.language || "javascript";
+  const language = props.language || 'javascript';
   const html = Prism.highlight(
     props.literal,
-    Prism.languages[language.toLowerCase()]
+    Prism.languages[language.toLowerCase()],
   );
   const cls = `language-${props.language}`;
 
@@ -54,7 +54,7 @@ export default class BlogPost extends React.Component<
 
         {(this.state.post.tags || []).map(tag => (
           <span key={tag}>
-            <BlogPostTag tag={tag} />{" "}
+            <BlogPostTag tag={tag} />{' '}
           </span>
         ))}
         {this.state.input ? (
@@ -65,7 +65,7 @@ export default class BlogPost extends React.Component<
             skipHtml={true}
           />
         ) : (
-          "Loading..."
+          'Loading...'
         )}
       </div>
     );

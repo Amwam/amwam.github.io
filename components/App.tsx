@@ -1,6 +1,6 @@
-import * as React from "react";
-import { Link } from "react-router";
-import Navigation from "./Navigation";
+import * as React from 'react';
+import { Link } from 'react-router';
+import Navigation from './Navigation';
 
 interface IRoute {
   mapMenuTitle: string;
@@ -9,18 +9,18 @@ interface IRoute {
 
 export default function App({
   children,
-  routes
+  routes,
 }: {
   children: React.ReactChildren;
   routes: IRoute[];
 }) {
   function generateMapMenu() {
-    let path = "";
+    let path = '';
 
     function nextPath(route) {
       path +=
-        (path.slice(-1) === "/" ? "" : "/") +
-        (route.path === "/" ? "" : route.path);
+        (path.slice(-1) === '/' ? '' : '/') +
+        (route.path === '/' ? '' : route.path);
       return path;
     }
 
@@ -29,7 +29,7 @@ export default function App({
       .map((route, index, array) => (
         <span key={index}>
           <Link to={nextPath(route)}>{route.mapMenuTitle}</Link>
-          {index + 1 < array.length && " / "}
+          {index + 1 < array.length && ' / '}
         </span>
       ));
   }
@@ -41,7 +41,7 @@ export default function App({
           <div className="title">
             <h1>AMWAM - Amit Shah</h1>
             <h4>Agile Software Developer, based in London.</h4>
-            <div style={{ paddingBottom: "100px" }}>{children}</div>
+            <div style={{ paddingBottom: '100px' }}>{children}</div>
           </div>
         </main>
       </Navigation>

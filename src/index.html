@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="./index.css" />
     <style>
       /* Prism theme */
-      code[class*="language-"],
-      pre[class*="language-"] {
+      code[class*='language-'],
+      pre[class*='language-'] {
         color: #000;
         background: 0 0;
         text-shadow: 0 1px #fff;
-        font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
         text-align: left;
         white-space: pre;
         word-spacing: normal;
@@ -32,36 +32,36 @@
         -ms-hyphens: none;
         hyphens: none;
       }
-      code[class*="language-"] ::-moz-selection,
-      code[class*="language-"]::-moz-selection,
-      pre[class*="language-"] ::-moz-selection,
-      pre[class*="language-"]::-moz-selection {
+      code[class*='language-'] ::-moz-selection,
+      code[class*='language-']::-moz-selection,
+      pre[class*='language-'] ::-moz-selection,
+      pre[class*='language-']::-moz-selection {
         text-shadow: none;
         background: #b3d4fc;
       }
-      code[class*="language-"] ::selection,
-      code[class*="language-"]::selection,
-      pre[class*="language-"] ::selection,
-      pre[class*="language-"]::selection {
+      code[class*='language-'] ::selection,
+      code[class*='language-']::selection,
+      pre[class*='language-'] ::selection,
+      pre[class*='language-']::selection {
         text-shadow: none;
         background: #b3d4fc;
       }
       @media print {
-        code[class*="language-"],
-        pre[class*="language-"] {
+        code[class*='language-'],
+        pre[class*='language-'] {
           text-shadow: none;
         }
       }
-      pre[class*="language-"] {
+      pre[class*='language-'] {
         padding: 1em;
         margin: 0.5em 0;
         overflow: auto;
       }
-      :not(pre) > code[class*="language-"],
-      pre[class*="language-"] {
+      :not(pre) > code[class*='language-'],
+      pre[class*='language-'] {
         background: #f5f2f0;
       }
-      :not(pre) > code[class*="language-"] {
+      :not(pre) > code[class*='language-'] {
         padding: 0.1em;
         border-radius: 0.3em;
         white-space: normal;
@@ -209,22 +209,22 @@
           var q = {};
           l.search
             .slice(1)
-            .split("&")
+            .split('&')
             .forEach(function(v) {
-              var a = v.split("=");
+              var a = v.split('=');
               q[a[0]] = a
                 .slice(1)
-                .join("=")
-                .replace(/~and~/g, "&");
+                .join('=')
+                .replace(/~and~/g, '&');
             });
           if (q.p !== undefined) {
             window.history.replaceState(
               null,
               null,
               l.pathname.slice(0, -1) +
-                (q.p || "") +
-                (q.q ? "?" + q.q : "") +
-                l.hash
+                (q.p || '') +
+                (q.q ? '?' + q.q : '') +
+                l.hash,
             );
           }
         }
