@@ -8,7 +8,7 @@
     "tslint": "tslint --config tslint.json 'src/**/*.ts*'",
     "prettier": "prettier --write \"{components,src}/**/*.{ts,tsx,js,jsx,css,html}\"",
     "prettier-check": "prettier --check \"{components,src}/**/*.{ts,tsx,js,jsx,css,html}\"",
-    "precommit": "yarn prettier && python cleanup.py && yarn build && git add src.* index.html"
+    "precommit": "yarn prettier && python cleanup.py && yarn build && git add ."
   },
   "repository": {
     "type": "git",
