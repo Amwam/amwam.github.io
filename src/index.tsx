@@ -57,4 +57,3 @@ render(
   </React.StrictMode>,
   root
 );
-document.getElementById('prerender').remove(); // remove the prerender text

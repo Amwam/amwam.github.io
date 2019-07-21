@@ -5,7 +5,7 @@ const blogURLs = blogPosts.map(post => `/blog/${post.slug}`);
 module.exports = {
   routes: ['/', '/about', '/blog', '/contact', ...blogURLs],
   rendererConfig: {
-    headless: false,
+    headless: true,
     renderAfterDocumentEvent: 'prerender-trigger',
   },
 };
