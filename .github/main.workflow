@@ -1,6 +1,10 @@
 workflow "New workflow" {
-  on = "push"
-  resolves = ["Lint"]
+  on       = "push"
+
+  resolves = [
+    "Lint",
+    "Prettier"
+  ]
 }
 
 action "Build" {
@@ -10,6 +14,12 @@ action "Build" {
 
 action "Lint" {
   needs = "Build"
-  uses = "actions/npm@master"
-  args = "run tslint"
+  uses  = "actions/npm@master"
+  args  = "run tslint"
+}
+
+action "Prettier" {
+  needs = "Build"
+  uses  = "actions/npm@master"
+  args  = "run prettier-check"
 }
