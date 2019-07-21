@@ -32,12 +32,15 @@ const contacts = [
 ];
 
 export default function Contact() {
+  React.useEffect(() => {
+    document.dispatchEvent(new Event('prerender-trigger'));
+  }, []);
   return (
     <div
       style={{
         display: 'flex',
-        flexWrap: 'wrap',
         flexDirection: 'column',
+        flexWrap: 'wrap',
       }}
     >
       {contacts.map(c => (

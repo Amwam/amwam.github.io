@@ -1,6 +1,0 @@
-{
-    "routes": ["/", "/about", "/blog", "/contact"],
-  "rendererConfig": {
-    "headless": false
-  }
-}

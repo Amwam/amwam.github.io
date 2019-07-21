@@ -2,6 +2,9 @@ import * as React from 'react';
 
 const liStyle = { paddingBottom: 10 };
 export default function Home() {
+  React.useEffect(() => {
+    document.dispatchEvent(new Event('prerender-trigger'));
+  }, []);
   return (
     <div>
       <div>

@@ -3,7 +3,7 @@ import * as React from 'react';
 import { render } from 'react-dom';
 import { browserHistory, IndexRoute, Route, Router } from 'react-router';
 
-import { posts } from '../blog_posts';
+import posts from '../blog_posts';
 import About from '../components/About';
 import App from '../components/App';
 import Blog from '../components/Blog';

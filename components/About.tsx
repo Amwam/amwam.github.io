@@ -93,6 +93,9 @@ const tools = [
 ];
 
 export default function About() {
+  React.useEffect(() => {
+    document.dispatchEvent(new Event('prerender-trigger'));
+  });
   return (
     <div>
       <div>

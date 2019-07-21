@@ -1,4 +1,4 @@
-export const posts = [
+const posts = [
   {
     title: 'My First post',
     date: '2014-07-05',
@@ -34,7 +34,7 @@ export const posts = [
     date: '2015-01-20',
     post_number: 4,
     published: true,
-    slug: 'update-jenkins-workflow-1.0.1',
+    slug: 'update-jenkins-workflow--1-0-1',
     tags: ['alfred', 'jenkins'],
   },
   {
@@ -58,7 +58,7 @@ export const posts = [
     date: '2016-05-15',
     post_number: 8,
     published: true,
-    slug: 'update-jenkins-wrokflow-1.3',
+    slug: 'update-jenkins-workkflow--1-3',
     tags: ['alfred', 'jenkins'],
   },
   {
@@ -103,4 +103,4 @@ export const posts = [
   },
 ];
 
-export default posts;
+module.exports = posts;

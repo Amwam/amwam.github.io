@@ -2,7 +2,7 @@ import Prism from 'prismjs';
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Link } from 'react-router';
-import { posts } from '../blog_posts';
+import posts from '../blog_posts';
 import BlogPostTag from './BlogPostTag';
 
 function CodeBlock(props: { language: string; literal: string }) {
@@ -23,51 +23,50 @@ function CodeBlock(props: { language: string; literal: string }) {
 interface IBlogPostProps {
   route: { path: string };
 }
-interface IBlogPostState {
-  post: { title: string; date: string; tags?: string[] };
-  input: string | undefined;
-}
 
-export default class BlogPost extends React.Component<
-  IBlogPostProps,
-  IBlogPostState
-> {
-  constructor(props) {
-    super(props);
-    const post = posts.reduce((x, p) => {
-      if (p.slug === this.props.route.path) {
-        return p;
-      }
-      return x;
-    });
-    this.state = { input: undefined, post };
+export default function BlogPost(props: IBlogPostProps) {
+  const [input, setInput] = React.useState(undefined);
+  const post = posts.reduce((x, p) => {
+    if (p.slug === props.route.path) {
+      return p;
+    }
+    return x;
+  });
+
+  React.useEffect(() => {
     fetch(`https://amwam.me/posts/${post.post_number}.md`)
       .then(response => response.text())
-      .then(input => this.setState({ input }));
-  }
+      .then(i => {
+        setInput(i);
+      });
+  }, []);
 
-  public render() {
-    return (
-      <div>
-        <h2>{this.state.post.title}</h2>
-        <h4>{new Date(this.state.post.date).toLocaleDateString()}</h4>
+  React.useEffect(() => {
+    if (input !== undefined) {
+      document.dispatchEvent(new Event('prerender-trigger'));
+    }
+  }, [input]);
 
-        {(this.state.post.tags || []).map(tag => (
-          <span key={tag}>
-            <BlogPostTag tag={tag} />{' '}
-          </span>
-        ))}
-        {this.state.input ? (
-          <ReactMarkdown
-            source={this.state.input}
-            renderers={{ CodeBlock }}
-            escapeHtml={false}
-            skipHtml={true}
-          />
-        ) : (
-          'Loading...'
-        )}
-      </div>
-    );
-  }
+  return (
+    <div>
+      <h2>{post.title}</h2>
+      <h4>{new Date(post.date).toLocaleDateString()}</h4>
+
+      {(post.tags || []).map(tag => (
+        <span key={tag}>
+          <BlogPostTag tag={tag} />{' '}
+        </span>
+      ))}
+      {input ? (
+        <ReactMarkdown
+          source={input}
+          renderers={{ CodeBlock }}
+          escapeHtml={false}
+          skipHtml={true}
+        />
+      ) : (
+        'Loading...'
+      )}
+    </div>
+  );
 }

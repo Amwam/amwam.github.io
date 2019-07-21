@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router';
-import { posts } from '../blog_posts';
+import posts from '../blog_posts';
 import BlogPostTag from './BlogPostTag';
 
 const tagsSet = new Set();
@@ -11,6 +11,11 @@ const tags = Array.from(tagsSet);
 export default class Blog extends React.PureComponent<{
   location: { query: { tag: string } };
 }> {
+  componentDidMount() {
+    if (!this.props.children) {
+      document.dispatchEvent(new Event('prerender-trigger'));
+    }
+  }
   render() {
     if (this.props.children) {
       return this.props.children;
