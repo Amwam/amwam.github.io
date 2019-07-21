@@ -23,7 +23,7 @@ export default class Blog extends React.PureComponent<{
           {posts
             .filter(post => post.published)
             .filter(post =>
-              tagQuery ? (post.tags || []).includes(tagQuery) : true,
+              tagQuery ? (post.tags || []).includes(tagQuery) : true
             )
             .sort((a, b) => {
               return b.post_number - a.post_number;
