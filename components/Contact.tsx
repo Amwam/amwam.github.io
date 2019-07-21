@@ -39,7 +39,13 @@ const contacts = [
 
 export default function Contact() {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'column' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+      }}
+    >
       {contacts.map(c => (
         <ContactIcon key={c.subtext} {...c} />
       ))}

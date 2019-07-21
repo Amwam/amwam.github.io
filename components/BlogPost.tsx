@@ -9,7 +9,7 @@ function CodeBlock(props: { language: string; literal: string }) {
   const language = props.language || 'javascript';
   const html = Prism.highlight(
     props.literal,
-    Prism.languages[language.toLowerCase()],
+    Prism.languages[language.toLowerCase()]
   );
   const cls = `language-${props.language}`;
 
