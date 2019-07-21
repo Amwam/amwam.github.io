@@ -86,18 +86,15 @@ export default function Navigation(props: { children: React.ReactNode }) {
 
 function useDocked() {
   const [docked, changeDocked] = React.useState(window.innerWidth > 650);
-  React.useEffect(
-    () => {
-      function update(e) {
-        changeDocked((e.currentTarget as Window).innerWidth > 650);
-      }
+  React.useEffect(() => {
+    function update(e) {
+      changeDocked((e.currentTarget as Window).innerWidth > 650);
+    }
 
-      window.addEventListener('resize', update);
-      return () => {
-        window.removeEventListener('resize', update);
-      };
-    },
-    [docked],
-  );
+    window.addEventListener('resize', update);
+    return () => {
+      window.removeEventListener('resize', update);
+    };
+  }, [docked]);
   return docked;
 }
