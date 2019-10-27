@@ -13,7 +13,11 @@ const sidebarStyles: SidebarStyles = {
 
 function CloseButton({ close }) {
   return (
-    <a onClick={close} href="#" style={{ float: 'right', marginTop: '-10px' }}>
+    <a
+      onClick={close}
+      href="#"
+      style={{ float: 'right', marginTop: '-20px', paddingRight: '1rem' }}
+    >
       X
     </a>
   );
@@ -69,6 +73,7 @@ export default function Navigation(props: { children: React.ReactNode }) {
       styles={sidebarStyles}
       touch={false}
       shadow={false}
+      sidebarClassName="navigation--sidebar"
     >
       <span>
         {!docked ? (

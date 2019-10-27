@@ -14,7 +14,10 @@
     background-color: black !important;
   }
 
-  .content-header-menu-link {
+  a.content-header-menu-link {
     color: var(--main-text-color);
+  }
+  .navigation--sidebar {
+    background-color: #000000cf;
   }
 }
