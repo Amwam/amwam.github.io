@@ -1,78 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0"?>
+<urlset>
   <url>
     <loc>https://amwam.me/</loc>
   </url>
-  <url>
-    <loc>https://amwam.me/</loc>
-  </url>
+</urlset>
+<urlset>
   <url>
     <loc>https://amwam.me/about/</loc>
   </url>
+</urlset>
+<urlset>
   <url>
     <loc>https://amwam.me/contact/</loc>
   </url>
+</urlset>
+<urlset>
   <url>
     <loc>https://amwam.me/blog/</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/?tag=typescript</loc>
+    <loc>https://amwam.me/blog?tag=git</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/?tag=python</loc>
+    <loc>https://amwam.me/blog?tag=alfred</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/?tag=jenkins</loc>
+    <loc>https://amwam.me/blog?tag=jenkins</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/?tag=react</loc>
+    <loc>https://amwam.me/blog?tag=vim</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/?tag=javascript</loc>
+    <loc>https://amwam.me/blog?tag=javascript</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/?tag=git</loc>
+    <loc>https://amwam.me/blog?tag=react</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/?tag=vim</loc>
+    <loc>https://amwam.me/blog?tag=typescript</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/?tag=alfred</loc>
+    <loc>https://amwam.me/blog?tag=python</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/my-vimrc/</loc>
+    <loc>https://amwam.me/blog/my-first-post</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/my-first-post/</loc>
+    <loc>https://amwam.me/blog/alfred-jenkins-workflow</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/alfred-jenkins-workflow/</loc>
+    <loc>https://amwam.me/blog/my-vimrc</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/maintaining-a-clean-git-history/</loc>
+    <loc>https://amwam.me/blog/update-jenkins-workflow--1-0-1</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/update-jenkins-workflow--1-0-1/</loc>
+    <loc>https://amwam.me/blog/git-push-to-deploy</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/react-web-components/</loc>
+    <loc>https://amwam.me/blog/maintaining-a-clean-git-history</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/git-push-to-deploy/</loc>
+    <loc>https://amwam.me/blog/update-jenkins-workkflow--1-3</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/update-jenkins-workkflow--1-3/</loc>
+    <loc>https://amwam.me/blog/js-import-sort</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/js-import-sort/</loc>
+    <loc>https://amwam.me/blog/react-web-components</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/flow-to-typesript/</loc>
+    <loc>https://amwam.me/blog/flow-to-typesript</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/react-in-python/</loc>
+    <loc>https://amwam.me/blog/preventing-double-clicks-in-react</loc>
   </url>
+</urlset>
+<urlset>
   <url>
-    <loc>https://amwam.me/blog/preventing-double-clicks-in-react/</loc>
+    <loc>https://amwam.me/blog/react-in-python</loc>
   </url>
 </urlset>
