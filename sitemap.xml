@@ -1,13 +1,78 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-  <loc>https://amwam.me/</loc>
-  <lastmod>2019-10-27T16:34:54+00:00</lastmod>
-</url>
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://amwam.me/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/about/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/contact/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/?tag=typescript</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/?tag=python</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/?tag=jenkins</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/?tag=react</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/?tag=javascript</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/?tag=git</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/?tag=vim</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/?tag=alfred</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/my-vimrc/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/my-first-post/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/alfred-jenkins-workflow/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/maintaining-a-clean-git-history/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/update-jenkins-workflow--1-0-1/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/react-web-components/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/git-push-to-deploy/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/update-jenkins-workkflow--1-3/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/js-import-sort/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/flow-to-typesript/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/react-in-python/</loc>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/preventing-double-clicks-in-react/</loc>
+  </url>
 </urlset>
