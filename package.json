@@ -4,7 +4,8 @@
   "description": "Single Page Apps for GitHub Pages",
   "scripts": {
     "start": "parcel src/index.html --no-cache",
-    "build": "parcel build src/index.html --out-dir ./",
+    "build": "parcel build src/index.html --out-dir ./ && yarn sitemap",
+    "sitemap": "node generate-sitemap.js",
     "tslint": "tslint --config tslint.json 'src/**/*.ts*'",
     "prettier": "prettier --write \"{components,src}/**/*.{ts,tsx,js,jsx,css,html}\"",
     "prettier-check": "prettier --check \"{components,src}/**/*.{ts,tsx,js,jsx,css,html}\"",
@@ -31,7 +32,8 @@
     "react-dom": "^16.8.6",
     "react-markdown": "^4.0.3",
     "react-router": "^3.0.2",
-    "react-sidebar": "^3.0.2"
+    "react-sidebar": "^3.0.2",
+    "xmlbuilder": "^13.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
