@@ -13,4 +13,8 @@
   pre {
     background-color: black !important;
   }
+
+  .content-header-menu-link {
+    color: var(--main-text-color);
+  }
 }
