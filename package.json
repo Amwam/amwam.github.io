@@ -4,7 +4,7 @@
   "description": "Single Page Apps for GitHub Pages",
   "scripts": {
     "start": "parcel src/index.html --no-cache",
-    "build": "parcel build src/index.html --out-dir ./ && yarn sitemap",
+    "build": "parcel build src/index.html --out-dir ./dist && yarn sitemap",
     "sitemap": "node generate-sitemap.js",
     "tslint": "tslint --config tslint.json 'src/**/*.ts*'",
     "prettier": "prettier --write \"{components,src}/**/*.{ts,tsx,js,jsx,css,html}\"",
