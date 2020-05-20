@@ -1,7 +1,7 @@
 import * as React from 'react';
 import ProductList from './ProductList';
 
-const languages = [
+const LANGUAGES = [
   {
     name: 'Python',
     link: 'http://www.python.org/',
@@ -37,7 +37,7 @@ const languages = [
   },
 ];
 
-const tools = [
+const TOOLS = [
   {
     name: 'Git',
     link: 'http://git-scm.com/',
@@ -101,8 +101,9 @@ export default function About() {
       <div>
         I graduated from the University of Warwick with a 1st in Computer
         Science (MEng) in July of 2013. Since then I have worked at BSkyB as a
-        Software Developer, and am currently employed by WeGotPOP. During my
-        degree I also worked as a freelancer, specialising as an iOS developer.
+        Software Developer, and am currently employed by WeGotPOP as Platform
+        Lead. During my degree I also worked as a freelancer, specialising as an
+        iOS developer.
       </div>
       <hr />
       <div className="row">
@@ -116,7 +117,7 @@ export default function About() {
             languages in which I am proficient
           </em>
         </div>
-        <ProductList products={languages} />
+        <ProductList products={LANGUAGES} />
       </div>
       <hr />
       <div className="row">
@@ -129,7 +130,7 @@ export default function About() {
             the following is a selection of a few that come to mind
           </em>
         </div>
-        <ProductList products={tools} />
+        <ProductList products={TOOLS} />
       </div>
     </div>
   );
