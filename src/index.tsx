@@ -31,7 +31,7 @@ const routes = (
       component={Status}
     />
     <Route key="blog" path="blog" mapMenuTitle="Blog" component={Blog}>
-      {posts.map(post => (
+      {posts.map((post) => (
         <Route
           key={post.slug}
           path={`${post.slug}`}

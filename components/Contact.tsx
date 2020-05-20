@@ -43,7 +43,7 @@ export default function Contact() {
         flexWrap: 'wrap',
       }}
     >
-      {contacts.map(c => (
+      {contacts.map((c) => (
         <ContactIcon key={c.subtext} {...c} />
       ))}
     </div>

@@ -4,7 +4,7 @@ import posts from '../blog_posts';
 import BlogPostTag from './BlogPostTag';
 
 const tagsSet = new Set();
-posts.forEach(post => (post.tags || []).forEach(tag => tagsSet.add(tag)));
+posts.forEach((post) => (post.tags || []).forEach((tag) => tagsSet.add(tag)));
 
 const tags = Array.from(tagsSet);
 
@@ -26,14 +26,14 @@ export default class Blog extends React.PureComponent<{
       <div style={{ display: 'flex' }}>
         <div style={{ flex: '1 1 50%' }}>
           {posts
-            .filter(post => post.published)
-            .filter(post =>
+            .filter((post) => post.published)
+            .filter((post) =>
               tagQuery ? (post.tags || []).includes(tagQuery) : true
             )
             .sort((a, b) => {
               return b.post_number - a.post_number;
             })
-            .map(post => (
+            .map((post) => (
               <div key={post.slug} style={{ padding: 10 }}>
                 <Link to={`/blog/${post.slug}`}>
                   <strong>{post.title}</strong>{' '}
@@ -45,7 +45,7 @@ export default class Blog extends React.PureComponent<{
         <div style={{ flex: 1 }}>
           <b>Tags</b>
           <ul>
-            {tags.map(tag => (
+            {tags.map((tag) => (
               <li>
                 <BlogPostTag tag={tag} />
               </li>

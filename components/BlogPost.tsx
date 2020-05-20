@@ -35,8 +35,8 @@ export default function BlogPost(props: IBlogPostProps) {
 
   React.useEffect(() => {
     fetch(`https://amwam.me/posts/${post.post_number}.md`)
-      .then(response => response.text())
-      .then(i => {
+      .then((response) => response.text())
+      .then((i) => {
         setInput(i);
       });
   }, []);
@@ -52,7 +52,7 @@ export default function BlogPost(props: IBlogPostProps) {
       <h2>{post.title}</h2>
       <h4>{new Date(post.date).toLocaleDateString()}</h4>
 
-      {(post.tags || []).map(tag => (
+      {(post.tags || []).map((tag) => (
         <span key={tag}>
           <BlogPostTag tag={tag} />{' '}
         </span>

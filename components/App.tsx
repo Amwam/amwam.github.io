@@ -25,7 +25,7 @@ export default function App({
     }
 
     return routes
-      .filter(route => route.mapMenuTitle)
+      .filter((route) => route.mapMenuTitle)
       .map((route, index, array) => (
         <span key={index}>
           <Link to={nextPath(route)}>{route.mapMenuTitle}</Link>

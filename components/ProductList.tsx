@@ -11,7 +11,7 @@ interface IProps {
 export default function ProductList(props: IProps) {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-      {props.products.map(product => (
+      {props.products.map((product) => (
         <div
           key={product.name}
           className="col-md-4 col-sm-6 col-xs-12 product-item"
