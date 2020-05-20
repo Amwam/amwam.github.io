@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Link as RouterLink } from 'react-router';
 import Radium from 'radium';
+import { Link as RouterLink } from 'react-router';
 import Sidebar, { SidebarStyles } from 'react-sidebar';
 import imageData from './gravatarImage';
 
-let Link = Radium(RouterLink);
+const Link = Radium(RouterLink);
 
 const sidebarStyles: SidebarStyles = {
   sidebar: { width: '150px' },

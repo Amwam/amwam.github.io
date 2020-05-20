@@ -11,12 +11,12 @@ const tags = Array.from(tagsSet);
 export default class Blog extends React.PureComponent<{
   location: { query: { tag: string } };
 }> {
-  componentDidMount() {
+  public componentDidMount() {
     if (!this.props.children) {
       document.dispatchEvent(new Event('prerender-trigger'));
     }
   }
-  render() {
+  public render() {
     if (this.props.children) {
       return this.props.children;
     }
