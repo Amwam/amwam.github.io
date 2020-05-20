@@ -8,8 +8,7 @@
     "sitemap": "node generate-sitemap.js",
     "tslint": "tslint --config tslint.json 'src/**/*.ts*'",
     "prettier": "prettier --write \"{components,src}/**/*.{ts,tsx,js,jsx,css,html}\"",
-    "prettier-check": "prettier --check \"{components,src}/**/*.{ts,tsx,js,jsx,css,html}\"",
-    "precommit": "yarn prettier && python cleanup.py && yarn build && git add ."
+    "prettier-check": "prettier --check \"{components,src}/**/*.{ts,tsx,js,jsx,css,html}\""
   },
   "repository": {
     "type": "git",
@@ -23,7 +22,6 @@
     "@types/react-dom": "^16.0.9",
     "@types/react-sidebar": "^3.0.0",
     "current-input": "^1.1.1",
-    "git-pre-commit": "^2.1.4",
     "parcel": "^1.10.3",
     "prettier": "^1.15.2",
     "prismjs": "^1.15.0",
