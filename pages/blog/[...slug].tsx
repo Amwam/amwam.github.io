@@ -8,10 +8,12 @@ import styles from './style.module.css';
 
 function CodeBlock(props: { language: string; value: string }) {
   const language = props.language || 'javascript';
+
   const html = Prism.highlight(
     props.value,
     Prism.languages[language.toLowerCase()]
   );
+
   const cls = `language-${props.language}`;
 
   return (
