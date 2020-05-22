@@ -1,3 +1,35 @@
 .tags {
   padding-bottom: 1rem;
 }
+
+.content {
+  display: flex;
+  width: 70vw;
+}
+
+.post-list {
+  flex: 1 1 50%;
+}
+
+.tags-list {
+  flex: 1;
+}
+
+.post-item {
+  padding: 0.5rem 0;
+}
+
+.post-date {
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tags-list {
+    padding-top: 2rem;
+  }
+}

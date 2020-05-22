@@ -3,6 +3,7 @@ import posts from '../../blog_posts';
 import BlogPostTag from '../../components/BlogPostTag';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import styles from './style.module.css';
 
 const tagsSet: Set<string> = new Set();
 posts.forEach((post) => (post.tags || []).forEach((tag) => tagsSet.add(tag)));
@@ -20,8 +21,8 @@ export default function Blog(props: {
   }
 
   return (
-    <div style={{ display: 'flex' }}>
-      <div style={{ flex: '1 1 50%' }}>
+    <div className={styles.content}>
+      <div className={styles['post-list']}>
         {posts
           .filter((post) => post.published)
           .filter((post) =>
@@ -31,17 +32,19 @@ export default function Blog(props: {
             return b.post_number - a.post_number;
           })
           .map((post) => (
-            <div key={post.slug} style={{ padding: 10 }}>
+            <div key={post.slug} className={styles['post-item']}>
               <strong>
                 <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
                   <a>{post.title}</a>
                 </Link>
               </strong>{' '}
-              <em style={{ fontSize: '0.8em' }}>{post.date}</em>
+              <div>
+                <em className={styles['post-date']}>{post.date}</em>
+              </div>
             </div>
           ))}
       </div>
-      <div style={{ flex: 1 }}>
+      <div className={styles['tags-list']}>
         <b>Tags</b>
         <ul>
           {tags.map((tag, index) => (

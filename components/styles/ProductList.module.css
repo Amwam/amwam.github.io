@@ -8,3 +8,9 @@
   flex-basis: 25%;
   padding-bottom: 0.5rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .productItem {
+    flex-basis: 50%;
+  }
+}

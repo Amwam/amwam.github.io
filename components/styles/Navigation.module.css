@@ -14,6 +14,7 @@
   margin-right: auto;
   text-align: center;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 #nav-bar {
@@ -21,4 +22,24 @@
   flex-direction: column;
   min-width: 150px;
   height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  #nav-bar {
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    background-color: var(--nc-bg-1);
+  }
+
+  .nav-link {
+    margin: auto;
+  }
+
+  #nav-display-picture {
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    padding-left: 0.5rem;
+  }
 }
