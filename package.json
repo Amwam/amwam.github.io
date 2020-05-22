@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build && next export -o dist",
     "start": "next start",
-    "prettier-check": "prettier --check \"{components,src}/**/*.{ts,tsx,js,jsx,css,html}\""
+    "prettier": "prettier --write \"{components,pages}/**/*.{ts,tsx,js,jsx,css,html}\"",
+    "prettier-check": "prettier --check \"{components,pages}/**/*.{ts,tsx,js,jsx,css,html}\""
   },
   "dependencies": {
     "next": "9.4.2",
