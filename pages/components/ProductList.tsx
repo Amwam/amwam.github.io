@@ -1,4 +1,5 @@
-import * as React from 'react';
+import * as React from "react";
+import styles from "./styles/ProductList.module.css";
 
 interface IProduct {
   name: string;
@@ -10,12 +11,9 @@ interface IProps {
 }
 export default function ProductList(props: IProps) {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <div className={styles.list}>
       {props.products.map((product) => (
-        <div
-          key={product.name}
-          className="col-md-4 col-sm-6 col-xs-12 product-item"
-        >
+        <div key={product.name} className={styles.productItem}>
           <strong>
             <a href={product.link}>{product.name}</a>
           </strong>

@@ -1,0 +1,13 @@
+#content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding: 1rem;
+  max-width: 70vw;
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  left: 0;
+}
