@@ -1,7 +1,5 @@
 import * as React from 'react';
 import Link from 'next/link';
-import imageData from './gravatarImage';
-import { useRouter } from 'next/router';
 import styles from './styles/Navigation.module.css';
 
 function CloseButton({ close }) {
@@ -17,24 +15,35 @@ function CloseButton({ close }) {
 }
 
 export default function Navigation(props: any) {
-  const router = useRouter();
-
   return (
     <div id={styles['nav-bar']} role="navigation">
-      <img id={styles['nav-display-picture']} src={imageData} alt="Me (Amit)" />
+      <img
+        id={styles['nav-display-picture']}
+        src="/images/me.jpg"
+        alt="Me (Amit)"
+        loading="lazy"
+      />
 
       <br />
       <div className={styles['nav-link']}>
-        <Link href="/">Home</Link>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
       </div>
       <div className={styles['nav-link']}>
-        <Link href="/about">About</Link>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
       </div>
       <div className={styles['nav-link']}>
-        <Link href="/blog">Blog</Link>
+        <Link href="/blog">
+          <a>Blog</a>
+        </Link>
       </div>
       <div className={styles['nav-link']}>
-        <Link href="/contact">Contact</Link>
+        <Link href="/contact">
+          <a>Contact</a>
+        </Link>
       </div>
     </div>
   );

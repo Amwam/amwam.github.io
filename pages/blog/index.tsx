@@ -33,7 +33,9 @@ export default function Blog(props: {
           .map((post) => (
             <div key={post.slug} style={{ padding: 10 }}>
               <strong>
-                <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
+                  <a>{post.title}</a>
+                </Link>
               </strong>{' '}
               <em style={{ fontSize: '0.8em' }}>{post.date}</em>
             </div>
