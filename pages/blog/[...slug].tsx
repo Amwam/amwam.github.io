@@ -1,13 +1,13 @@
-import Prism from "prismjs";
-import * as React from "react";
-import ReactMarkdown from "react-markdown";
-import posts from "../../blog_posts";
-import BlogPostTag from "../components/BlogPostTag";
-import { useRouter } from "next/router";
-import styles from "./style.module.css";
+import Prism from 'prismjs';
+import * as React from 'react';
+import ReactMarkdown from 'react-markdown';
+import posts from '../../blog_posts';
+import BlogPostTag from '../../components/BlogPostTag';
+import { useRouter } from 'next/router';
+import styles from './style.module.css';
 
 function CodeBlock(props: { language: string; value: string }) {
-  const language = props.language || "javascript";
+  const language = props.language || 'javascript';
   const html = Prism.highlight(
     props.value,
     Prism.languages[language.toLowerCase()]
@@ -61,7 +61,7 @@ export default function BlogPost(props: IBlogPostProps) {
       <div className={styles.tags}>
         {(post.tags || []).map((tag) => (
           <span key={tag}>
-            <BlogPostTag tag={tag} />{" "}
+            <BlogPostTag tag={tag} />{' '}
           </span>
         ))}
       </div>
@@ -76,7 +76,7 @@ export default function BlogPost(props: IBlogPostProps) {
           skipHtml={true}
         />
       ) : (
-        "Loading..."
+        'Loading...'
       )}
     </div>
   );

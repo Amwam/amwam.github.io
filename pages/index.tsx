@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 const liStyle = { paddingBottom: 10 };
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
       <div>
         <ul>
           <li style={liStyle}>
-            Lead Developer @{" "}
+            Lead Developer @{' '}
             <a href="https://www.wegotpop.com/">We Got POP Ltd</a>
           </li>
           <li style={liStyle}>

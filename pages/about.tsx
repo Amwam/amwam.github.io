@@ -1,94 +1,94 @@
-import * as React from "react";
-import ProductList from "./components/ProductList";
+import * as React from 'react';
+import ProductList from '../components/ProductList';
 
 const LANGUAGES = [
   {
-    name: "Python",
-    link: "http://www.python.org/",
+    name: 'Python',
+    link: 'http://www.python.org/',
   },
   {
-    name: "Typescript",
-    link: "http://www.typescriptlang.org/",
+    name: 'Typescript',
+    link: 'http://www.typescriptlang.org/',
   },
   {
-    name: "Javascript",
-    link: "http://jquery.com/",
+    name: 'Javascript',
+    link: 'http://jquery.com/',
   },
   {
-    name: "Swift",
-    link: "https://swift.org/",
+    name: 'Swift',
+    link: 'https://swift.org/',
   },
   {
-    name: "Java",
-    link: "http://www.java.com/",
+    name: 'Java',
+    link: 'http://www.java.com/',
   },
   {
-    name: "Objective-C",
+    name: 'Objective-C',
     link:
-      "https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html",
+      'https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html',
   },
   {
-    name: "HTML/CSS",
-    link: "http://www.w3.org/",
+    name: 'HTML/CSS',
+    link: 'http://www.w3.org/',
   },
   {
-    name: "Bash/Shell (Unix)",
-    link: "http://en.wikipedia.org/wiki/Bash_(Unix_shell)",
+    name: 'Bash/Shell (Unix)',
+    link: 'http://en.wikipedia.org/wiki/Bash_(Unix_shell)',
   },
 ];
 
 const TOOLS = [
   {
-    name: "Git",
-    link: "http://git-scm.com/",
+    name: 'Git',
+    link: 'http://git-scm.com/',
   },
   {
-    name: "iOS",
-    link: "https://developer.apple.com/technologies/ios/",
+    name: 'iOS',
+    link: 'https://developer.apple.com/technologies/ios/',
   },
   {
-    name: "Docker",
-    link: "https://www.docker.com/",
+    name: 'Docker',
+    link: 'https://www.docker.com/',
   },
   {
-    name: "IntelliJ IDEA/PyCharm",
-    link: "http://www.jetbrains.com/idea/",
+    name: 'IntelliJ IDEA/PyCharm',
+    link: 'http://www.jetbrains.com/idea/',
   },
   {
-    name: "Jenkins",
-    link: "https://jenkins-ci.org/",
+    name: 'Jenkins',
+    link: 'https://jenkins-ci.org/',
   },
   {
-    name: "Amazon Web Services (AWS)",
-    link: "http://aws.amazon.com/",
+    name: 'Amazon Web Services (AWS)',
+    link: 'http://aws.amazon.com/',
   },
   {
-    name: "Node.js",
-    link: "https://nodejs.org",
+    name: 'Node.js',
+    link: 'https://nodejs.org',
   },
   {
-    name: "Xcode",
-    link: "https://developer.apple.com/xcode/",
+    name: 'Xcode',
+    link: 'https://developer.apple.com/xcode/',
   },
   {
-    name: "PostgreSQL",
-    link: "http://www.postgresql.org/",
+    name: 'PostgreSQL',
+    link: 'http://www.postgresql.org/',
   },
   {
-    name: "SQL (MySQL, SQLite)",
-    link: "http://en.wikipedia.org/wiki/SQL",
+    name: 'SQL (MySQL, SQLite)',
+    link: 'http://en.wikipedia.org/wiki/SQL',
   },
   {
-    name: "VIM",
-    link: "http://vim.org",
+    name: 'VIM',
+    link: 'http://vim.org',
   },
   {
-    name: "Unix",
-    link: "http://www.unix.org/",
+    name: 'Unix',
+    link: 'http://www.unix.org/',
   },
   {
-    name: "OS X",
-    link: "http://www.apple.com/osx/",
+    name: 'OS X',
+    link: 'http://www.apple.com/osx/',
   },
 ];
 
