@@ -32,7 +32,7 @@ interface IBlogPostProps {
 
 export default function BlogPost(props: IBlogPostProps) {
   const router = useRouter();
-  const slug = router?.query?.slug?.[0];
+  const slug = router?.query?.slug;
   const post = posts.reduce((x, p) => {
     if (p.slug === slug) {
       return p;
@@ -76,7 +76,7 @@ export default function BlogPost(props: IBlogPostProps) {
 
 // Here we're fetching the markdown files to use a posts
 export async function getStaticProps({ params }) {
-  const slug = params.slug[0];
+  const slug = params.slug;
   const post = posts.reduce((x, p) => {
     if (p.slug === slug) {
       return p;
@@ -91,7 +91,7 @@ export async function getStaticProps({ params }) {
 
   const fileContents = fs.readFileSync(postsFilename, 'utf8');
   const POST = fileContents;
-  // By returning { props: POSTS }, the Blog component
+  // By returning { props: POST }, the Blog component
   // will receive `POSTS` as a prop at build time
   return {
     props: {
@@ -104,7 +104,7 @@ export async function getStaticPaths() {
   return {
     paths: posts
       .filter((p) => p.slug)
-      .map((p) => ({ params: { slug: [p.slug] } })),
+      .map((p) => ({ params: { slug: p.slug } })),
     fallback: false,
   };
 }
