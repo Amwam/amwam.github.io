@@ -20,6 +20,6 @@ a {
   text-decoration: none;
 }
 
-main > div:first-child {
-  width: var(--default-width);
+main>div:first-child {
+  width: 100%;
 }
