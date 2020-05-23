@@ -17,7 +17,7 @@ function CodeBlock(props: { language: string; value: string }) {
     Prism.languages[language.toLowerCase()]
   );
 
-  const cls = `language-${props.language}`;
+  const cls = `language-${language.toLowerCase()}`;
 
   return (
     <pre className={cls}>

@@ -34,7 +34,7 @@ export default function Blog(props: {
           .map((post) => (
             <div key={post.slug} className={styles['post-item']}>
               <strong>
-                <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
+                <Link href={`/blog/${post.slug}`} as={`/blog/${post.slug}`}>
                   <a>{post.title}</a>
                 </Link>
               </strong>{' '}
