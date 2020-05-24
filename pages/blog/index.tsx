@@ -22,41 +22,44 @@ export default function Blog(props: {
   }
 
   return (
-    <div className={styles.content}>
+    <div>
       <Head>
         <title>Blog | AMWAM - Amit Shah</title>
       </Head>
-      <div className={styles['post-list']}>
-        {posts
-          .filter((post) => post.published)
-          .filter((post) =>
-            query.tag ? (post.tags || []).includes(query.tag) : true
-          )
-          .sort((a, b) => {
-            return b.post_number - a.post_number;
-          })
-          .map((post) => (
-            <div key={post.slug} className={styles['post-item']}>
-              <strong>
-                <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
-                  <a>{post.title}</a>
-                </Link>
-              </strong>{' '}
-              <div>
-                <em className={styles['post-date']}>{post.date}</em>
+      <h1>Blog</h1>
+      <div className={styles.content}>
+        <div className={styles['post-list']}>
+          {posts
+            .filter((post) => post.published)
+            .filter((post) =>
+              query.tag ? (post.tags || []).includes(query.tag) : true
+            )
+            .sort((a, b) => {
+              return b.post_number - a.post_number;
+            })
+            .map((post) => (
+              <div key={post.slug} className={styles['post-item']}>
+                <strong>
+                  <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
+                    <a>{post.title}</a>
+                  </Link>
+                </strong>{' '}
+                <div>
+                  <em className={styles['post-date']}>{post.date}</em>
+                </div>
               </div>
-            </div>
-          ))}
-      </div>
-      <div className={styles['tags-list']}>
-        <b>Tags</b>
-        <ul>
-          {tags.map((tag, index) => (
-            <li key={index}>
-              <BlogPostTag tag={tag} />
-            </li>
-          ))}
-        </ul>
+            ))}
+        </div>
+        <div className={styles['tags-list']}>
+          <b>Tags</b>
+          <ul>
+            {tags.map((tag, index) => (
+              <li key={index}>
+                <BlogPostTag tag={tag} />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

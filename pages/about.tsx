@@ -99,6 +99,7 @@ export default function About() {
       <Head>
         <title>About | AMWAM - Amit Shah</title>
       </Head>
+      <h1>About</h1>
       <div>
         I graduated from the University of Warwick with a 1st in Computer
         Science (MEng) in July of 2013. Since then I have worked at BSkyB as a

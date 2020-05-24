@@ -41,6 +41,7 @@ export default function Contact() {
         flexWrap: 'wrap',
       }}
     >
+      <h1>Contact</h1>
       <Head>
         <title>Contact | AMWAM - Amit Shah</title>
       </Head>
