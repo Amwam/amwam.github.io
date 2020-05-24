@@ -4,6 +4,7 @@ import BlogPostTag from '../../components/BlogPostTag';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styles from './style.module.css';
+import Head from 'next/head';
 
 const tagsSet: Set<string> = new Set();
 posts.forEach((post) => (post.tags || []).forEach((tag) => tagsSet.add(tag)));
@@ -22,6 +23,9 @@ export default function Blog(props: {
 
   return (
     <div className={styles.content}>
+      <Head>
+        <title>Blog | AMWAM - Amit Shah</title>
+      </Head>
       <div className={styles['post-list']}>
         {posts
           .filter((post) => post.published)

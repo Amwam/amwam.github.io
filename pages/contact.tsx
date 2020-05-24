@@ -1,5 +1,6 @@
 import * as React from 'react';
 import ContactIcon from '../components/ContactIcon';
+import Head from 'next/head';
 
 const contacts = [
   {
@@ -40,6 +41,9 @@ export default function Contact() {
         flexWrap: 'wrap',
       }}
     >
+      <Head>
+        <title>Contact | AMWAM - Amit Shah</title>
+      </Head>
       {contacts.map((c) => (
         <ContactIcon key={c.subtext} {...c} />
       ))}

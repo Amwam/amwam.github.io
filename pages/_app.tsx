@@ -22,10 +22,6 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       <Navigation />
       <div id={styles['content-wrapper']}>
-        <div className={styles.heading}>
-          <h1>AMWAM - Amit Shah</h1>
-          <h3>Agile Software Developer, based in London</h3>
-        </div>
         <main id={styles.content}>
           <Component {...pageProps} />
         </main>

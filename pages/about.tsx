@@ -1,5 +1,6 @@
 import * as React from 'react';
 import ProductList from '../components/ProductList';
+import Head from 'next/head';
 
 const LANGUAGES = [
   {
@@ -95,6 +96,9 @@ const TOOLS = [
 export default function About() {
   return (
     <div>
+      <Head>
+        <title>About | AMWAM - Amit Shah</title>
+      </Head>
       <div>
         I graduated from the University of Warwick with a 1st in Computer
         Science (MEng) in July of 2013. Since then I have worked at BSkyB as a

@@ -24,26 +24,28 @@ export default function Navigation(props: any) {
         loading="lazy"
       />
 
-      <br />
-      <div className={styles['nav-link']}>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </div>
-      <div className={styles['nav-link']}>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </div>
-      <div className={styles['nav-link']}>
-        <Link href="/blog">
-          <a>Blog</a>
-        </Link>
-      </div>
-      <div className={styles['nav-link']}>
-        <Link href="/contact">
-          <a>Contact</a>
-        </Link>
+      <div id={styles.name}>Amit Shah</div>
+      <div id={styles['nav-links']}>
+        <div className={styles['nav-link']}>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </div>
+        <div className={styles['nav-link']}>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
+        </div>
+        <div className={styles['nav-link']}>
+          <Link href="/blog">
+            <a>Blog</a>
+          </Link>
+        </div>
+        <div className={styles['nav-link']}>
+          <Link href="/contact">
+            <a>Contact</a>
+          </Link>
+        </div>
       </div>
     </div>
   );

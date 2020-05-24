@@ -8,6 +8,7 @@ import posts from '../../blog_posts';
 import BlogPostTag from '../../components/BlogPostTag';
 import { useRouter } from 'next/router';
 import styles from './style.module.css';
+import Head from 'next/head';
 
 function CodeBlock(props: { language: string; value: string }) {
   const language = props.language || 'javascript';
@@ -47,7 +48,10 @@ export default function BlogPost(props: IBlogPostProps) {
   }
   return (
     <div>
-      <h2>{post.title}</h2>
+      <Head>
+        <title>{post.title} | AMWAM - Amit Shah</title>
+      </Head>
+      <h1>{post.title}</h1>
       <h4>{new Date(post.date).toLocaleDateString()}</h4>
 
       <div className={styles.tags}>
