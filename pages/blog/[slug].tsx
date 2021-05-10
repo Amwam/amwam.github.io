@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-import Prism from 'prismjs';
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter/dist/cjs'
+import {light} from 'react-syntax-highlighter/dist/cjs/styles/prism'
+
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import posts from '../../blog_posts';
@@ -9,23 +11,17 @@ import BlogPostTag from '../../components/BlogPostTag';
 import { useRouter } from 'next/router';
 import styles from './style.module.css';
 import Head from 'next/head';
-
-function CodeBlock(props: { language: string; value: string }) {
-  const language = props.language || 'javascript';
-
-  const html = Prism.highlight(
-    props.value,
-    Prism.languages[language.toLowerCase()]
-  );
-
-  const cls = `language-${language.toLowerCase()}`;
-
-  return (
-    <pre className={cls}>
-      <code dangerouslySetInnerHTML={{ __html: html }} className={cls} />
-    </pre>
-  );
+const components = {
+  code : function({node, inline, className, children, ...props}) {
+    const match = /language-(\w+)/.exec(className || '')
+    return !inline && match ? (
+      <SyntaxHighlighter style={light} language={match[1]} PreTag="div" children={String(children).replace(/\n$/, '')} {...props} />
+    ) : (
+      <code className={className} {...props} />
+    )
+  }
 }
+
 
 interface IBlogPostProps {
   POST: string;
@@ -63,14 +59,12 @@ export default function BlogPost(props: IBlogPostProps) {
       </div>
 
       <ReactMarkdown
-        source={input}
-        renderers={{
-          code: CodeBlock,
-        }}
-        escapeHtml={false}
+      // @ts-ignore
+        components={components}
+        // escapeHtml={false}
         skipHtml={true}
-      />
-    </div>
+      >{input}</ReactMarkdown>
+      </div>
   );
 }
 
