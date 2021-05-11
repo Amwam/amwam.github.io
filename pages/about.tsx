@@ -25,8 +25,7 @@ const LANGUAGES = [
   },
   {
     name: 'Objective-C',
-    link:
-      'https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html',
+    link: 'https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html',
   },
   {
     name: 'HTML/CSS',

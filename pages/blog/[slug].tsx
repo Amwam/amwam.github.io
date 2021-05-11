@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter/dist/cjs'
-import {light} from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter/dist/cjs';
+import { light } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -12,16 +12,21 @@ import { useRouter } from 'next/router';
 import styles from './style.module.css';
 import Head from 'next/head';
 const components = {
-  code : function({node, inline, className, children, ...props}) {
-    const match = /language-(\w+)/.exec(className || '')
+  code: function ({ node, inline, className, children, ...props }) {
+    const match = /language-(\w+)/.exec(className || '');
     return !inline && match ? (
-      <SyntaxHighlighter style={light} language={match[1]} PreTag="div" children={String(children).replace(/\n$/, '')} {...props} />
+      <SyntaxHighlighter
+        style={light}
+        language={match[1]}
+        PreTag="div"
+        children={String(children).replace(/\n$/, '')}
+        {...props}
+      />
     ) : (
       <code className={className} {...props} />
-    )
-  }
-}
-
+    );
+  },
+};
 
 interface IBlogPostProps {
   POST: string;
@@ -59,12 +64,14 @@ export default function BlogPost(props: IBlogPostProps) {
       </div>
 
       <ReactMarkdown
-      // @ts-ignore
+        // @ts-ignore
         components={components}
         // escapeHtml={false}
         skipHtml={true}
-      >{input}</ReactMarkdown>
-      </div>
+      >
+        {input}
+      </ReactMarkdown>
+    </div>
   );
 }
 
