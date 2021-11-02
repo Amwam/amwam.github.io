@@ -17,7 +17,7 @@
     "react-syntax-highlighter": "^15.4.4"
   },
   "devDependencies": {
-    "@types/node": "^16.10.3",
+    "@types/node": "^16.11.6",
     "@types/react": "^17.0.33",
     "babel-plugin-prismjs": "^2.1.0",
     "prettier": "^2.4.1",
