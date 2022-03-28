@@ -4,6 +4,7 @@ import Head from 'next/head';
 import styles from './_app.module.css';
 import './css/index.css';
 import './global.css';
+import 'prismjs/themes/prism.css';
 
 export default function MyApp({ Component, pageProps }) {
   return (
