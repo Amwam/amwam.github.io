@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import Prism from 'Prismjs';
+import Prism from 'prismjs';
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import posts from '../../blog_posts';
