@@ -8,8 +8,8 @@ export default function Home() {
       <div>
         <ul>
           <li className={styles['link-item']}>
-            Lead Developer @{' '}
-            <a href="https://www.wegotpop.com/">We Got POP Ltd</a>
+            Chief Architect EP International @{' '}
+            <a href="https://www.ep.com/">Entertainment Partners UK</a> (Entertainment Partners aquired We Got POP LTD in 2020)
           </li>
           <li className={styles['link-item']}>
             Mentor @ <a href="https://codeyourfuture.co/">Code Your Future</a>
