@@ -11,7 +11,7 @@ export default function Home() {
             Chief Architect EP International @{" "}
             <a href="https://www.ep.com/">Entertainment Partners UK</a>
             <ul>
-              <li>(Entertainment Partners aquired We Got POP LTD in 2020)</li>
+              <li>Entertainment Partners aquired We Got POP LTD in 2020</li>
             </ul>
           </li>
           <li className={styles["link-item"]}>
