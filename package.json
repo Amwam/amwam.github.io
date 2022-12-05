@@ -14,7 +14,7 @@
     "prismjs": "^1.28.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-markdown": "^8.0.2"
+    "react-markdown": "^8.0.4"
   },
   "devDependencies": {
     "@types/node": "^18.7.16",
