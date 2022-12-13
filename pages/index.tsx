@@ -22,6 +22,10 @@ export default function Home() {
           </li>
           <li className={styles['link-item']}>
             Tweeter @ <a href="https://twitter.com/Amwam/">Twitter</a>
+          </li>  
+          <li className={styles['link-item']}>
+            Mastadon @ 
+<a rel="me" href="https://mstdn.party/@amwam">Mastodon</a>
           </li>
           <li className={styles['link-item']}>
             Stack Overflow @{' '}
