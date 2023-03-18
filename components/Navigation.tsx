@@ -19,7 +19,7 @@ export default function Navigation(props: any) {
     <div id={styles['nav-bar']} role="navigation">
       <img
         id={styles['nav-display-picture']}
-        src="/images/me.jpg"
+        src="/images/me.200.png"
         alt="Me (Amit)"
         loading="lazy"
       />

@@ -20,7 +20,7 @@ const contacts = [
     subtext: 'LinkedIn',
   },
   {
-    href: 'https://careers.stackoverflow.com/amwam',
+    href: 'https://stackoverflow.com/users/818739/amit-shah',
     image: 'stackoverflow.png',
     subtext: 'Stack overflow',
   },

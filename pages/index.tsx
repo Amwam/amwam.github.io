@@ -31,7 +31,7 @@ export default function Home() {
           </li>
           <li className={styles['link-item']}>
             Stack Overflow @{' '}
-            <a href="https://stackoverflow.com/story/amwam">Stack Overflow</a>
+            <a href="https://stackoverflow.com/users/818739/amit-shah">Stack Overflow</a>
           </li>
         </ul>
       </div>
