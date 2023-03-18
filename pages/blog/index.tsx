@@ -41,7 +41,7 @@ export default function Blog(props: {
               <div key={post.slug} className={styles['post-item']}>
                 <strong>
                   <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
-                    <a>{post.title}</a>
+                    {post.title}
                   </Link>
                 </strong>{' '}
                 <div>

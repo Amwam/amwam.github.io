@@ -28,22 +28,22 @@ export default function Navigation(props: any) {
       <div id={styles['nav-links']}>
         <div className={styles['nav-link']}>
           <Link href="/">
-            <a>Home</a>
+            Home
           </Link>
         </div>
         <div className={styles['nav-link']}>
           <Link href="/about">
-            <a>About</a>
+            About
           </Link>
         </div>
         <div className={styles['nav-link']}>
           <Link href="/blog">
-            <a>Blog</a>
+            Blog
           </Link>
         </div>
         <div className={styles['nav-link']}>
           <Link href="/contact">
-            <a>Contact</a>
+            Contact
           </Link>
         </div>
       </div>
