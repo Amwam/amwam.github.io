@@ -27,24 +27,16 @@ export default function Navigation(props: any) {
       <div id={styles.name}>Amit Shah</div>
       <div id={styles['nav-links']}>
         <div className={styles['nav-link']}>
-          <Link href="/">
-            Home
-          </Link>
+          <Link href="/">Home</Link>
         </div>
         <div className={styles['nav-link']}>
-          <Link href="/about">
-            About
-          </Link>
+          <Link href="/about">About</Link>
         </div>
         <div className={styles['nav-link']}>
-          <Link href="/blog">
-            Blog
-          </Link>
+          <Link href="/blog">Blog</Link>
         </div>
         <div className={styles['nav-link']}>
-          <Link href="/contact">
-            Contact
-          </Link>
+          <Link href="/contact">Contact</Link>
         </div>
       </div>
     </div>
