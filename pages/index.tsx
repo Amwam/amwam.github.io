@@ -20,9 +20,9 @@ export default function Home() {
           <li className={styles['link-item']}>
             Committer @ <a href="https://github.com/Amwam/">GitHub</a>
           </li>
-          <li className={styles['link-item']}>
+          {/* <li className={styles['link-item']}>
             Tweeter @ <a href="https://twitter.com/Amwam/">Twitter</a>
-          </li>
+          </li> */}
           <li className={styles['link-item']}>
             Mastodon @{' '}
             <a rel="me" href="https://mastodon.social/@Amwam">
