@@ -1,12 +1,12 @@
 {
-  "theme_color": "#8936FF",
-  "background_color": "#2EC6FE",
+  "theme_color": "#0070f3",
+  "background_color": "#0070f3",
   "orientation": "any",
   "display": "standalone",
   "dir": "auto",
   "lang": "en-GB",
   "name": "Amit Shah",
-  "short_name": "Amit Shha",
+  "short_name": "Amit Shah",
   "start_url": "https://amwam.me",
   "description": "Amit Shah’s Personal Site",
   "icons": [
