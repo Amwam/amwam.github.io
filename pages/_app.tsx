@@ -19,12 +19,13 @@ export default function MyApp({ Component, pageProps }) {
         src="https://www.googletagmanager.com/gtag/js?id=G-9977N7FRG8"
       ></script>
       <script>
-        window.dataLayer = window.dataLayer || []; function gtag()
-        // @ts-ignore
-        {dataLayer.push(arguments)}
-        
-        // @ts-ignore
-        gtag('js', new Date()); gtag('config', 'G-9977N7FRG8');
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-9977N7FRG8');
+        `}
       </script>
 
       <Navigation />
