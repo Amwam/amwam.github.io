@@ -20,7 +20,10 @@ export default function MyApp({ Component, pageProps }) {
       ></script>
       <script>
         window.dataLayer = window.dataLayer || []; function gtag()
+        // @ts-ignore
         {dataLayer.push(arguments)}
+        
+        // @ts-ignore
         gtag('js', new Date()); gtag('config', 'G-9977N7FRG8');
       </script>
 
