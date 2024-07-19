@@ -1,0 +1,44 @@
+{
+  "theme_color": "#8936FF",
+  "background_color": "#2EC6FE",
+  "orientation": "any",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "en-GB",
+  "name": "Amit Shah",
+  "short_name": "Amit Shha",
+  "start_url": "https://amwam.me",
+  "description": "Amit Shah’s Personal Site",
+  "icons": [
+    {
+      "src": "https://gravatar.com/avatar/8fc4b5f17beaf8893a97c896f68ba084?s=96",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "https://gravatar.com/avatar/8fc4b5f17beaf8893a97c896f68ba084?s=144",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://gravatar.com/avatar/8fc4b5f17beaf8893a97c896f68ba084?s=192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://gravatar.com/avatar/8fc4b5f17beaf8893a97c896f68ba084?s=256",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "https://gravatar.com/avatar/8fc4b5f17beaf8893a97c896f68ba084?s=512",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "https://gravatar.com/avatar/8fc4b5f17beaf8893a97c896f68ba084?s=1024",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
