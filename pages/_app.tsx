@@ -14,13 +14,14 @@ export default function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-9977N7FRG8"></script>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-9977N7FRG8"
+      ></script>
       <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-9977N7FRG8');
+        window.dataLayer = window.dataLayer || []; function gtag()
+        {dataLayer.push(arguments)}
+        gtag('js', new Date()); gtag('config', 'G-9977N7FRG8');
       </script>
 
       <Navigation />
