@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build && next export -o dist",
     "start": "next start",
-    "prettier": "prettier --write \"{components,pages}/**/*.{ts,tsx,js,jsx,css,html}\"",
-    "prettier-check": "prettier --check \"{components,pages}/**/*.{ts,tsx,js,jsx,css,html}\""
+    "prettier": "yarn run prettier --write \"{components,pages}/**/*.{ts,tsx,js,jsx,css,html}\"",
+    "prettier-check": "yarn run prettier --check \"{components,pages}/**/*.{ts,tsx,js,jsx,css,html}\""
   },
   "dependencies": {
     "next": "13.2.4",
