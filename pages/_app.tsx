@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head key="meta-info">
         <title>AMWAM - Amit Shah</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="manifest" rel="manifest.json" />
+        <link rel="manifest" href="manifest.json" />
       </Head>
 
       <script
