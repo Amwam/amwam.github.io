@@ -39,7 +39,9 @@ export default function BlogPost(props: IBlogPostProps) {
         <title>{post.title} | AMWAM - Amit Shah</title>
       </Head>
       <h1>{post.title}</h1>
-      <h4>{new Date(post.date).toLocaleDateString()}</h4>
+      <h4>
+        {new Date(post.date).toLocaleDateString('gb', { dateStyle: 'long' })}
+      </h4>
 
       <div className={styles.tags}>
         {(post.tags || []).map((tag) => (
