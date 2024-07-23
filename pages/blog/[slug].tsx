@@ -8,12 +8,13 @@ import BlogPostTag from '../../components/BlogPostTag';
 import { useRouter } from 'next/router';
 import styles from './style.module.css';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 
 interface IBlogPostProps {
   POST: string;
 }
 
-export default function BlogPost(props: IBlogPostProps) {
+function BlogPost(props: IBlogPostProps) {
   const router = useRouter();
 
   React.useEffect(() => {
@@ -36,11 +37,11 @@ export default function BlogPost(props: IBlogPostProps) {
   return (
     <div>
       <Head>
-        <title>{post.title} | AMWAM - Amit Shah</title>
+        <title>{`${post.title} | AMWAM - Amit Shah`}</title>
       </Head>
       <h1>{post.title}</h1>
       <h4>
-        {new Date(post.date).toLocaleDateString('gb', { dateStyle: 'long' })}
+        {new Date(post.date).toLocaleDateString('en-GB', { dateStyle: 'long' })}
       </h4>
 
       <div className={styles.tags}>
@@ -94,3 +95,5 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
+export default dynamic(() => Promise.resolve(BlogPost), { ssr: false });
