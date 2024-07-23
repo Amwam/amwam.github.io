@@ -5,7 +5,7 @@ import styles from './_app.module.css';
 import './css/index.css';
 import './global.css';
 import 'prismjs/themes/prism.css';
-import { GoogleAnalytics } from './GoogleAnalytics';
+import { GoogleAnalytics } from '../components/GoogleAnalytics';
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -13,8 +13,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head key="meta-info">
         <title>AMWAM - Amit Shah</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="manifest" href="manifest.json" />
-
+        <link rel="manifest" href="/manifest.json" />
       </Head>
 
       <Navigation />
