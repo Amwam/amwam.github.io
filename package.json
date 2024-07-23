@@ -10,6 +10,7 @@
     "prettier-check": "prettier --check \"{components,pages}/**/*.{ts,tsx,js,jsx,css,html}\""
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.5",
     "next": "13.2.4",
     "prismjs": "^1.28.0",
     "react": "^18.1.0",

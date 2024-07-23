@@ -5,6 +5,8 @@ import styles from './_app.module.css';
 import './css/index.css';
 import './global.css';
 import 'prismjs/themes/prism.css';
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -13,21 +15,10 @@ export default function MyApp({ Component, pageProps }) {
         <title>AMWAM - Amit Shah</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="manifest.json" />
+
+        <GoogleAnalytics gaId="G-9977N7FRG8" />
+
       </Head>
-
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-9977N7FRG8"
-      ></script>
-      <script>
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-9977N7FRG8');
-        `}
-      </script>
 
       <Navigation />
       <div id={styles['content-wrapper']}>
