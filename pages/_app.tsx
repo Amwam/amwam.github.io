@@ -5,7 +5,7 @@ import styles from './_app.module.css';
 import './css/index.css';
 import './global.css';
 import 'prismjs/themes/prism.css';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics } from './GoogleAnalytics';
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -15,7 +15,6 @@ export default function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="manifest.json" />
 
-        <GoogleAnalytics gaId="G-9977N7FRG8" />
       </Head>
 
       <Navigation />
@@ -24,6 +23,7 @@ export default function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </main>
       </div>
+      <GoogleAnalytics />
     </div>
   );
 }
