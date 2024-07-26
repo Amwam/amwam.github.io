@@ -45,7 +45,7 @@ export default function Blog(props: {
                   </Link>
                 </strong>{' '}
                 <div>
-                  <em className={styles['post-date']}>{post.date}</em>
+                  <em className={styles['post-date']}>{new Date(post.date).toLocaleDateString('en-GB', { dateStyle: 'long' })}</em>
                 </div>
               </div>
             ))}
