@@ -45,9 +45,9 @@ function BlogPost(props: IBlogPostProps) {
       </h4>
 
       <div className={styles.tags}>
-        {(post.tags || []).map((tag) => (
+        {(post.tags || []).map((tag, index) => (
           <span key={tag}>
-            <BlogPostTag tag={tag} />{' '}
+            <BlogPostTag tag={tag} />{index != post.tags?.length -1 ? ', ': ''}
           </span>
         ))}
       </div>
