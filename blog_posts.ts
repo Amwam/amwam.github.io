@@ -124,5 +124,13 @@ export default [
     published: true,
     slug: "i-bought-a-mac-mini",
     tags: ["osx", "mac", "python", "shell", "docker"],
+  },
+  {
+    title: "Setting up TailScale and VNC",
+    date: "2025-01-13",
+    post_number: 17,
+    published: true,
+    slug: "setting-up-tailscale-and-vnc",
+    tags: ["osx", "mac"],
   }
 ]
