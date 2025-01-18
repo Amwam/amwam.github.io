@@ -101,10 +101,8 @@ export default function About() {
       <h1>About</h1>
       <div>
         I graduated from the University of Warwick with a 1st in Computer
-        Science (MEng) in July of 2013. Since then I have worked at BSkyB as a
-        Software Developer, and am currently employed by WeGotPOP as Platform
-        Lead. During my degree I also worked as a freelancer, specialising as an
-        iOS developer.
+        Science (MEng) in July of 2013. I have spent the last 10 years working at Entertainment Partners, which aquired We Got POP in 2020.
+        I was the first developer as part of We Got POP, and have seen it go from a small startup to aquisition and further into enterprise.
       </div>
       <hr />
       <div className="row">

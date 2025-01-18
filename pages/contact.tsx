@@ -4,11 +4,6 @@ import Head from 'next/head';
 
 const contacts = [
   {
-    href: 'https://twitter.com/amwam',
-    image: 'twitter.png',
-    subtext: 'Twitter',
-  },
-  {
     href: 'https://github.com/amwam',
     image: 'github.png',
     subtext: 'GitHub',
