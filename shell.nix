@@ -4,7 +4,10 @@
 with pkgs;
 mkShell {
   buildInputs = [
-    nodejs-slim_23
+    nodejs_23
     yarn
   ];
+
+  shellHook = "yarn set version berry";
+
 }
