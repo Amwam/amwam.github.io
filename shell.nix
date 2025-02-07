@@ -8,6 +8,9 @@ mkShell {
     yarn
   ];
 
-  shellHook = "yarn set version berry";
+  shellHook = ''
+    yarn set version berry
+    yarn install
+    '';
 
 }
