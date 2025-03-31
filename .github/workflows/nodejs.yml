@@ -1,6 +1,6 @@
 name: Node CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -34,3 +34,5 @@ jobs:
 
     steps:
       - uses: fastify/github-action-merge-dependabot@v3
+        with:
+          pr-number: ${{ github.event.inputs.pr-number }}
