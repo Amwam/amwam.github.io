@@ -10,3 +10,9 @@ updates:
     open-pull-requests-limit: 15
     schedule:
       interval: "weekly"
+    groups:
+      react:
+        applies-to: version-updates
+        patterns:
+          - "react"
+          - "react-dom"
