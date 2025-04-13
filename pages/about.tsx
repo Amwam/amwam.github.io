@@ -16,16 +16,8 @@ const LANGUAGES = [
     link: 'http://jquery.com/',
   },
   {
-    name: 'Swift',
-    link: 'https://swift.org/',
-  },
-  {
     name: 'Java',
     link: 'http://www.java.com/',
-  },
-  {
-    name: 'Objective-C',
-    link: 'https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html',
   },
   {
     name: 'HTML/CSS',
@@ -38,6 +30,7 @@ const LANGUAGES = [
 ];
 
 const TOOLS = [
+  { name: "AWS", link: "https://aws.amazon.com" },
   {
     name: 'Git',
     link: 'http://git-scm.com/',
@@ -55,10 +48,6 @@ const TOOLS = [
     link: 'http://www.jetbrains.com/idea/',
   },
   {
-    name: 'Jenkins',
-    link: 'https://jenkins-ci.org/',
-  },
-  {
     name: 'Amazon Web Services (AWS)',
     link: 'http://aws.amazon.com/',
   },
@@ -67,20 +56,16 @@ const TOOLS = [
     link: 'https://nodejs.org',
   },
   {
-    name: 'Xcode',
-    link: 'https://developer.apple.com/xcode/',
+    name: 'React',
+    link: 'https://react.dev',
   },
   {
     name: 'PostgreSQL',
     link: 'http://www.postgresql.org/',
   },
   {
-    name: 'SQL (MySQL, SQLite)',
+    name: 'SQL (PostgreSQL, SQLite)',
     link: 'http://en.wikipedia.org/wiki/SQL',
-  },
-  {
-    name: 'VIM',
-    link: 'http://vim.org',
   },
   {
     name: 'Unix',
