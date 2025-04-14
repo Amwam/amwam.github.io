@@ -30,7 +30,7 @@ const LANGUAGES = [
 ];
 
 const TOOLS = [
-  { name: "AWS", link: "https://aws.amazon.com" },
+  { name: 'AWS', link: 'https://aws.amazon.com' },
   {
     name: 'Git',
     link: 'http://git-scm.com/',
