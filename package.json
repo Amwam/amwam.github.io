@@ -20,12 +20,12 @@
   },
   "devDependencies": {
     "@types/node": "^24.2.1",
-    "@types/react": "19.1.10",
+    "@types/react": "19.1.11",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2"
   },
   "packageManager": "yarn@4.9.2",
   "resolutions": {
-    "@types/react": "19.1.10"
+    "@types/react": "19.1.11"
   }
 }
