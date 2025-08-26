@@ -305,15 +305,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/third-parties@npm:15.4.6":
-  version: 15.4.6
-  resolution: "@next/third-parties@npm:15.4.6"
+"@next/third-parties@npm:15.5.0":
+  version: 15.5.0
+  resolution: "@next/third-parties@npm:15.5.0"
   dependencies:
     third-party-capital: "npm:1.0.20"
   peerDependencies:
     next: ^13.0.0 || ^14.0.0 || ^15.0.0
     react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
-  checksum: 10c0/db6375da0ae0256a0f9af8779d0ff7a6de8c7a5131ea5f9434fd709dc68bcf00eda09ac055cc261a07aece76e40e05b9df21b6ff7727fed79c048d8d1b21db3c
+  checksum: 10c0/3152e9f68d4abcfe10b45fa9f497b9996374efd3ede54d751156e707f13314267c98f30ea414692eda87bb3eec88f5cfbab5891f1216f7e4668b6cad71db160a
   languageName: node
   linkType: hard
 
@@ -586,7 +586,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "amwam-nextjs@workspace:."
   dependencies:
-    "@next/third-parties": "npm:15.4.6"
+    "@next/third-parties": "npm:15.5.0"
     "@types/node": "npm:^24.2.1"
     "@types/react": "npm:19.1.10"
     eslint-config-next: "npm:15.4.6"
