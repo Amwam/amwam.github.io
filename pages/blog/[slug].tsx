@@ -35,14 +35,17 @@ function BlogPost(props: IBlogPostProps) {
   return (
     <div>
       <Head>
-        <title>{`${post.title} | AMWAM - Amit Shah`}</title>
+        <title key="title">{`${post.title} | AMWAM - Amit Shah`}</title>
         <meta property="og:url" content={`https://amwam.me/blog/${slug}`} />
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="article" key="og-type" />
         <meta
           property="og:title"
           content={`${post.title} | AMWAM - Amit Shah`}
+          key="ogtitle"
         />
         <meta property="og:image" content="https://amwam.me/images/me.jpg" />
+        <meta property="article:published_time" content={post.date} />
+        <meta property="article:author" content="Amit Shah" />
       </Head>
       <h1>{post.title}</h1>
       <h4>
