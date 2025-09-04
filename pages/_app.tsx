@@ -14,7 +14,12 @@ export default function MyApp({ Component, pageProps }) {
         <title>AMWAM - Amit Shah</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://amwam.me/rss.xml" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="RSS"
+          href="https://amwam.me/rss.xml"
+        />
       </Head>
 
       <Navigation />

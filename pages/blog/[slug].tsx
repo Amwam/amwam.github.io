@@ -38,7 +38,10 @@ function BlogPost(props: IBlogPostProps) {
         <title>{`${post.title} | AMWAM - Amit Shah`}</title>
         <meta property="og:url" content={`https://amwam.me/blog/${slug}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content={`${post.title} | AMWAM - Amit Shah`} />
+        <meta
+          property="og:title"
+          content={`${post.title} | AMWAM - Amit Shah`}
+        />
         <meta property="og:image" content="https://amwam.me/images/me.jpg" />
       </Head>
       <h1>{post.title}</h1>
@@ -69,7 +72,7 @@ export async function getStaticProps({ params }) {
   const slug = params.slug;
   const { getPostContent } = await import('../../utils/getPostContent');
   const result = getPostContent(slug);
-  
+
   if (!result) {
     return {
       notFound: true,

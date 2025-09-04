@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from './index.module.css';
 import posts from '../blog_posts';
-import {generateRssFeed} from '../utils/rss'; 
+import { generateRssFeed } from '../utils/rss';
 
 export default function Home() {
   return (
@@ -44,13 +44,15 @@ export default function Home() {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = posts.filter((post) => post.published).map((post) => ({
-    title: post.title,
-    date: post.date,
-    slug: post.slug,
+  const allPosts = posts
+    .filter((post) => post.published)
+    .map((post) => ({
+      title: post.title,
+      date: post.date,
+      slug: post.slug,
 
-    excerpt: '',
-  }));
+      excerpt: '',
+    }));
 
   await generateRssFeed(allPosts);
   return {
