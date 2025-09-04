@@ -13,7 +13,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head key="meta-info">
         <title key="title">AMWAM - Amit Shah</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:image" content="https://amwam.me/images/me.jpg" />
+        <meta property="og:image" content="https://amwam.me/images/me.png" />
         <meta property="og:type" content="website" key="og-type" />
         <link rel="manifest" href="/manifest.json" />
         <link
