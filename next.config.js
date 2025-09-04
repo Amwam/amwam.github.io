@@ -12,6 +12,8 @@ const nextConfig = {
    
     // Optional: Change the output directory `out` -> `dist`
     distDir: 'dist',
+
+    typedRoutes: true
   }
    
   module.exports = nextConfig
