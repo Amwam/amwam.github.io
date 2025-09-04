@@ -6,7 +6,6 @@ import BlogPostTag from '../../components/BlogPostTag';
 import { useRouter } from 'next/router';
 import styles from './style.module.css';
 import Head from 'next/head';
-import dynamic from 'next/dynamic';
 
 interface IBlogPostProps {
   POST: string;
@@ -98,4 +97,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default dynamic(() => Promise.resolve(BlogPost), { ssr: false });
+export default BlogPost;
