@@ -42,6 +42,11 @@ function BlogPost(props: IBlogPostProps) {
           content={`${post.title} | AMWAM - Amit Shah`}
           key="ogtitle"
         />
+        <meta
+          property="og:description"
+          content={post.title}
+          key="description"
+        />
         <meta property="og:image" content="https://amwam.me/images/me.png" />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content="Amit Shah" />
