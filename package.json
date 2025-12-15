@@ -14,8 +14,8 @@
     "eslint-config-next": "16.0.7",
     "next": "16.0.10",
     "prismjs": "^1.30.0",
-    "react": "19.2.1",
-    "react-dom": "19.2.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "react-markdown": "^10.1.0",
     "rss": "^1.2.2"
   },
