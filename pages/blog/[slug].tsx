@@ -7,11 +7,9 @@ import { useRouter } from 'next/router';
 import styles from './style.module.css';
 import SEO from '../../components/SEO';
 import Breadcrumbs from '../../components/Breadcrumbs';
-import { calculateReadingTime, formatReadingTime } from '../../utils/readingTime';
 
 interface IBlogPostProps {
   POST: string;
-  readingTime: number;
 }
 
 function BlogPost(props: IBlogPostProps) {
@@ -85,8 +83,6 @@ function BlogPost(props: IBlogPostProps) {
         <time dateTime={post.date}>
           {new Date(post.date).toLocaleDateString('en-GB', { dateStyle: 'long' })}
         </time>
-        {' • '}
-        <span>{formatReadingTime(props.readingTime)}</span>
       </div>
 
       <div className={styles.tags}>
@@ -119,12 +115,9 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     };
   }
 
-  const readingTime = calculateReadingTime(result.content);
-
   return {
     props: {
       POST: result.content,
-      readingTime,
     },
   };
 }
