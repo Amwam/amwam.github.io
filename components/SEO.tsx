@@ -22,7 +22,9 @@ export default function SEO({
   article,
   structuredData,
 }: SEOProps) {
-  const fullTitle = title.includes('AMWAM') ? title : `${title} | AMWAM - Amit Shah`;
+  const fullTitle = title.includes('AMWAM')
+    ? title
+    : `${title} | AMWAM - Amit Shah`;
   const canonicalUrl = canonical || 'https://amwam.me';
 
   return (
@@ -37,21 +39,36 @@ export default function SEO({
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} key="ogtitle" />
-      <meta property="og:description" content={description} key="ogdescription" />
+      <meta
+        property="og:description"
+        content={description}
+        key="ogdescription"
+      />
       <meta property="og:url" content={canonicalUrl} key="ogurl" />
       <meta property="og:type" content={ogType} key="og-type" />
       <meta property="og:image" content={ogImage} key="ogimage" />
-      <meta property="og:site_name" content="AMWAM - Amit Shah" key="ogsitename" />
+      <meta
+        property="og:site_name"
+        content="AMWAM - Amit Shah"
+        key="ogsitename"
+      />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary" key="twittercard" />
       <meta name="twitter:title" content={fullTitle} key="twittertitle" />
-      <meta name="twitter:description" content={description} key="twitterdescription" />
+      <meta
+        name="twitter:description"
+        content={description}
+        key="twitterdescription"
+      />
       <meta name="twitter:image" content={ogImage} key="twitterimage" />
 
       {/* Article Meta Tags */}
       {article?.publishedTime && (
-        <meta property="article:published_time" content={article.publishedTime} />
+        <meta
+          property="article:published_time"
+          content={article.publishedTime}
+        />
       )}
       {article?.author && (
         <meta property="article:author" content={article.author} />

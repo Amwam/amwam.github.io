@@ -29,12 +29,7 @@ export default function Blog(props: {
         description="Technical blog posts about TypeScript, React, Python, Docker, Git, and software engineering best practices. Topics include system architecture, development workflows, and engineering leadership."
         canonical="https://amwam.me/blog"
       />
-      <Breadcrumbs
-        items={[
-          { label: 'Home', href: '/' },
-          { label: 'Blog' },
-        ]}
-      />
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Blog' }]} />
       <h1>Blog</h1>
       <div className={styles.content}>
         <div className={styles['post-list']}>

@@ -34,7 +34,11 @@ function BlogPost(props: IBlogPostProps) {
   }
 
   // Generate article excerpt for meta description
-  const excerpt = input.slice(0, 150).replace(/[#*`\n]/g, ' ').trim() + '...';
+  const excerpt =
+    input
+      .slice(0, 150)
+      .replace(/[#*`\n]/g, ' ')
+      .trim() + '...';
 
   // Article structured data
   const articleSchema = {
@@ -81,7 +85,9 @@ function BlogPost(props: IBlogPostProps) {
       <h1>{post.title}</h1>
       <div>
         <time dateTime={post.date}>
-          {new Date(post.date).toLocaleDateString('en-GB', { dateStyle: 'long' })}
+          {new Date(post.date).toLocaleDateString('en-GB', {
+            dateStyle: 'long',
+          })}
         </time>
       </div>
 

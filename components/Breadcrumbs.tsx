@@ -28,7 +28,15 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         }}
       />
       <nav aria-label="Breadcrumb" style={{ marginBottom: '1rem' }}>
-        <ol style={{ display: 'flex', listStyle: 'none', padding: 0, margin: 0, gap: '0.5rem' }}>
+        <ol
+          style={{
+            display: 'flex',
+            listStyle: 'none',
+            padding: 0,
+            margin: 0,
+            gap: '0.5rem',
+          }}
+        >
           {items.map((item, index) => (
             <li key={index} style={{ display: 'flex', alignItems: 'center' }}>
               {index > 0 && <span style={{ margin: '0 0.5rem' }}>/</span>}

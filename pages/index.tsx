@@ -39,24 +39,32 @@ export default function Home() {
       <h1>Amit Shah</h1>
       <p>
         Tech Lead with over a decade of experience building and scaling systems.
-        I focus on engineering leadership, system architecture, and mentoring developers.
+        I focus on engineering leadership, system architecture, and mentoring
+        developers.
       </p>
       <div>
         <h2>Current & Previous Roles</h2>
         <ul>
           <li className={styles['link-item']}>
-            Tech Lead @ <a href="https://monday.com/" rel="noopener noreferrer">monday.com</a>
+            Tech Lead @{' '}
+            <a href="https://monday.com/" rel="noopener noreferrer">
+              monday.com
+            </a>
           </li>
           <li className={styles['link-item']}>
             Previously Chief Architect EP International @{' '}
-            <a href="https://www.ep.com/" rel="noopener noreferrer">Entertainment Partners UK</a>
+            <a href="https://www.ep.com/" rel="noopener noreferrer">
+              Entertainment Partners UK
+            </a>
             <ul>
               <li>Entertainment Partners acquired We Got POP LTD in 2020</li>
             </ul>
           </li>
           <li className={styles['link-item']}>
             Previously a Mentor @{' '}
-            <a href="https://codeyourfuture.co/" rel="noopener noreferrer">Code Your Future</a>
+            <a href="https://codeyourfuture.co/" rel="noopener noreferrer">
+              Code Your Future
+            </a>
           </li>
         </ul>
       </div>
@@ -64,15 +72,23 @@ export default function Home() {
         <h2>Connect</h2>
         <ul>
           <li className={styles['link-item']}>
-            <a href="https://github.com/Amwam/" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/Amwam/" rel="noopener noreferrer">
+              GitHub
+            </a>
           </li>
           <li className={styles['link-item']}>
-            <a rel="me noopener noreferrer" href="https://mastodon.social/@Amwam">
+            <a
+              rel="me noopener noreferrer"
+              href="https://mastodon.social/@Amwam"
+            >
               Mastodon
             </a>
           </li>
           <li className={styles['link-item']}>
-            <a href="https://stackoverflow.com/users/818739/amit-shah" rel="noopener noreferrer">
+            <a
+              href="https://stackoverflow.com/users/818739/amit-shah"
+              rel="noopener noreferrer"
+            >
               Stack Overflow
             </a>
           </li>
