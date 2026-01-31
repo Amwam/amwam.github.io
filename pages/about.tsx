@@ -13,11 +13,7 @@ const LANGUAGES = [
   },
   {
     name: 'Javascript',
-    link: 'http://jquery.com/',
-  },
-  {
-    name: 'Java',
-    link: 'http://www.java.com/',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
   },
   {
     name: 'HTML/CSS',
@@ -33,7 +29,7 @@ const TOOLS = [
   { name: 'AWS', link: 'https://aws.amazon.com' },
   {
     name: 'Git',
-    link: 'http://git-scm.com/',
+    link: 'https://git-scm.com/',
   },
   {
     name: 'iOS',
@@ -45,11 +41,7 @@ const TOOLS = [
   },
   {
     name: 'IntelliJ IDEA/PyCharm',
-    link: 'http://www.jetbrains.com/idea/',
-  },
-  {
-    name: 'Amazon Web Services (AWS)',
-    link: 'http://aws.amazon.com/',
+    link: 'https://www.jetbrains.com/idea/',
   },
   {
     name: 'Node.js',
@@ -61,19 +53,23 @@ const TOOLS = [
   },
   {
     name: 'PostgreSQL',
-    link: 'http://www.postgresql.org/',
+    link: 'https://www.postgresql.org/',
+  },
+  {
+    name: 'MySQL',
+    link: 'https://www.mysql.com/',
   },
   {
     name: 'SQL (PostgreSQL, SQLite)',
-    link: 'http://en.wikipedia.org/wiki/SQL',
+    link: 'https://en.wikipedia.org/wiki/SQL',
   },
   {
     name: 'Unix',
-    link: 'http://www.unix.org/',
+    link: 'https://www.unix.org/',
   },
   {
-    name: 'OS X',
-    link: 'http://www.apple.com/osx/',
+    name: 'macOS',
+    link: 'https://www.apple.com/macos/',
   },
 ];
 
@@ -86,10 +82,15 @@ export default function About() {
       <h1>About</h1>
       <div>
         I graduated from the University of Warwick with a 1st in Computer
-        Science (MEng) in July of 2013. I have spent the last 10 years working
-        at Entertainment Partners, which aquired We Got POP in 2020. I was the
-        first developer as part of We Got POP, and have seen it go from a small
-        startup to aquisition and further into enterprise.
+        Science (MEng) in July of 2013. I spent over 10 years working at
+        Entertainment Partners, which acquired We Got POP in 2020. I was the
+        first developer as part of We Got POP, and saw it grow from a small
+        startup through acquisition and further into enterprise. During my time
+        there, I progressed from being the first engineer to Chief Architect EP
+        International, building and scaling systems while growing and leading
+        engineering teams across multiple countries. I am now a Tech Lead at
+        monday.com, where I focus on building scalable systems and leading
+        engineering teams.
       </div>
       <hr />
       <div className="row">

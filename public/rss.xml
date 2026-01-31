@@ -2,19 +2,19 @@
     <channel>
         <title><![CDATA[Amit Shah's Blog posts]]></title>
         <description><![CDATA[Welcome to Amit Shah's blog!]]></description>
-        <link>https://amwam.me</link>
+        <link>http://localhost:3000</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 04 Sep 2025 10:19:12 GMT</lastBuildDate>
-        <atom:link href="https://amwam.me/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 04 Sep 2025 10:19:12 GMT</pubDate>
-        <copyright><![CDATA[All rights reserved 2025]]></copyright>
+        <lastBuildDate>Sat, 31 Jan 2026 10:24:22 GMT</lastBuildDate>
+        <atom:link href="http://localhost:3000/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Sat, 31 Jan 2026 10:24:22 GMT</pubDate>
+        <copyright><![CDATA[All rights reserved 2026]]></copyright>
         <item>
             <title><![CDATA[My First post]]></title>
             <description><![CDATA[<p>This is my <em>first</em> post on this site</p>
 <p>For a bit of reference this is a python Flask website.</p>
 <p>And I&#x27;m using markdown to write all this!</p>]]></description>
-            <link>https://amwam.me/blog/my-first-post</link>
-            <guid isPermaLink="true">https://amwam.me/blog/my-first-post</guid>
+            <link>http://localhost:3000/blog/my-first-post</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/my-first-post</guid>
             <pubDate>Sat, 05 Jul 2014 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -27,8 +27,8 @@
 <p>Simply start typing to filter down the list of jobs.</p>
 <p>You can download the latest from either <a href="http://www.packal.org/workflow/jenkins">Packal</a> or directly from <a href="https://github.com/Amwam/Jenkins-Alfred-Workflow/releases">GitHub Releases</a>.</p>
 <p>If you&#x27;re interested in checking out the source code, you can find it here: <a href="https://github.com/Amwam/Jenkins-Alfred-Workflow">https://github.com/Amwam/Jenkins-Alfred-Workflow</a></p>]]></description>
-            <link>https://amwam.me/blog/alfred-jenkins-workflow</link>
-            <guid isPermaLink="true">https://amwam.me/blog/alfred-jenkins-workflow</guid>
+            <link>http://localhost:3000/blog/alfred-jenkins-workflow</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/alfred-jenkins-workflow</guid>
             <pubDate>Wed, 03 Sep 2014 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -36,8 +36,8 @@
             <description><![CDATA[<p>Finally got around to putting my .vimrc files into git.
 Lately I&#x27;ve been playing with vim more and more, and I&#x27;m really starting to like it.</p>
 <p>If you would like to check out my current configs, you can do so here at <a href="https://github.com/Amwam/vimrc">GitHub</a>.</p>]]></description>
-            <link>https://amwam.me/blog/my-vimrc</link>
-            <guid isPermaLink="true">https://amwam.me/blog/my-vimrc</guid>
+            <link>http://localhost:3000/blog/my-vimrc</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/my-vimrc</guid>
             <pubDate>Sun, 11 Jan 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -47,8 +47,8 @@ Lately I&#x27;ve been playing with vim more and more, and I&#x27;m really starti
 Also removed the mockito package, as there really was no need for it.</p>
 <p>You can download it from either <a href="http://www.packal.org/workflow/jenkins">Packal</a> or directly from <a href="https://github.com/Amwam/Jenkins-Alfred-Workflow/releases">GitHub Releases</a>.</p>
 <p>If you&#x27;re interested in checking out the source code, you can find it here: <a href="https://github.com/Amwam/Jenkins-Alfred-Workflow">https://github.com/Amwam/Jenkins-Alfred-Workflow</a></p>]]></description>
-            <link>https://amwam.me/blog/update-jenkins-workflow--1-0-1</link>
-            <guid isPermaLink="true">https://amwam.me/blog/update-jenkins-workflow--1-0-1</guid>
+            <link>http://localhost:3000/blog/update-jenkins-workflow--1-0-1</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/update-jenkins-workflow--1-0-1</guid>
             <pubDate>Tue, 20 Jan 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -66,8 +66,8 @@ then run the following command to allow pushing into the repo.</p>
 <pre><code>git remote add prod http://path.to.your.production.repo
 </code></pre>
 <p>When ever you want to deploy it becomes a simple case of just running <code>git push prod master</code>.</p>]]></description>
-            <link>https://amwam.me/blog/git-push-to-deploy</link>
-            <guid isPermaLink="true">https://amwam.me/blog/git-push-to-deploy</guid>
+            <link>http://localhost:3000/blog/git-push-to-deploy</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/git-push-to-deploy</guid>
             <pubDate>Fri, 06 Feb 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -148,8 +148,8 @@ The <code>squash</code> options, will also <code>amend</code> a previous commit,
 <p>Rebasing commits can sometimes be a little scary if you don&#x27;t know what you are doing or how it really works.
 So squashing commits may not be for everyone, but I would still recommend everyone to put in more effort to their commit messages, as it can help
 everyone involved in modifying a codebase.</p>]]></description>
-            <link>https://amwam.me/blog/maintaining-a-clean-git-history</link>
-            <guid isPermaLink="true">https://amwam.me/blog/maintaining-a-clean-git-history</guid>
+            <link>http://localhost:3000/blog/maintaining-a-clean-git-history</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/maintaining-a-clean-git-history</guid>
             <pubDate>Sun, 11 Oct 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -157,8 +157,8 @@ everyone involved in modifying a codebase.</p>]]></description>
             <description><![CDATA[<p>I&#x27;ve updated my <a href="http://www.alfredapp.com/">Alfred</a> workflow for searching through jobs on Jenkins. You can find it on <a href="http://www.packal.org/workflow/jenkins">Packal</a> or on <a href="https://github.com/Amwam/Jenkins-Alfred-Workflow/releases">GitHub Releases</a>.</p>
 <p>This release contains an update to the login flow to make use of the API token, allowing the workflow to work with any authentication strategy.</p>
 <p>There is also now support for nested job structures (such as using the folders plugin)!</p>]]></description>
-            <link>https://amwam.me/blog/update-jenkins-workkflow--1-3</link>
-            <guid isPermaLink="true">https://amwam.me/blog/update-jenkins-workkflow--1-3</guid>
+            <link>http://localhost:3000/blog/update-jenkins-workkflow--1-3</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/update-jenkins-workkflow--1-3</guid>
             <pubDate>Sun, 15 May 2016 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -203,8 +203,8 @@ import AnotherClass from &#x27;../../Module1&#x27;;
 import SomeClass from &#x27;./MyModule&#x27;;
 </code></pre>
 <p>Imports are separated by node, dependencies in <code>package.json</code>, other and relative imports.</p>]]></description>
-            <link>https://amwam.me/blog/js-import-sort</link>
-            <guid isPermaLink="true">https://amwam.me/blog/js-import-sort</guid>
+            <link>http://localhost:3000/blog/js-import-sort</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/js-import-sort</guid>
             <pubDate>Sun, 17 Jul 2016 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -248,8 +248,8 @@ class CustomHTMLElement extends BabelHTMLElement {
 </code></pre>
 <p>Now our <code>CustomHTMLElement</code> extends the <code>BabelHTMLElement</code> rather the <code>HTMLElement</code> directly.</p>
 <p>To view an example project with this in use, you can checkout the repo here: <a href="https://github.com/Amwam/react-webcomponents">https://github.com/Amwam/react-webcomponents</a></p>]]></description>
-            <link>https://amwam.me/blog/react-web-components</link>
-            <guid isPermaLink="true">https://amwam.me/blog/react-web-components</guid>
+            <link>http://localhost:3000/blog/react-web-components</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/react-web-components</guid>
             <pubDate>Sun, 02 Jul 2017 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -272,8 +272,8 @@ However, as TypeScript code can&#x27;t run unless it compiles successfully it en
 This results in fewer errors, and actually <em>less</em> time spent debugging, than if the code is written in Flow/plain JS (this is purely anecdotal).</p>
 <p>These are just a few of the reasons as to why I&#x27;ve switched over a few of my projects to TypeScript recently, and is certain not an exhaustive list.</p>
 <p><strong>1</strong> Turns out my team <em>did</em> like typechecking, but would not run it alongside their editing, so would often forget. <a href="#a1">↩</a></p>]]></description>
-            <link>https://amwam.me/blog/flow-to-typesript</link>
-            <guid isPermaLink="true">https://amwam.me/blog/flow-to-typesript</guid>
+            <link>http://localhost:3000/blog/flow-to-typesript</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/flow-to-typesript</guid>
             <pubDate>Sun, 02 Dec 2018 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -340,8 +340,8 @@ function handleClick() {
   Click me
 &lt;/PreventDoubleClickButton&gt;;
 </code></pre>]]></description>
-            <link>https://amwam.me/blog/preventing-double-clicks-in-react</link>
-            <guid isPermaLink="true">https://amwam.me/blog/preventing-double-clicks-in-react</guid>
+            <link>http://localhost:3000/blog/preventing-double-clicks-in-react</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/preventing-double-clicks-in-react</guid>
             <pubDate>Mon, 14 Jan 2019 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -368,8 +368,8 @@ def HelloWorldReactComponent():
 ReactDOM.render(HelloWorldReactComponent(), document.querySelector(&quot;#result&quot;))
 </code></pre>
 <p>You can see a live demo at: <a href="https://amwam-pyodide-testing.now.sh">https://amwam-pyodide-testing.now.sh</a> or alternatively the code at: <a href="https://github.com/Amwam/pyodide-testing-playground">https://github.com/Amwam/pyodide-testing-playground</a></p>]]></description>
-            <link>https://amwam.me/blog/react-in-python</link>
-            <guid isPermaLink="true">https://amwam.me/blog/react-in-python</guid>
+            <link>http://localhost:3000/blog/react-in-python</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/react-in-python</guid>
             <pubDate>Mon, 22 Apr 2019 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -471,8 +471,8 @@ docker build --target prod -t myapp:prod .
 <p>One of the biggest drawbacks using multi-stage builds, is the inability to re-use sections in the middle of a stage.</p>
 <p>For instance, typically I would want to have <code>dev</code> and <code>prod</code> images separated only by the dependencies they install. However to produce an optimise build, you would want to add you application code <em>after</em> building the dependencies. This would therefore mean you would have to duplicate the <code>COPY</code> commands in both the <code>dev</code> and <code>prod</code> stages.</p>
 <p>Multi-stage builds in Docker offer a powerful way to optimize your container images and streamline your development workflow. By separating your dev and prod dependencies, you can ensure that your production containers are lean, secure, and efficient, while still maintaining a robust development environment.</p>]]></description>
-            <link>https://amwam.me/blog/docker-multi-stage-targets</link>
-            <guid isPermaLink="true">https://amwam.me/blog/docker-multi-stage-targets</guid>
+            <link>http://localhost:3000/blog/docker-multi-stage-targets</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/docker-multi-stage-targets</guid>
             <pubDate>Thu, 04 Jul 2024 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -575,8 +575,8 @@ function SubmitButton() {
 <p>The final component doesn&#x27;t need to handle any logic for reseting <code>isSubmitting</code>, and can focus on rendering the different states.</p>
 <h2>Conclusion</h2>
 <p>Disabling the button after it&#x27;s clicked is a simple yet effective way to prevent double clicks and double submissions in React applications. This approach provides clear visual feedback to the user and ensures that actions are only triggered once, even if the user accidentally clicks multiple times. By combining this with proper error handling and timeouts, you can create a robust and user-friendly interface for your forms and action buttons.</p>]]></description>
-            <link>https://amwam.me/blog/preventing-double-clicks-in-react-with-hooks</link>
-            <guid isPermaLink="true">https://amwam.me/blog/preventing-double-clicks-in-react-with-hooks</guid>
+            <link>http://localhost:3000/blog/preventing-double-clicks-in-react-with-hooks</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/preventing-double-clicks-in-react-with-hooks</guid>
             <pubDate>Mon, 05 Aug 2024 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -643,8 +643,8 @@ I&#x27;ve gone for a M4, 32GB, 1TB Mac mini. I&#x27;ve opted not to go for the P
 </ul>
 </li>
 </ul>]]></description>
-            <link>https://amwam.me/blog/i-bought-a-mac-mini</link>
-            <guid isPermaLink="true">https://amwam.me/blog/i-bought-a-mac-mini</guid>
+            <link>http://localhost:3000/blog/i-bought-a-mac-mini</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/i-bought-a-mac-mini</guid>
             <pubDate>Mon, 30 Dec 2024 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -656,8 +656,8 @@ I&#x27;ve gone for a M4, 32GB, 1TB Mac mini. I&#x27;ve opted not to go for the P
 <p>Only been able to use it on my local network so far, but performance seems pretty good.</p>
 <p>Not a lot to share about the install experience yet, both these two applications didn&#x27;t take up to get working.</p>
 <p>Next thing I&#x27;ll likely start looking at is Nix, to install packages, I&#x27;m currently writing this via the GitHub online editor.</p>]]></description>
-            <link>https://amwam.me/blog/setting-up-tailscale-and-vnc</link>
-            <guid isPermaLink="true">https://amwam.me/blog/setting-up-tailscale-and-vnc</guid>
+            <link>http://localhost:3000/blog/setting-up-tailscale-and-vnc</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/setting-up-tailscale-and-vnc</guid>
             <pubDate>Mon, 13 Jan 2025 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -711,8 +711,8 @@ pkgs.mkShell {
 <p><strong>Home Manager</strong> is a tool that integrates seamlessly with Nix to manage your user-specific configuration files and software. Think of it as a way to manage your dotfiles, shells, editors, and other personal settings in a reproducible way. For me, managing my dev tools like Neovim, Zsh, and Git configurations with Home Manager has been a game-changer. I can easily sync my configuration across multiple machines and roll back changes if something goes wrong. No more wrestling with hidden configuration files or trying to remember all the tweaks I’ve made to my setup.</p>
 <hr/>
 <p>I’ve still got a long way to go understanding Nix, but I’ve started configuring my work machine to use a <code>shell.nix</code> for different projects, which has made switching between different language versions and tools a lot easier. When working with unfamiliar projects that haven’t already been converted to Docker, it’s made setting up a container to run the application a lot simpler.</p>]]></description>
-            <link>https://amwam.me/blog/nix-nixos-on-macos</link>
-            <guid isPermaLink="true">https://amwam.me/blog/nix-nixos-on-macos</guid>
+            <link>http://localhost:3000/blog/nix-nixos-on-macos</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/nix-nixos-on-macos</guid>
             <pubDate>Sat, 08 Feb 2025 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -724,8 +724,8 @@ pkgs.mkShell {
 <p>In the end, I found myself spending more time trying to get Nix to work than actually working on the projects it was supposed to support.</p>
 <p>For now, I&#x27;ve decided to try out <a href="https://www.gnu.org/software/stow/">GNU Stow</a> for managing my dotfiles, which you can see here: <a href="https://github.com/Amwam/Dotfiles">https://github.com/Amwam/Dotfiles</a>. I need to take some time and fully flesh out the configurations, but its a start. A few hours in and its already been easier to manager.</p>
 <p>I would like to find a nice way of configuring a new MacOS system via code, but so far I&#x27;ve not been able to find much. I suspect I&#x27;ll dive into some shell scripts to help configure the system the way I like.</p>]]></description>
-            <link>https://amwam.me/blog/backing-out-of-nix-nixos-on-a-mac</link>
-            <guid isPermaLink="true">https://amwam.me/blog/backing-out-of-nix-nixos-on-a-mac</guid>
+            <link>http://localhost:3000/blog/backing-out-of-nix-nixos-on-a-mac</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/backing-out-of-nix-nixos-on-a-mac</guid>
             <pubDate>Sat, 07 Jun 2025 00:00:00 GMT</pubDate>
         </item>
     </channel>

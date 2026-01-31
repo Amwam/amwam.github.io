@@ -10,14 +10,18 @@ export default function Home() {
       <div>
         <ul>
           <li className={styles['link-item']}>
-            Chief Architect EP International @{' '}
+            Tech Lead @ <a href="https://monday.com/">monday.com</a>
+          </li>
+          <li className={styles['link-item']}>
+            Previously Chief Architect EP International @{' '}
             <a href="https://www.ep.com/">Entertainment Partners UK</a>
             <ul>
               <li>Entertainment Partners aquired We Got POP LTD in 2020</li>
             </ul>
           </li>
           <li className={styles['link-item']}>
-            Mentor @ <a href="https://codeyourfuture.co/">Code Your Future</a>
+            Previously a Mentor @{' '}
+            <a href="https://codeyourfuture.co/">Code Your Future</a>
           </li>
           <li className={styles['link-item']}>
             Committer @ <a href="https://github.com/Amwam/">GitHub</a>
