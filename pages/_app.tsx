@@ -1,32 +1,21 @@
 import * as React from 'react';
+import type { AppProps } from 'next/app';
 import Navigation from '../components/Navigation';
-import Head from 'next/head';
 import styles from './_app.module.css';
 import './css/index.css';
 import './global.css';
 import 'prismjs/themes/prism.css';
 import { GoogleAnalytics } from '../components/GoogleAnalytics';
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className={styles.container}>
-      <Head key="meta-info">
-        <title key="title">AMWAM - Amit Shah</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:image" content="https://amwam.me/images/me.png" />
-        <meta property="og:type" content="website" key="og-type" />
-        <link rel="manifest" href="/manifest.json" />
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="RSS"
-          href="https://amwam.me/rss.xml"
-        />
-      </Head>
-
+      <a href="#main-content" className={styles['skip-link']}>
+        Skip to main content
+      </a>
       <Navigation />
       <div id={styles['content-wrapper']}>
-        <main id={styles.content}>
+        <main id="main-content" className={styles.content}>
           <Component {...pageProps} />
         </main>
       </div>

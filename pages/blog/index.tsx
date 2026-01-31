@@ -4,7 +4,8 @@ import BlogPostTag from '../../components/BlogPostTag';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styles from './style.module.css';
-import Head from 'next/head';
+import SEO from '../../components/SEO';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 const tagsSet: Set<string> = new Set();
 posts.forEach((post) => (post.tags || []).forEach((tag) => tagsSet.add(tag)));
@@ -23,9 +24,17 @@ export default function Blog(props: {
 
   return (
     <div>
-      <Head>
-        <title>Blog | AMWAM - Amit Shah</title>
-      </Head>
+      <SEO
+        title="Blog"
+        description="Technical blog posts about TypeScript, React, Python, Docker, Git, and software engineering best practices. Topics include system architecture, development workflows, and engineering leadership."
+        canonical="https://amwam.me/blog"
+      />
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Blog' },
+        ]}
+      />
       <h1>Blog</h1>
       <div className={styles.content}>
         <div className={styles['post-list']}>

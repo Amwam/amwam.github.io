@@ -2,43 +2,31 @@ import * as React from 'react';
 import Link from 'next/link';
 import styles from './styles/Navigation.module.css';
 
-function CloseButton({ close }) {
+export default function Navigation() {
   return (
-    <a
-      onClick={close}
-      href="#"
-      style={{ float: 'right', marginTop: '-20px', paddingRight: '1rem' }}
-    >
-      X
-    </a>
-  );
-}
-
-export default function Navigation(props: any) {
-  return (
-    <div id={styles['nav-bar']} role="navigation">
+    <nav id={styles['nav-bar']} role="navigation" aria-label="Main navigation">
       <img
         id={styles['nav-display-picture']}
         src="/images/me.200.png"
-        alt="Me (Amit)"
+        alt="Amit Shah profile picture"
         loading="lazy"
       />
 
-      <div id={styles.name}>Amit Shah</div>
+      <div id={styles.name} aria-label="Site owner">Amit Shah</div>
       <div id={styles['nav-links']}>
         <div className={styles['nav-link']}>
-          <Link href="/">Home</Link>
+          <Link href="/" aria-label="Navigate to home page">Home</Link>
         </div>
         <div className={styles['nav-link']}>
-          <Link href="/about">About</Link>
+          <Link href="/about" aria-label="Navigate to about page">About</Link>
         </div>
         <div className={styles['nav-link']}>
-          <Link href="/blog">Blog</Link>
+          <Link href="/blog" aria-label="Navigate to blog">Blog</Link>
         </div>
         <div className={styles['nav-link']}>
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact" aria-label="Navigate to contact page">Contact</Link>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }

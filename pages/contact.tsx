@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ContactIcon from '../components/ContactIcon';
-import Head from 'next/head';
+import SEO from '../components/SEO';
 
 const contacts = [
   {
@@ -36,10 +36,12 @@ export default function Contact() {
         flexWrap: 'wrap',
       }}
     >
+      <SEO
+        title="Contact"
+        description="Get in touch with Amit Shah. Connect via GitHub, LinkedIn, Stack Overflow, or email. Open to discussing software engineering, architecture, and technology."
+        canonical="https://amwam.me/contact"
+      />
       <h1>Contact</h1>
-      <Head>
-        <title>Contact | AMWAM - Amit Shah</title>
-      </Head>
       {contacts.map((c) => (
         <ContactIcon key={c.subtext} {...c} />
       ))}

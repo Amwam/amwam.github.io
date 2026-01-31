@@ -15,7 +15,9 @@ export default function ProductList(props: IProps) {
       {props.products.map((product) => (
         <div key={product.name} className={styles.productItem}>
           <strong>
-            <a href={product.link}>{product.name}</a>
+            <a href={product.link} rel="noopener noreferrer" target="_blank">
+              {product.name}
+            </a>
           </strong>
         </div>
       ))}

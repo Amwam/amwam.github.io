@@ -1,97 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-  <loc>https://amwam.me/</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://amwam.me/about</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://amwam.me/contact</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/preventing-double-clicks-in-react-with-hooks</loc>
-  <lastmod>2024-08-05T00:00:01+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/docker-multi-stage-targets</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/react-in-python</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/preventing-double-clicks-in-react</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/flow-to-typesript</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/react-web-components</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/js-import-sort</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/update-jenkins-workkflow--1-3</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/maintaining-a-clean-git-history</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/git-push-to-deploy</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/update-jenkins-workflow--1-0-1</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/my-vimrc</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/alfred-jenkins-workflow</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://amwam.me/blog/my-first-post</loc>
-  <lastmod>2024-07-26T10:07:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://amwam.me</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/my-first-post</loc>
+    <lastmod>2014-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/alfred-jenkins-workflow</loc>
+    <lastmod>2014-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/my-vimrc</loc>
+    <lastmod>2015-01-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/update-jenkins-workflow--1-0-1</loc>
+    <lastmod>2015-01-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/git-push-to-deploy</loc>
+    <lastmod>2015-02-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/maintaining-a-clean-git-history</loc>
+    <lastmod>2015-10-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/update-jenkins-workkflow--1-3</loc>
+    <lastmod>2016-05-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/js-import-sort</loc>
+    <lastmod>2016-07-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/react-web-components</loc>
+    <lastmod>2017-07-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/flow-to-typesript</loc>
+    <lastmod>2018-12-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/preventing-double-clicks-in-react</loc>
+    <lastmod>2019-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/react-in-python</loc>
+    <lastmod>2019-04-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/docker-multi-stage-targets</loc>
+    <lastmod>2024-07-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/preventing-double-clicks-in-react-with-hooks</loc>
+    <lastmod>2024-08-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/i-bought-a-mac-mini</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/setting-up-tailscale-and-vnc</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/nix-nixos-on-macos</loc>
+    <lastmod>2025-02-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amwam.me/blog/backing-out-of-nix-nixos-on-a-mac</loc>
+    <lastmod>2025-06-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

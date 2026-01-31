@@ -5,10 +5,13 @@ import posts from '../../blog_posts';
 import BlogPostTag from '../../components/BlogPostTag';
 import { useRouter } from 'next/router';
 import styles from './style.module.css';
-import Head from 'next/head';
+import SEO from '../../components/SEO';
+import Breadcrumbs from '../../components/Breadcrumbs';
+import { calculateReadingTime, formatReadingTime } from '../../utils/readingTime';
 
 interface IBlogPostProps {
   POST: string;
+  readingTime: number;
 }
 
 function BlogPost(props: IBlogPostProps) {
@@ -31,30 +34,60 @@ function BlogPost(props: IBlogPostProps) {
   if (!slug || !input) {
     return <div>Post not found.</div>;
   }
+
+  // Generate article excerpt for meta description
+  const excerpt = input.slice(0, 150).replace(/[#*`\n]/g, ' ').trim() + '...';
+
+  // Article structured data
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: 'Amit Shah',
+      url: 'https://amwam.me',
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Amit Shah',
+    },
+    description: excerpt,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://amwam.me/blog/${slug}`,
+    },
+  };
+
   return (
     <div>
-      <Head>
-        <title key="title">{`${post.title} | AMWAM - Amit Shah`}</title>
-        <meta property="og:url" content={`https://amwam.me/blog/${slug}`} />
-        <meta property="og:type" content="article" key="og-type" />
-        <meta
-          property="og:title"
-          content={`${post.title} | AMWAM - Amit Shah`}
-          key="ogtitle"
-        />
-        <meta
-          property="og:description"
-          content={post.title}
-          key="description"
-        />
-        <meta property="og:image" content="https://amwam.me/images/me.png" />
-        <meta property="article:published_time" content={post.date} />
-        <meta property="article:author" content="Amit Shah" />
-      </Head>
+      <SEO
+        title={post.title}
+        description={excerpt}
+        canonical={`https://amwam.me/blog/${slug}`}
+        ogType="article"
+        article={{
+          publishedTime: post.date,
+          author: 'Amit Shah',
+        }}
+        structuredData={articleSchema}
+      />
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Blog', href: '/blog' },
+          { label: post.title },
+        ]}
+      />
       <h1>{post.title}</h1>
-      <h4>
-        {new Date(post.date).toLocaleDateString('en-GB', { dateStyle: 'long' })}
-      </h4>
+      <div>
+        <time dateTime={post.date}>
+          {new Date(post.date).toLocaleDateString('en-GB', { dateStyle: 'long' })}
+        </time>
+        {' • '}
+        <span>{formatReadingTime(props.readingTime)}</span>
+      </div>
 
       <div className={styles.tags}>
         {(post.tags || []).map((tag, index) => (
@@ -75,7 +108,7 @@ function BlogPost(props: IBlogPostProps) {
 // direct database queries. See the "Technical details" section.
 
 // Here we're fetching the markdown files to use a posts
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: { params: { slug: string } }) {
   const slug = params.slug;
   const { getPostContent } = await import('../../utils/getPostContent');
   const result = getPostContent(slug);
@@ -86,9 +119,12 @@ export async function getStaticProps({ params }) {
     };
   }
 
+  const readingTime = calculateReadingTime(result.content);
+
   return {
     props: {
       POST: result.content,
+      readingTime,
     },
   };
 }

@@ -22,10 +22,8 @@ function convertMarkdownToHtml(markdown: string): string {
 export async function generateRssFeed(allPosts: Post[]) {
   console.log('Generating RSS feed');
 
-  const site_url =
-    process.env.NODE_ENV === 'production'
-      ? 'https://amwam.me'
-      : 'http://localhost:3000';
+  // Always use production URL for static export builds
+  const site_url = 'https://amwam.me';
 
   const feedOptions = {
     title: "Amit Shah's Blog posts",

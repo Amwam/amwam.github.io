@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ProductList from '../components/ProductList';
-import Head from 'next/head';
+import SEO from '../components/SEO';
 
 const LANGUAGES = [
   {
@@ -76,9 +76,11 @@ const TOOLS = [
 export default function About() {
   return (
     <div>
-      <Head>
-        <title>About | AMWAM - Amit Shah</title>
-      </Head>
+      <SEO
+        title="About"
+        description="Computer Science graduate from University of Warwick. Over 10 years of experience in software engineering, from startup to enterprise. Proficient in Python, TypeScript, React, and AWS."
+        canonical="https://amwam.me/about"
+      />
       <h1>About</h1>
       <div>
         I graduated from the University of Warwick with a 1st in Computer
@@ -95,7 +97,7 @@ export default function About() {
       <hr />
       <div className="row">
         <div className="col-xs-12">
-          <h4>Programming languages</h4>
+          <h2>Programming languages</h2>
         </div>
         <div>
           I regularly work with a variety of languages, and am always looking to
@@ -107,7 +109,7 @@ export default function About() {
       <hr />
       <div className="row">
         <div className="col-xs-12">
-          <h4>Tools and Platforms</h4>
+          <h2>Tools and Platforms</h2>
         </div>
         <div>
           Again, I regularly work with many different tools and platforms, but
