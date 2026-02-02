@@ -22,7 +22,7 @@
     "rss": "^1.2.2"
   },
   "devDependencies": {
-    "@types/node": "^25.0.10",
+    "@types/node": "^25.2.0",
     "@types/react": "19.2.10",
     "@typescript-eslint/eslint-plugin": "^8.54.0",
     "@typescript-eslint/parser": "^8.54.0",
