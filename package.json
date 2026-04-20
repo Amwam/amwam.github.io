@@ -14,7 +14,7 @@
   "dependencies": {
     "@next/third-parties": "16.2.3",
     "eslint-config-next": "16.2.3",
-    "next": "16.2.3",
+    "next": "16.2.4",
     "prismjs": "^1.30.0",
     "react": "19.2.5",
     "react-dom": "19.2.5",
