@@ -4,9 +4,9 @@
         <description><![CDATA[Welcome to Amit Shah's blog!]]></description>
         <link>https://amwam.me</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 21 Apr 2026 21:32:38 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 21 Apr 2026 21:44:10 GMT</lastBuildDate>
         <atom:link href="https://amwam.me/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 21 Apr 2026 21:32:38 GMT</pubDate>
+        <pubDate>Tue, 21 Apr 2026 21:44:10 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2026]]></copyright>
         <item>
             <title><![CDATA[Backing out of Nix/NixOS on a Mac]]></title>
