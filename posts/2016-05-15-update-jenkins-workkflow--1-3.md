@@ -1,0 +1,18 @@
+---
+title: Update Jenkins workflow to 1.3
+date: '2016-05-15'
+published: true
+slug: update-jenkins-workkflow--1-3
+tags:
+  - alfred
+  - jenkins
+---
+I've updated my [Alfred] workflow for searching through jobs on Jenkins. You can find it on [Packal] or on [GitHub Releases].
+
+This release contains an update to the login flow to make use of the API token, allowing the workflow to work with any authentication strategy.
+
+There is also now support for nested job structures (such as using the folders plugin)!
+
+[GitHub Releases]: https://github.com/Amwam/Jenkins-Alfred-Workflow/releases
+[Packal]: http://www.packal.org/workflow/jenkins
+[Alfred]: http://www.alfredapp.com/
