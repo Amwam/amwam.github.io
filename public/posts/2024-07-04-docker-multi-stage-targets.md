@@ -1,7 +1,6 @@
 ---
 title: Optimising Docker builds with multi-stage targers
 date: '2024-07-04'
-post_number: 14
 published: true
 slug: docker-multi-stage-targets
 tags:

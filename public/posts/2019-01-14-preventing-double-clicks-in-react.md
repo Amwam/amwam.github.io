@@ -1,7 +1,6 @@
 ---
 title: Preventing double clicks in React
 date: '2019-01-14'
-post_number: 12
 published: true
 slug: preventing-double-clicks-in-react
 tags:

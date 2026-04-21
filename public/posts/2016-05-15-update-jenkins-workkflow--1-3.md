@@ -1,7 +1,6 @@
 ---
 title: Update Jenkins workflow to 1.3
 date: '2016-05-15'
-post_number: 8
 published: true
 slug: update-jenkins-workkflow--1-3
 tags:

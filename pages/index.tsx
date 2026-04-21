@@ -99,20 +99,17 @@ export default function Home() {
 }
 
 export const getStaticProps = async () => {
-  const posts = getPosts();
-  const allPosts = posts
-    .filter((post) => post.published)
-    .map((post) => ({
-      title: post.title,
-      date: post.date,
-      slug: post.slug,
-      excerpt: '',
-    }));
+  const { getPostContent } = await import('../utils/getPostContent');
 
-  await generateRssFeed(allPosts);
-  await generateSitemap(allPosts);
+  const posts = getPosts().filter((p) => p.published && p.slug);
+  const postsWithContent = posts.flatMap((post) => {
+    const result = getPostContent(post);
+    if (!result) return [];
+    return [{ title: post.title, date: post.date, slug: post.slug!, content: result.content }];
+  });
 
-  return {
-    props: { allPosts },
-  };
+  await generateRssFeed(postsWithContent);
+  await generateSitemap(postsWithContent.map(({ title: _t, content: _c, ...rest }) => rest));
+
+  return { props: {} };
 };

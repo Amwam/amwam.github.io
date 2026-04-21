@@ -5,10 +5,10 @@ import matter from 'gray-matter';
 export interface BlogPost {
   title: string;
   date: string; // ISO 8601 date string
-  post_number: number;
   published: boolean;
   slug?: string; // URL-friendly identifier
   tags?: string[]; // Optional array of tags
+  _filename?: string; // Internal: absolute path to source .md file
 }
 
 export function getPosts(): BlogPost[] {
@@ -27,16 +27,16 @@ export function getPosts(): BlogPost[] {
       const fileContent = fs.readFileSync(filePath, 'utf8');
       const { data, content } = matter(fileContent);
       
-      const post: any = {
+      const post: BlogPost = {
         title: data.title,
-        date: data.date,
-        post_number: data.post_number,
-        published: data.published,
-        slug: data.slug ?? null,
-        tags: data.tags ?? null,
+        date: typeof data.date === 'string' ? data.date : String(data.date).slice(0, 10),
+        published: data.published ?? false,
+        slug: data.slug ?? undefined,
+        tags: data.tags ?? undefined,
+        _filename: filePath,
       };
-      
-      return post as BlogPost;
+
+      return post;
     })
-    .sort((a, b) => b.post_number - a.post_number);
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }

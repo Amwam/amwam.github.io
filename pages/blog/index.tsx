@@ -9,30 +9,29 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 
 interface BlogProps {
   posts: BlogPost[];
-  children?: React.ReactNode;
-  location?: { query: { tag: string } };
+  allTags: string[];
 }
 
 export async function getStaticProps() {
-  const posts = getPosts();
+  const rawPosts = getPosts().filter((p) => p.published);
+  const tagsSet = new Set<string>();
+  rawPosts.forEach((p) => (p.tags ?? []).forEach((t) => tagsSet.add(t)));
+  // Strip internal _filename field and normalise optional fields for JSON serialisation
+  const posts = rawPosts.map(({ _filename: _, tags, ...rest }) => ({
+    ...rest,
+    tags: tags ?? null,
+  }));
   return {
     props: {
       posts,
+      allTags: Array.from(tagsSet).sort(),
     },
   };
 }
 
-export default function Blog({ posts, children }: BlogProps) {
+export default function Blog({ posts, allTags }: BlogProps) {
   const router = useRouter();
   const query = router.query as { tag?: string };
-
-  const tagsSet: Set<string> = new Set();
-  posts.forEach((post) => (post.tags || []).forEach((tag) => tagsSet.add(tag)));
-  const tags = Array.from(tagsSet);
-
-  if (children) {
-    return <>{children}</>;
-  }
 
   return (
     <div>
@@ -46,13 +45,9 @@ export default function Blog({ posts, children }: BlogProps) {
       <div className={styles.content}>
         <div className={styles['post-list']}>
           {posts
-            .filter((post) => post.published)
             .filter((post) =>
               query.tag ? (post.tags || []).includes(query.tag) : true
             )
-            .sort((a, b) => {
-              return b.post_number - a.post_number;
-            })
             .map((post) => (
               <div key={post.slug} className={styles['post-item']}>
                 <strong>
@@ -73,7 +68,7 @@ export default function Blog({ posts, children }: BlogProps) {
         <div className={styles['tags-list']}>
           <b>Tags</b>
           <ul>
-            {tags.map((tag, index) => (
+            {allTags.map((tag, index) => (
               <li key={index}>
                 <BlogPostTag tag={tag} />
               </li>

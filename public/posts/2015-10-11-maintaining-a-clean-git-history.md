@@ -1,7 +1,6 @@
 ---
 title: Maintaining a clean Git history
 date: '2015-10-11'
-post_number: 7
 published: true
 slug: maintaining-a-clean-git-history
 tags:

@@ -1,7 +1,6 @@
 ---
 title: Backing out of Nix/NixOS on a Mac
 date: '2025-06-07'
-post_number: 19
 published: true
 slug: backing-out-of-nix-nixos-on-a-mac
 tags:

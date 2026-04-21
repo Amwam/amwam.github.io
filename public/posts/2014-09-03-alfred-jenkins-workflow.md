@@ -1,7 +1,6 @@
 ---
 title: 'Alfred: Jenkins workflow'
 date: '2014-09-03'
-post_number: 2
 published: true
 slug: alfred-jenkins-workflow
 tags:

@@ -1,7 +1,6 @@
 ---
 title: Using Git push-to-deploy
 date: '2015-02-06'
-post_number: 5
 published: true
 slug: git-push-to-deploy
 tags:

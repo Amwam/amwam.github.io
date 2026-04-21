@@ -1,7 +1,6 @@
 ---
 title: Switching from flow to TypeScript
 date: '2018-12-02'
-post_number: 11
 published: true
 slug: flow-to-typesript
 tags:

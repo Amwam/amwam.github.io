@@ -1,7 +1,6 @@
 ---
 title: React in python (Pyodide)
 date: '2019-04-22'
-post_number: 13
 published: true
 slug: react-in-python
 tags:

@@ -1,37 +1,32 @@
 import fs from 'fs';
-import path from 'path';
-import { BlogPost, getPosts } from '../blog_posts';
 import matter from 'gray-matter';
+import { BlogPost, getPosts } from '../blog_posts';
 
 export interface PostContentResult {
   content: string;
   post: BlogPost;
 }
 
-export function getPostContent(slug: string): PostContentResult | null {
-  const posts = getPosts();
-  const post = posts.find((p) => p.slug === slug);
+export function getPostContent(
+  postOrSlug: BlogPost | string
+): PostContentResult | null {
+  let post: BlogPost | undefined;
 
-  if (!post) {
+  if (typeof postOrSlug === 'string') {
+    post = getPosts().find((p) => p.slug === postOrSlug);
+  } else {
+    post = postOrSlug;
+  }
+
+  if (!post?._filename) {
     return null;
   }
 
-  const postsFilename = path.join(
-    process.cwd(),
-    'public/posts',
-    `${post.post_number}.md`
-  );
-
   try {
-    const fileContents = fs.readFileSync(postsFilename, 'utf8');
-    const { content } = matter(fileContents);
-
-    return {
-      content,
-      post,
-    };
+    const { content } = matter(fs.readFileSync(post._filename, 'utf8'));
+    return { content, post };
   } catch (error) {
-    console.error(`Error reading post file for slug ${slug}:`, error);
+    console.error(`Error reading post "${post.slug ?? post.title}":`, error);
     return null;
   }
 }

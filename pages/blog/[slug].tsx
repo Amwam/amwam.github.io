@@ -115,10 +115,11 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     };
   }
 
+  const { _filename: _, tags, slug: postSlug, ...rest } = result.post;
   return {
     props: {
       POST: result.content,
-      post: result.post,
+      post: { ...rest, slug: postSlug ?? null, tags: tags ?? null },
     },
   };
 }
@@ -128,8 +129,8 @@ export async function getStaticPaths() {
   const posts = getPosts();
   return {
     paths: posts
-      .filter((p) => p.slug)
-      .map((p) => ({ params: { slug: p.slug } })),
+      .filter((p) => p.published && p.slug)
+      .map((p) => ({ params: { slug: p.slug as string } })),
     fallback: false,
   };
 }

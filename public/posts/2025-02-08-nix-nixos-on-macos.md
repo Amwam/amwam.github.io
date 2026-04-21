@@ -1,7 +1,6 @@
 ---
 title: Using Nix/NixOS for package management on a Mac
 date: '2025-02-08'
-post_number: 18
 published: true
 slug: nix-nixos-on-macos
 tags:

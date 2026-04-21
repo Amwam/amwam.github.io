@@ -1,7 +1,6 @@
 ---
 title: My First post
 date: '2014-07-05'
-post_number: 0
 published: true
 slug: my-first-post
 ---

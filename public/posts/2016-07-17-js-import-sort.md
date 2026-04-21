@@ -1,7 +1,6 @@
 ---
 title: Sorting Javascript imports
 date: '2016-07-17'
-post_number: 9
 published: true
 slug: js-import-sort
 tags:

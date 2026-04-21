@@ -1,7 +1,6 @@
 ---
 title: Using React with Web Components
 date: '2017-07-02'
-post_number: 10
 published: true
 slug: react-web-components
 tags:

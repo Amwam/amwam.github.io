@@ -1,7 +1,6 @@
 ---
 title: I bought a Mac Mini
 date: '2024-12-30'
-post_number: 16
 published: true
 slug: i-bought-a-mac-mini
 tags:
