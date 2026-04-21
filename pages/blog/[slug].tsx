@@ -13,18 +13,60 @@ import styles from './style.module.css';
 import SEO from '../../components/SEO';
 import Breadcrumbs from '../../components/Breadcrumbs';
 
+// Prevent Prism's client-side auto-highlight from mutating <pre> (adds
+// tabindex and a language class) before React hydrates — we call
+// Prism.highlight() ourselves during render.
+Prism.manual = true;
+
 interface IBlogPostProps {
   POST: string;
   post: BlogPost;
 }
 
+const codeComponents = {
+  pre({ children, ...props }: React.HTMLAttributes<HTMLPreElement>) {
+    const child = React.Children.only(children) as React.ReactElement<{
+      className?: string;
+    }>;
+    const match = /language-(\w+)/.exec(child?.props?.className || '');
+    const language = match?.[1];
+    if (language) {
+      return (
+        <pre className={`language-${language}`} tabIndex={0} {...props}>
+          {children}
+        </pre>
+      );
+    }
+    return <pre {...props}>{children}</pre>;
+  },
+  code({ className, children, ...props }: React.HTMLAttributes<HTMLElement>) {
+    const match = /language-(\w+)/.exec(className || '');
+    const language = match?.[1];
+    const code = String(children).replace(/\n$/, '');
+
+    if (language && Prism.languages[language]) {
+      return (
+        <code
+          className={className}
+          dangerouslySetInnerHTML={{
+            __html: Prism.highlight(code, Prism.languages[language], language),
+          }}
+          {...props}
+        />
+      );
+    }
+
+    return (
+      <code className={className} {...props}>
+        {children}
+      </code>
+    );
+  },
+};
+
 function BlogPost(props: IBlogPostProps) {
   const { POST: input, post } = props;
   const router = useRouter();
-
-  React.useEffect(() => {
-    Prism.highlightAll();
-  }, [input]);
 
   const slug = router?.query?.slug;
 
@@ -99,7 +141,7 @@ function BlogPost(props: IBlogPostProps) {
         ))}
       </div>
 
-      <ReactMarkdown skipHtml={true}>{input}</ReactMarkdown>
+      <ReactMarkdown skipHtml={true} components={codeComponents}>{input}</ReactMarkdown>
     </div>
   );
 }
