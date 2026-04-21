@@ -1,3 +1,7 @@
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+
 export interface BlogPost {
   title: string;
   date: string; // ISO 8601 date string
@@ -7,155 +11,32 @@ export interface BlogPost {
   tags?: string[]; // Optional array of tags
 }
 
-export default [
-  {
-    title: 'My First post',
-    date: '2014-07-05',
-    post_number: 0,
-    published: true,
-    slug: 'my-first-post',
-  },
-  {
-    title: 'Branch Per Feature',
-    date: '2014-07-12',
-    post_number: 1,
-    published: false,
-    tags: ['git'],
-  },
-  {
-    title: 'Alfred: Jenkins workflow',
-    date: '2014-09-03',
-    post_number: 2,
-    published: true,
-    slug: 'alfred-jenkins-workflow',
-    tags: ['alfred', 'jenkins'],
-  },
-  {
-    title: 'My .vimrc',
-    date: '2015-01-11',
-    post_number: 3,
-    published: true,
-    slug: 'my-vimrc',
-    tags: ['vim'],
-  },
-  {
-    title: 'Update Jenkins workflow to 1.0.1',
-    date: '2015-01-20',
-    post_number: 4,
-    published: true,
-    slug: 'update-jenkins-workflow--1-0-1',
-    tags: ['alfred', 'jenkins'],
-  },
-  {
-    title: 'Using Git push-to-deploy',
-    date: '2015-02-06',
-    post_number: 5,
-    published: true,
-    slug: 'git-push-to-deploy',
-    tags: ['git'],
-  },
-  {
-    title: 'Maintaining a clean Git history',
-    date: '2015-10-11',
-    post_number: 7,
-    published: true,
-    slug: 'maintaining-a-clean-git-history',
-    tags: ['git'],
-  },
-  {
-    title: 'Update Jenkins workflow to 1.3',
-    date: '2016-05-15',
-    post_number: 8,
-    published: true,
-    slug: 'update-jenkins-workkflow--1-3',
-    tags: ['alfred', 'jenkins'],
-  },
-  {
-    title: 'Sorting Javascript imports',
-    date: '2016-07-17',
-    post_number: 9,
-    published: true,
-    slug: 'js-import-sort',
-    tags: ['javascript'],
-  },
-  {
-    title: 'Using React with Web Components',
-    date: '2017-07-02',
-    post_number: 10,
-    published: true,
-    slug: 'react-web-components',
-    tags: ['javascript', 'react'],
-  },
-  {
-    title: 'Switching from flow to TypeScript',
-    date: '2018-12-02',
-    post_number: 11,
-    published: true,
-    slug: 'flow-to-typesript',
-    tags: ['javascript', 'typescript'],
-  },
-  {
-    title: 'Preventing double clicks in React',
-    date: '2019-01-14',
-    post_number: 12,
-    published: true,
-    slug: 'preventing-double-clicks-in-react',
-    tags: ['javascript', 'react'],
-  },
-  {
-    title: 'React in python (Pyodide)',
-    date: '2019-04-22',
-    post_number: 13,
-    published: true,
-    slug: 'react-in-python',
-    tags: ['javascript', 'react', 'python'],
-  },
-  {
-    title: 'Optimising Docker builds with multi-stage targers',
-    date: '2024-07-04',
-    post_number: 14,
-    published: true,
-    slug: 'docker-multi-stage-targets',
-    tags: ['docker'],
-  },
-  {
-    title: 'Preventing double clicks in React, with Hooks',
-    date: '2024-08-05',
-    post_number: 15,
-    published: true,
-    slug: 'preventing-double-clicks-in-react-with-hooks',
-    tags: ['javascript', 'react'],
-  },
-  {
-    title: 'I bought a Mac Mini',
-    date: '2024-12-30',
-    post_number: 16,
-    published: true,
-    slug: 'i-bought-a-mac-mini',
-    tags: ['osx', 'mac', 'python', 'shell', 'docker'],
-  },
-  {
-    title: 'Setting up TailScale and VNC',
-    date: '2025-01-13',
-    post_number: 17,
-    published: true,
-    slug: 'setting-up-tailscale-and-vnc',
-    tags: ['osx', 'mac'],
-  },
-  {
-    title: 'Using Nix/NixOS for package management on a Mac',
-    date: '2025-02-08',
-    post_number: 18,
-    published: true,
-    slug: 'nix-nixos-on-macos',
-    tags: ['osx', 'mac', 'nix', 'shell', 'docker'],
-  },
-  {
-    title: 'Backing out of Nix/NixOS on a Mac',
-    date: '2025-06-07',
-    post_number: 19,
-    published: true,
-    slug: 'backing-out-of-nix-nixos-on-a-mac',
-    tags: ['osx', 'mac', 'nix', 'shell', 'docker'],
-  },
-] as BlogPost[];
+export function getPosts(): BlogPost[] {
+  const postsDir = path.join(process.cwd(), 'public/posts');
+  
+  if (!fs.existsSync(postsDir)) {
+    return [];
+  }
+
+  const files = fs.readdirSync(postsDir);
+  
+  return files
+    .filter((file) => file.endsWith('.md'))
+    .map((file) => {
+      const filePath = path.join(postsDir, file);
+      const fileContent = fs.readFileSync(filePath, 'utf8');
+      const { data, content } = matter(fileContent);
+      
+      const post: any = {
+        title: data.title,
+        date: data.date,
+        post_number: data.post_number,
+        published: data.published,
+        slug: data.slug ?? null,
+        tags: data.tags ?? null,
+      };
+      
+      return post as BlogPost;
+    })
+    .sort((a, b) => b.post_number - a.post_number);
+}

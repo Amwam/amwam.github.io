@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import posts, { BlogPost } from '../blog_posts';
+import { BlogPost, getPosts } from '../blog_posts';
+import matter from 'gray-matter';
 
 export interface PostContentResult {
   content: string;
@@ -8,6 +9,7 @@ export interface PostContentResult {
 }
 
 export function getPostContent(slug: string): PostContentResult | null {
+  const posts = getPosts();
   const post = posts.find((p) => p.slug === slug);
 
   if (!post) {
@@ -22,9 +24,10 @@ export function getPostContent(slug: string): PostContentResult | null {
 
   try {
     const fileContents = fs.readFileSync(postsFilename, 'utf8');
+    const { content } = matter(fileContents);
 
     return {
-      content: fileContents,
+      content,
       post,
     };
   } catch (error) {

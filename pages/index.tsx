@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styles from './index.module.css';
-import posts from '../blog_posts';
+import { getPosts } from '../blog_posts';
 import { generateRssFeed } from '../utils/rss';
 import { generateSitemap } from '../utils/sitemap';
 import SEO from '../components/SEO';
@@ -99,6 +99,7 @@ export default function Home() {
 }
 
 export const getStaticProps = async () => {
+  const posts = getPosts();
   const allPosts = posts
     .filter((post) => post.published)
     .map((post) => ({

@@ -1,7 +1,7 @@
 import Prism from 'prismjs';
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
-import posts from '../../blog_posts';
+import { type BlogPost, getPosts } from '../../blog_posts';
 import BlogPostTag from '../../components/BlogPostTag';
 import { useRouter } from 'next/router';
 import styles from './style.module.css';
@@ -10,9 +10,11 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 
 interface IBlogPostProps {
   POST: string;
+  post: BlogPost;
 }
 
 function BlogPost(props: IBlogPostProps) {
+  const { POST: input, post } = props;
   const router = useRouter();
 
   React.useEffect(() => {
@@ -20,14 +22,6 @@ function BlogPost(props: IBlogPostProps) {
   }, []);
 
   const slug = router?.query?.slug;
-  const post = posts.reduce((x, p) => {
-    if (p.slug === slug) {
-      return p;
-    }
-    return x;
-  });
-
-  const input = props.POST;
 
   if (!slug || !input) {
     return <div>Post not found.</div>;
@@ -95,7 +89,7 @@ function BlogPost(props: IBlogPostProps) {
         {(post.tags || []).map((tag, index) => (
           <span key={tag}>
             <BlogPostTag tag={tag} />
-            {index != post.tags?.length - 1 ? ', ' : ''}
+            {index != (post.tags?.length || 0) - 1 ? ', ' : ''}
           </span>
         ))}
       </div>
@@ -124,11 +118,14 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   return {
     props: {
       POST: result.content,
+      post: result.post,
     },
   };
 }
 
 export async function getStaticPaths() {
+  const { getPosts } = await import('../../blog_posts');
+  const posts = getPosts();
   return {
     paths: posts
       .filter((p) => p.slug)

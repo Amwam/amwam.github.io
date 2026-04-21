@@ -17,22 +17,22 @@ export default function Navigation() {
       </div>
       <div id={styles['nav-links']}>
         <div className={styles['nav-link']}>
-          <Link href="/" aria-label="Navigate to home page">
+          <Link id="nav-link-home" href="/" aria-label="Navigate to home page">
             Home
           </Link>
         </div>
         <div className={styles['nav-link']}>
-          <Link href="/about" aria-label="Navigate to about page">
+          <Link id="nav-link-about" href="/about" aria-label="Navigate to about page">
             About
           </Link>
         </div>
         <div className={styles['nav-link']}>
-          <Link href="/blog" aria-label="Navigate to blog">
+          <Link id="nav-link-blog" href="/blog" aria-label="Navigate to blog">
             Blog
           </Link>
         </div>
         <div className={styles['nav-link']}>
-          <Link href="/contact" aria-label="Navigate to contact page">
+          <Link id="nav-link-contact" href="/contact" aria-label="Navigate to contact page">
             Contact
           </Link>
         </div>

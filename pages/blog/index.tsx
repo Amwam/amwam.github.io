@@ -1,5 +1,5 @@
 import * as React from 'react';
-import posts from '../../blog_posts';
+import { type BlogPost, getPosts } from '../../blog_posts';
 import BlogPostTag from '../../components/BlogPostTag';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -7,19 +7,31 @@ import styles from './style.module.css';
 import SEO from '../../components/SEO';
 import Breadcrumbs from '../../components/Breadcrumbs';
 
-const tagsSet: Set<string> = new Set();
-posts.forEach((post) => (post.tags || []).forEach((tag) => tagsSet.add(tag)));
-
-const tags = Array.from(tagsSet);
-
-export default function Blog(props: {
+interface BlogProps {
+  posts: BlogPost[];
   children?: React.ReactNode;
-  location: { query: { tag: string } };
-}) {
+  location?: { query: { tag: string } };
+}
+
+export async function getStaticProps() {
+  const posts = getPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+
+export default function Blog({ posts, children }: BlogProps) {
   const router = useRouter();
   const query = router.query as { tag?: string };
-  if (props.children) {
-    return props.children;
+
+  const tagsSet: Set<string> = new Set();
+  posts.forEach((post) => (post.tags || []).forEach((tag) => tagsSet.add(tag)));
+  const tags = Array.from(tagsSet);
+
+  if (children) {
+    return <>{children}</>;
   }
 
   return (
