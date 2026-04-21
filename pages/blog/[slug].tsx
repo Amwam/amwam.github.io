@@ -1,4 +1,9 @@
 import Prism from 'prismjs';
+import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-bash';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-docker';
+import 'prismjs/components/prism-nix';
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { type BlogPost, getPosts } from '../../blog_posts';
@@ -19,7 +24,7 @@ function BlogPost(props: IBlogPostProps) {
 
   React.useEffect(() => {
     Prism.highlightAll();
-  }, []);
+  }, [input]);
 
   const slug = router?.query?.slug;
 
