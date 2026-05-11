@@ -667,15 +667,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/third-parties@npm:16.2.4":
-  version: 16.2.4
-  resolution: "@next/third-parties@npm:16.2.4"
+"@next/third-parties@npm:16.2.6":
+  version: 16.2.6
+  resolution: "@next/third-parties@npm:16.2.6"
   dependencies:
     third-party-capital: "npm:1.0.20"
   peerDependencies:
     next: ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0-beta.0
     react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
-  checksum: 10c0/acb055e17f121ffd543cedc8f0268c856544e54a160cfd2c7fb475dee5ad655a1303cf012126fb075a6bd72f93dd53f37615071de2953694adbe357c17e302a6
+  checksum: 10c0/82938095f186b6830378b509ba9a265b5912bde5a5dbe3feaf5245c56a6f51a848070f991d6c57719ee0476782b4e7cfff01dd1ede7a629344da18a27e4f030c
   languageName: node
   linkType: hard
 
@@ -1152,7 +1152,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "amwam-nextjs@workspace:."
   dependencies:
-    "@next/third-parties": "npm:16.2.4"
+    "@next/third-parties": "npm:16.2.6"
     "@types/node": "npm:^25.6.0"
     "@types/react": "npm:19.2.14"
     "@typescript-eslint/eslint-plugin": "npm:^8.58.2"
